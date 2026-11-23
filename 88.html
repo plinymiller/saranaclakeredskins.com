@@ -1,37 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #ffffff;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
-    }
-    .big-88 {
-      font-size: clamp(10rem, 35vw, 22rem);
-      font-weight: 900;
-      color: #cc0000;
-      line-height: 0.85;
-    }
-    .coming {
-      position: fixed;
-      bottom: 22px;
-      right: 28px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.15rem;
-      color: #222;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Class of '88</title>
+<meta name="description" content="Saranac Lake High School Class of 1988. Sign in for reunion news, the classmate directory and class photos.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout idea: a class-reunion sign-in desk. Big '88 at left, the form at right, members' rooms below. */
+  color-scheme:dark;
+  --ink:#130c0b; --ink-2:#1d1312; --oxblood:#571016; --red:#cf2430; --bone:#f1e8d9; --brass:#bfa173; --smoke:#a99d93;
+  --ok:#8fc79a; --warn:#f0b35a;
+  --display:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
+  --label:"Barlow Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  --gutter:clamp(16px,4vw,56px);
+}
+*{box-sizing:border-box}
+html{background:var(--ink)}
+body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--bone);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
+[hidden]{display:none!important}
+.label{font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:.82rem;color:var(--brass)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding:16px var(--gutter);border-bottom:1px solid rgba(191,161,115,.25)}
+.top a{text-decoration:none;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.84rem}
+.top .who{display:flex;gap:14px;align-items:center;flex-wrap:wrap;color:var(--smoke);font-size:.92rem}
+.wrap{max-width:1300px;margin:0 auto;padding:clamp(28px,5vw,64px) var(--gutter) clamp(40px,6vw,80px)}
+.desk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,6vw,90px);align-items:start}
+.big{margin:0;font-family:var(--display);font-style:italic;font-weight:700;line-height:.82;font-size:clamp(7rem,22vw,19rem);color:var(--red);letter-spacing:-.03em}
+.intro h1{margin:.3em 0 .4em;font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.05;text-wrap:balance}
+.intro p{margin:0 0 1em;max-width:46ch;color:#e9dfd0}
+.intro .big{margin:0 0 .12em;max-width:none;color:var(--red)}
+#offNote{margin-bottom:20px}
+.card{background:var(--ink-2);border:1px solid rgba(191,161,115,.25);padding:clamp(20px,3vw,34px)}
+.tabs{display:flex;gap:26px;margin-bottom:22px;border-bottom:1px solid rgba(191,161,115,.25)}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--smoke);padding:0 0 12px;cursor:pointer;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.9rem;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--bone);border-bottom-color:var(--red)}
+form{display:grid;gap:16px}
+.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.row.three{grid-template-columns:2fr 1fr 1fr}
+.f{display:grid;gap:6px}
+.f label{font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;color:var(--brass)}
+.f label i{font-style:normal;color:var(--smoke);letter-spacing:.08em;text-transform:none;font-family:var(--body);font-weight:400}
+input[type=text],input[type=email],input[type=tel],input[type=password]{width:100%;min-height:46px;padding:10px 12px;background:#120b0a;border:1px solid rgba(191,161,115,.4);color:var(--bone);font:inherit;border-radius:2px}
+input:focus{border-color:var(--bone);outline:none}
+fieldset{border:1px solid rgba(191,161,115,.25);padding:16px;margin:0;display:grid;gap:14px}
+legend{padding:0 8px;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;color:var(--brass)}
+.check{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;font-size:.95rem;color:#e9dfd0}
+.check input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--red)}
+.btn{font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.86rem;color:var(--ink);background:var(--bone);border:0;padding:14px 22px 13px;min-height:46px;cursor:pointer;border-radius:2px}
+.btn:hover{background:#fff}.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn.ghost{background:none;color:var(--bone);border:1px solid rgba(191,161,115,.5)}
+.link{background:none;border:0;color:var(--bone);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit;padding:0;justify-self:start}
+.msg{margin:0;padding:12px 14px;border:1px solid;font-size:.95rem}
+.msg.err{border-color:var(--red);color:#ffd9dc;background:rgba(207,36,48,.12)}
+.msg.ok{border-color:var(--ok);color:#dff3e3;background:rgba(143,199,154,.1)}
+.msg.note{border-color:var(--warn);color:#fbe6c4;background:rgba(240,179,90,.08)}
+.small{font-size:.84rem;color:var(--smoke);margin:0}
+.rooms{display:grid;gap:clamp(30px,5vw,60px)}
+.room h2{margin:0 0 6px;font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.05}
+.room header{display:flex;justify-content:space-between;align-items:baseline;gap:10px 20px;flex-wrap:wrap;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid rgba(191,161,115,.25)}
+.empty{color:var(--smoke);margin:0}
+.news article{padding:16px 0;border-bottom:1px solid rgba(191,161,115,.18)}
+.news h3{margin:2px 0 6px;font-family:var(--display);font-weight:500;font-size:1.5rem;line-height:1.15}
+.news p{margin:0;max-width:70ch;white-space:pre-line;color:#e9dfd0}
+.dir{width:100%;border-collapse:collapse;font-size:.96rem}
+.dir th{text-align:left;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;color:var(--brass);padding:8px 14px 8px 0;border-bottom:1px solid rgba(191,161,115,.35)}
+.dir td{padding:11px 14px 11px 0;border-bottom:1px solid rgba(191,161,115,.15);vertical-align:top;overflow-wrap:anywhere}
+.scroll{overflow-x:auto}
+.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.photos figure{margin:0;background:var(--ink-2);border:1px solid rgba(191,161,115,.18)}
+.photos img{display:block;width:100%;height:auto}
+.photos figcaption{padding:10px 12px;font-size:.9rem;color:#e9dfd0}
+footer{border-top:1px solid rgba(191,161,115,.25);padding:22px var(--gutter) 34px;color:var(--smoke);font-size:.84rem}
+footer p{margin:0 auto;max-width:1300px}
+@media (max-width:860px){.desk{grid-template-columns:1fr}.row,.row.three{grid-template-columns:1fr}.big{font-size:clamp(6rem,34vw,11rem)}}
+</style>
 </head>
 <body>
-  <div class="big-88">88</div>
-  <div class="coming">coming soon...</div>
+
+<div class="top">
+  <a href="index.html">&larr; Home</a>
+  <div class="who" id="who" hidden><span id="whoName"></span><button class="btn ghost" id="signOut" type="button">Sign out</button></div>
+</div>
+
+<div class="wrap">
+
+  <!-- Signed out: sign up or log in -->
+  <section class="desk" id="viewOut">
+    <div class="intro">
+      <p class="big" aria-hidden="true">&rsquo;88</p>
+      <span class="label">Saranac Lake High School</span>
+      <h1>Class of 1988</h1>
+      <p>This page is for members of the Class of &rsquo;88. Create an account to get reunion news, find classmates in the directory and see class photos.</p>
+      <p class="small">New accounts are checked by a classmate before the directory and photos open up.</p>
+    </div>
+
+    <div class="card">
+      <p class="msg note" id="offNote" hidden>Sign-up is not switched on yet. Check back soon.</p>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tabUp" aria-selected="true" aria-controls="formUp">Create account</button>
+        <button type="button" role="tab" id="tabIn" aria-selected="false" aria-controls="formIn">Log in</button>
+      </div>
+
+      <form id="formUp" novalidate>
+        <div class="row">
+          <div class="f"><label for="upFirst">First name</label><input type="text" id="upFirst" autocomplete="given-name" required></div>
+          <div class="f"><label for="upLast">Last name</label><input type="text" id="upLast" autocomplete="family-name" required></div>
+        </div>
+        <div class="f"><label for="upGrad">Name at graduation <i>(if different)</i></label><input type="text" id="upGrad"></div>
+        <div class="row">
+          <div class="f"><label for="upUser">Username</label><input type="text" id="upUser" autocomplete="username" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_.\-]+"></div>
+          <div class="f"><label for="upPass">Password <i>(8 or more characters)</i></label><input type="password" id="upPass" autocomplete="new-password" required minlength="8"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="upEmail">Email</label><input type="email" id="upEmail" autocomplete="email" required></div>
+          <div class="f"><label for="upCell">Cell phone</label><input type="tel" id="upCell" autocomplete="tel" required></div>
+        </div>
+        <fieldset>
+          <legend>Mailing address, optional</legend>
+          <div class="f"><label for="upStreet">Street</label><input type="text" id="upStreet" autocomplete="street-address"></div>
+          <div class="row three">
+            <div class="f"><label for="upCity">City</label><input type="text" id="upCity" autocomplete="address-level2"></div>
+            <div class="f"><label for="upState">State</label><input type="text" id="upState" autocomplete="address-level1"></div>
+            <div class="f"><label for="upZip">ZIP</label><input type="text" id="upZip" autocomplete="postal-code"></div>
+          </div>
+        </fieldset>
+        <label class="check" for="upListed"><input type="checkbox" id="upListed"><span>List my name and city in the classmate directory.</span></label>
+        <label class="check" for="upShowEmail"><input type="checkbox" id="upShowEmail"><span>Show my email to classmates in the directory.</span></label>
+        <label class="check" for="upShowCell"><input type="checkbox" id="upShowCell"><span>Show my cell number to classmates in the directory.</span></label>
+        <label class="check" for="upConsent"><input type="checkbox" id="upConsent" required><span>I agree that the class organizers may contact me about Class of &rsquo;88 news and reunions using the details above.</span></label>
+        <p class="msg" id="upMsg" hidden role="status"></p>
+        <button class="btn" type="submit" id="upBtn">Create account</button>
+        <p class="small">Your email, cell number and mailing address are seen only by the class organizers unless you tick the boxes above. They are never sold or shared outside the class.</p>
+      </form>
+
+      <form id="formIn" hidden novalidate>
+        <div class="f"><label for="inEmail">Email</label><input type="email" id="inEmail" autocomplete="email" required></div>
+        <div class="f"><label for="inPass">Password</label><input type="password" id="inPass" autocomplete="current-password" required></div>
+        <p class="msg" id="inMsg" hidden role="status"></p>
+        <button class="btn" type="submit" id="inBtn">Log in</button>
+        <button class="link" type="button" id="forgot">Forgot your password?</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Choosing a new password after a reset email -->
+  <section class="desk" id="viewReset" hidden>
+    <div class="intro"><p class="big" aria-hidden="true">&rsquo;88</p><h1>Choose a new password</h1></div>
+    <div class="card">
+      <form id="formReset" novalidate>
+        <div class="f"><label for="rsPass">New password <i>(8 or more characters)</i></label><input type="password" id="rsPass" autocomplete="new-password" required minlength="8"></div>
+        <p class="msg" id="rsMsg" hidden role="status"></p>
+        <button class="btn" type="submit">Save password</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Signed in -->
+  <section class="rooms" id="viewIn" hidden>
+    <p class="msg note" id="pending" hidden>Your account is waiting for a classmate to confirm you are Class of &rsquo;88. Reunion news is open now. The directory and photos open once you are confirmed.</p>
+
+    <div class="room news">
+      <header><h2>Reunion news</h2><span class="label">From the organizers</span></header>
+      <div id="newsList"><p class="empty">No news posted yet.</p></div>
+    </div>
+
+    <div class="room" id="roomDir">
+      <header><h2>Classmate directory</h2><span class="label" id="dirCount"></span></header>
+      <div class="scroll"><table class="dir" id="dirTable" hidden><thead><tr><th scope="col">Name</th><th scope="col">City</th><th scope="col">Email</th><th scope="col">Cell</th></tr></thead><tbody></tbody></table></div>
+      <p class="empty" id="dirEmpty">No classmates listed yet.</p>
+    </div>
+
+    <div class="room" id="roomPhotos">
+      <header><h2>Class photos</h2><span class="label">1984 to 1988</span></header>
+      <div class="photos" id="photoGrid"></div>
+      <p class="empty" id="photoEmpty">No photos posted yet. Send yours to <a href="mailto:imaredskin@saranaclakeredskins.com">imaredskin@saranaclakeredskins.com</a>.</p>
+    </div>
+
+    <div class="room">
+      <header><h2>Your details</h2><span class="label" id="meUser"></span></header>
+      <form id="formMe" class="card" novalidate>
+        <div class="row">
+          <div class="f"><label for="meFirst">First name</label><input type="text" id="meFirst" required></div>
+          <div class="f"><label for="meLast">Last name</label><input type="text" id="meLast" required></div>
+        </div>
+        <div class="f"><label for="meGrad">Name at graduation <i>(if different)</i></label><input type="text" id="meGrad"></div>
+        <div class="f"><label for="meCell">Cell phone</label><input type="tel" id="meCell" required></div>
+        <fieldset>
+          <legend>Mailing address, optional</legend>
+          <div class="f"><label for="meStreet">Street</label><input type="text" id="meStreet"></div>
+          <div class="row three">
+            <div class="f"><label for="meCity">City</label><input type="text" id="meCity"></div>
+            <div class="f"><label for="meState">State</label><input type="text" id="meState"></div>
+            <div class="f"><label for="meZip">ZIP</label><input type="text" id="meZip"></div>
+          </div>
+        </fieldset>
+        <label class="check" for="meListed"><input type="checkbox" id="meListed"><span>List my name and city in the classmate directory.</span></label>
+        <label class="check" for="meShowEmail"><input type="checkbox" id="meShowEmail"><span>Show my email to classmates in the directory.</span></label>
+        <label class="check" for="meShowCell"><input type="checkbox" id="meShowCell"><span>Show my cell number to classmates in the directory.</span></label>
+        <p class="msg" id="meMsg" hidden role="status"></p>
+        <button class="btn" type="submit">Save changes</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<footer><p>Class of &rsquo;88 page of saranaclakeredskins.com, an independent alumni history project. To have your account and details removed, write to <a href="mailto:imaredskin@saranaclakeredskins.com">imaredskin@saranaclakeredskins.com</a>.</p></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+/* ---- Settings: the project address and its publishable (public) key. Never put a secret key here. ---- */
+var SUPABASE_URL = "https://hzetipekhvzrhpojykyx.supabase.co";
+var SUPABASE_ANON_KEY = "sb_publishable_U53zrnmAqS2GmBP_LRx3bA_EDQjT4ah";
+/* -------------------------------------------------------------------------------------------- */
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var val=function(id){return $(id).value.trim()};
+  function say(id,kind,text){var m=$(id);m.className='msg '+kind;m.textContent=text;m.hidden=false}
+  function hush(id){$(id).hidden=true}
+  function show(view){['viewOut','viewReset','viewIn'].forEach(function(v){$(v).hidden=(v!==view)})}
+  function tab(up){$('tabUp').setAttribute('aria-selected',up);$('tabIn').setAttribute('aria-selected',!up);$('formUp').hidden=!up;$('formIn').hidden=up}
+  $('tabUp').addEventListener('click',function(){tab(true)});
+  $('tabIn').addEventListener('click',function(){tab(false)});
+
+  var ready = SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase;
+  if(!ready){
+    $('offNote').hidden=false;
+    ['upBtn','inBtn','forgot'].forEach(function(b){$(b).disabled=true});
+    ['formUp','formIn'].forEach(function(f){$(f).addEventListener('submit',function(e){e.preventDefault()})});
+    return;
+  }
+  var db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  var here = location.origin + location.pathname;
+  var recovering = false;
+
+  $('formUp').addEventListener('submit', async function(e){
+    e.preventDefault(); hush('upMsg');
+    var user=val('upUser'), pass=$('upPass').value, email=val('upEmail'), cell=val('upCell');
+    if(!val('upFirst')||!val('upLast')) return say('upMsg','err','Enter your first and last name.');
+    if(!/^[A-Za-z0-9_.\-]{3,24}$/.test(user)) return say('upMsg','err','Choose a username of 3 to 24 letters, numbers, dots, dashes or underscores.');
+    if(pass.length<8) return say('upMsg','err','Choose a password of at least 8 characters.');
+    if(!/^\S+@\S+\.\S+$/.test(email)) return say('upMsg','err','Enter a valid email address.');
+    if(cell.replace(/\D/g,'').length<10) return say('upMsg','err','Enter your cell number with area code.');
+    if(!$('upConsent').checked) return say('upMsg','err','Tick the box agreeing to be contacted about class news.');
+    $('upBtn').disabled=true;
+    try{
+      var free = await db.rpc('username_available',{candidate:user});
+      if(free.error) throw free.error;
+      if(free.data===false){ say('upMsg','err','That username is taken. Try another.'); return; }
+      var r = await db.auth.signUp({email:email,password:pass,options:{emailRedirectTo:here,data:{
+        username:user, first_name:val('upFirst'), last_name:val('upLast'), grad_name:val('upGrad'), cell:cell,
+        addr_street:val('upStreet'), addr_city:val('upCity'), addr_state:val('upState'), addr_zip:val('upZip'),
+        listed:$('upListed').checked, show_email:$('upShowEmail').checked, show_cell:$('upShowCell').checked }}});
+      if(r.error) throw r.error;
+      if(!r.data.session) say('upMsg','ok','Almost done. We sent a confirmation link to '+email+'. Open it to finish creating your account.');
+    }catch(err){ say('upMsg','err', err.message || 'Could not create the account. Try again.'); }
+    finally{ $('upBtn').disabled=false; }
+  });
+
+  $('formIn').addEventListener('submit', async function(e){
+    e.preventDefault(); hush('inMsg'); $('inBtn').disabled=true;
+    var r = await db.auth.signInWithPassword({email:val('inEmail'),password:$('inPass').value});
+    $('inBtn').disabled=false;
+    if(r.error) say('inMsg','err', r.error.message==='Email not confirmed' ? 'Open the confirmation link we emailed you, then log in.' : 'That email and password do not match an account.');
+  });
+
+  $('forgot').addEventListener('click', async function(){
+    var email=val('inEmail');
+    if(!email) return say('inMsg','err','Enter your email above, then choose Forgot your password.');
+    var r = await db.auth.resetPasswordForEmail(email,{redirectTo:here});
+    if(r.error) say('inMsg','err', r.error.message); else say('inMsg','ok','If that email has an account, a reset link is on its way.');
+  });
+
+  $('formReset').addEventListener('submit', async function(e){
+    e.preventDefault();
+    if($('rsPass').value.length<8) return say('rsMsg','err','Choose a password of at least 8 characters.');
+    var r = await db.auth.updateUser({password:$('rsPass').value});
+    if(r.error) return say('rsMsg','err', r.error.message);
+    recovering=false; var s=await db.auth.getSession(); render(s.data.session);
+  });
+
+  $('signOut').addEventListener('click', function(){ db.auth.signOut(); });
+
+  $('formMe').addEventListener('submit', async function(e){
+    e.preventDefault(); hush('meMsg');
+    if(!val('meFirst')||!val('meLast')) return say('meMsg','err','Enter your first and last name.');
+    if(val('meCell').replace(/\D/g,'').length<10) return say('meMsg','err','Enter your cell number with area code.');
+    var s=await db.auth.getSession(); if(!s.data.session) return;
+    var r = await db.from('profiles').update({ first_name:val('meFirst'), last_name:val('meLast'), grad_name:val('meGrad'), cell:val('meCell'),
+      addr_street:val('meStreet'), addr_city:val('meCity'), addr_state:val('meState'), addr_zip:val('meZip'),
+      listed:$('meListed').checked, show_email:$('meShowEmail').checked, show_cell:$('meShowCell').checked }).eq('id', s.data.session.user.id);
+    if(r.error) say('meMsg','err', r.error.message); else { say('meMsg','ok','Saved.'); loadDirectory(); }
+  });
+
+  function cell(text){ var td=document.createElement('td'); td.textContent=text||''; return td; }
+
+  async function loadNews(){
+    var r = await db.from('class_news').select('posted_on,title,body').order('posted_on',{ascending:false});
+    var box=$('newsList'); if(r.error||!r.data||!r.data.length) return;
+    box.textContent='';
+    r.data.forEach(function(n){ var a=document.createElement('article');
+      var d=document.createElement('span'); d.className='label'; d.textContent=n.posted_on||'';
+      var h=document.createElement('h3'); h.textContent=n.title||'';
+      var p=document.createElement('p'); p.textContent=n.body||'';
+      a.appendChild(d); a.appendChild(h); a.appendChild(p); box.appendChild(a); });
+  }
+  async function loadDirectory(){
+    var r = await db.rpc('class_directory'); var tb=$('dirTable').querySelector('tbody'); tb.textContent='';
+    var rows=(r.error||!r.data)?[]:r.data;
+    $('dirTable').hidden=!rows.length; $('dirEmpty').hidden=!!rows.length;
+    $('dirCount').textContent = rows.length ? rows.length+' listed' : '';
+    rows.forEach(function(p){ var tr=document.createElement('tr');
+      tr.appendChild(cell(p.first_name+' '+p.last_name+(p.grad_name?' ('+p.grad_name+')':'')));
+      tr.appendChild(cell([p.addr_city,p.addr_state].filter(Boolean).join(', ')));
+      tr.appendChild(cell(p.email)); tr.appendChild(cell(p.cell)); tb.appendChild(tr); });
+  }
+  async function loadPhotos(){
+    var r = await db.from('class_photos').select('image_url,caption').order('sort_order',{ascending:true});
+    var g=$('photoGrid'); g.textContent=''; var rows=(r.error||!r.data)?[]:r.data; $('photoEmpty').hidden=!!rows.length;
+    rows.forEach(function(ph){ if(!/^https:\/\//.test(ph.image_url||'')) return;
+      var f=document.createElement('figure'); var i=document.createElement('img'); i.src=ph.image_url; i.alt=ph.caption||'Class photo'; i.loading='lazy';
+      var c=document.createElement('figcaption'); c.textContent=ph.caption||''; f.appendChild(i); f.appendChild(c); g.appendChild(f); });
+  }
+
+  async function render(session){
+    if(recovering){ show('viewReset'); return; }
+    if(!session){ $('who').hidden=true; show('viewOut'); return; }
+    show('viewIn'); $('who').hidden=false;
+    var r = await db.from('profiles').select('*').eq('id',session.user.id).maybeSingle();
+    var me = r.data || {};
+    $('whoName').textContent = me.first_name ? me.first_name+' '+(me.last_name||'') : session.user.email;
+    $('meUser').textContent = me.username ? 'Username: '+me.username : '';
+    [['meFirst','first_name'],['meLast','last_name'],['meGrad','grad_name'],['meCell','cell'],['meStreet','addr_street'],['meCity','addr_city'],['meState','addr_state'],['meZip','addr_zip']]
+      .forEach(function(p){ $(p[0]).value = me[p[1]] || ''; });
+    $('meListed').checked=!!me.listed; $('meShowEmail').checked=!!me.show_email; $('meShowCell').checked=!!me.show_cell;
+    var ok=!!me.approved; $('pending').hidden=ok; $('roomDir').hidden=!ok; $('roomPhotos').hidden=!ok;
+    loadNews(); if(ok){ loadDirectory(); loadPhotos(); }
+  }
+
+  db.auth.onAuthStateChange(function(event, session){
+    if(event==='PASSWORD_RECOVERY') recovering=true;
+    setTimeout(function(){ render(session); },0);
+  });
+})();
+</script>
 </body>
 </html>
