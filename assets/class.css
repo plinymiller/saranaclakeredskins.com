@@ -206,3 +206,11 @@ footer p{margin:0}
   .top{align-items:flex-start}
 }
 .credit a{color:inherit;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:10px 0}
+
+/* Support / donate */
+.btn.gold{background:var(--gold);color:var(--maroon);min-height:44px}
+.btn.gold:hover{background:#e09a14;color:var(--maroon-deep)}
+.support-panel .panel-box{border-color:var(--gold);box-shadow:inset 4px 0 0 var(--gold)}
+.support-panel .label{margin:0 0 .35em}
+.support-panel p{margin:0 0 1.1em}
+.prose .btn.gold{margin-top:.4em}

@@ -6,6 +6,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTACT = "plinymiller@gmail.com"
 MAIL = "mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site"
 CREDIT = "a <a href=\"https://plinymiller.com\" target=\"_blank\" rel=\"noopener\">plinymiller design</a> \u2013 a <a href=\"https://b-tuff.co\" target=\"_blank\" rel=\"noopener\">B-Tuff Company</a>"
+KOFI = "https://ko-fi.com/plinymiller"
+SUPPORT_BLURB = "This site is a volunteer labor of love. Contributions help cover web hosting, the domain, and upkeep \u2014 nothing more. This site is not a nonprofit, and contributions are not tax-deductible."
 FIRST, LAST = 1890, 2000
 FONTS = "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap"
 
@@ -69,6 +71,7 @@ def footer() -> str:
     <nav aria-label="Legal">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
       <a href="{MAIL}">Contact</a>
     </nav>
     <p class="credit">{CREDIT}</p>
@@ -107,6 +110,14 @@ def index_page() -> str:
     <div class="panel-box">
       <h2 id="news-heading">Class news</h2>
       <p>Reunion dates, photos, and class group links will be posted here. To share one, <a href="{MAIL}">email us</a> at {CONTACT}.</p>
+    </div>
+  </section>
+  <section class="panel support-panel" id="support" aria-labelledby="support-heading">
+    <div class="panel-box">
+      <p class="label">Support</p>
+      <h2 id="support-heading">Support this site</h2>
+      <p>{SUPPORT_BLURB}</p>
+      <a class="btn gold" href="{KOFI}" target="_blank" rel="noopener">Support this site</a>
     </div>
   </section>
 </main>
@@ -438,12 +449,31 @@ def not_found_page() -> str:
 """
 
 
+def support_page() -> str:
+    return head(
+        "Support | Saranac Lake Redskins",
+        "Help keep this alumni site online. Contributions cover web hosting, the domain, and upkeep.",
+    ) + f"""<body>
+{header()}
+<main id="main" class="wrap prose">
+  <span class="label">Support</span>
+  <h1>Support this site</h1>
+  <p>{SUPPORT_BLURB}</p>
+  <p><a class="btn gold" href="{KOFI}" target="_blank" rel="noopener">Support this site</a></p>
+</main>
+{footer()}
+</body>
+</html>
+"""
+
+
 def main() -> None:
     write("index.html", index_page())
     write("classes.html", classes_page())
     write("welcome.html", welcome_page())
     write("privacy.html", privacy_page())
     write("terms.html", terms_page())
+    write("support.html", support_page())
     write("404.html", not_found_page())
     for y in range(FIRST, LAST + 1):
         write(year_file(y), class_page(y))
