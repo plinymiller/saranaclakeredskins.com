@@ -47,7 +47,7 @@ def head(title: str, description: str | None = None, robots: str | None = None) 
 """
 
 
-def header(current: str | None = None, extra: str = "") -> str:
+def header(current: str | None = None, extra: str = "", home: bool = False) -> str:
     def item(href, label, key):
         cur = ' aria-current="page"' if current == key else ""
         return f'<a href="{href}"{cur}>{label}</a>'
@@ -56,16 +56,27 @@ def header(current: str | None = None, extra: str = "") -> str:
         item("classes.html", "Find your class", "classes"),
         f'<a href="{MAIL}">Contact us</a>',
     ])
+    if home:
+        brand = ('<a class="brand" href="index.html" aria-label="Saranac Lake Redskins home">'
+                 '<img src="assets/mark.jpg" width="64" height="64" alt=""></a>\n'
+                 '  <p class="site-title">Home of the Saranac Lake Redskins</p>')
+    else:
+        brand = ('<a class="brand" href="index.html"><img src="assets/mark.jpg" width="40" height="40" alt="">'
+                 '<span>Saranac Lake Redskins</span></a>')
     return f"""<a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <a class="brand" href="index.html"><img src="assets/mark.jpg" width="40" height="40" alt=""><span>Saranac Lake Redskins</span></a>
+  {brand}
   <nav aria-label="Site">{nav}</nav>
   {extra}
 </header>
 """
 
 
-def footer() -> str:
+LOGO_NOTICE = "The Redskins logo is a trademark and copyright of the Washington Redskins football club (now the Washington Commanders). This site is not affiliated with or endorsed by the club or the NFL."
+
+
+def footer(logo_notice: bool = False) -> str:
+    notice = f'\n    <p class="logo-notice">&copy; {LOGO_NOTICE}</p>' if logo_notice else ""
     return f"""<footer>
   <div class="foot">
     <nav aria-label="Legal">
@@ -75,7 +86,7 @@ def footer() -> str:
       <a href="{MAIL}">Contact</a>
     </nav>
     <p class="credit">{CREDIT}</p>
-    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="{MAIL}">contact us</a> at {CONTACT}.</p>
+    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="{MAIL}">contact us</a> at {CONTACT}.</p>{notice}
   </div>
 </footer>
 """
@@ -89,10 +100,10 @@ def write(name: str, html: str) -> None:
 
 def index_page() -> str:
     return head(
-        "Saranac Lake Redskins",
+        "Home of the Saranac Lake Redskins",
         "An independent alumni project for Saranac Lake High School classes of 1890 to 2000. Find your class, sign in, and reconnect.",
     ) + f"""<body class="home">
-{header("home")}
+{header("home", home=True)}
 <main id="main">
   <section class="hero">
     <div class="logo-wrap">
@@ -121,7 +132,7 @@ def index_page() -> str:
     </div>
   </section>
 </main>
-{footer()}
+{footer(logo_notice=True)}
 </body>
 </html>
 """

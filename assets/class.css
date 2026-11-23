@@ -214,3 +214,8 @@ footer p{margin:0}
 .support-panel .label{margin:0 0 .35em}
 .support-panel p{margin:0 0 1.1em}
 .prose .btn.gold{margin-top:.4em}
+
+/* Home masthead: logo only, with the site title set large beside it */
+.home .brand img{width:64px;height:64px}
+.site-title{flex:1 1 12ch;margin:0;font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.05;color:var(--maroon);text-wrap:balance}
+.logo-notice{font-size:.85rem;border-top:1px solid var(--line);padding-top:10px}
