@@ -58,8 +58,7 @@ def header(current: str | None = None, extra: str = "", home: bool = False) -> s
     ])
     if home:
         brand = ('<a class="brand" href="index.html" aria-label="Saranac Lake Redskins home">'
-                 '<img src="assets/mark.jpg" width="64" height="64" alt=""></a>\n'
-                 '  <p class="site-title">Home of the Saranac Lake Redskins</p>')
+                 '<img src="assets/mark.jpg" width="64" height="64" alt=""></a>')
     else:
         brand = ('<a class="brand" href="index.html"><img src="assets/mark.jpg" width="40" height="40" alt="">'
                  '<span>Saranac Lake Redskins</span></a>')
@@ -112,7 +111,7 @@ def index_page() -> str:
     </div>
     <div class="hero-copy">
       <p class="label">Saranac Lake High School alumni</p>
-      <h1>Find your class</h1>
+      <h1>Home of the Saranac Lake Redskins</h1>
       <p>An independent alumni project for the classes of 1890 to 2000. Sign in for your class bulletin board, the classmate directory, and reunion news.</p>
       <a class="btn" href="classes.html">Find your class</a>
     </div>
