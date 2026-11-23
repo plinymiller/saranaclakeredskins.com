@@ -3,131 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Class of 1988 Home</title>
+<title>My Class Home</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  /* Layout idea: a class-reunion sign-in desk. Big '88 at left, the form at right, members' rooms below. */
-  color-scheme:dark;
-  --ink:#130c0b; --ink-2:#1d1312; --oxblood:#571016; --red:#cf2430; --bone:#f1e8d9; --brass:#bfa173; --smoke:#a99d93;
-  --ok:#8fc79a; --warn:#f0b35a;
-  --display:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
-  --label:"Barlow Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
-  --body:"Barlow","Helvetica Neue",Arial,sans-serif;
-  --gutter:clamp(16px,4vw,56px);
-}
-*{box-sizing:border-box}
-html{background:var(--ink)}
-body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:var(--bone);text-underline-offset:3px}
-:focus-visible{outline:2px solid var(--bone);outline-offset:3px}
-[hidden]{display:none!important}
-.label{font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.22em;font-size:.82rem;color:var(--brass)}
-.top{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding:16px var(--gutter);border-bottom:1px solid rgba(191,161,115,.25)}
-.top a{text-decoration:none;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.84rem}
-.top .who{display:flex;gap:14px;align-items:center;flex-wrap:wrap;color:var(--smoke);font-size:.92rem}
-.wrap{max-width:1300px;margin:0 auto;padding:clamp(28px,5vw,64px) var(--gutter) clamp(40px,6vw,80px)}
-.desk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,6vw,90px);align-items:start}
-.big{margin:0;font-family:var(--display);font-style:italic;font-weight:700;line-height:.82;font-size:clamp(7rem,22vw,19rem);color:var(--red);letter-spacing:-.03em}
-.intro h1{margin:.3em 0 .4em;font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.05;text-wrap:balance}
-.intro p{margin:0 0 1em;max-width:46ch;color:#e9dfd0}
-.intro .big{margin:0 0 .12em;max-width:none;color:var(--red)}
-#offNote{margin-bottom:20px}
-.card{background:var(--ink-2);border:1px solid rgba(191,161,115,.25);padding:clamp(20px,3vw,34px)}
-.tabs{display:flex;gap:26px;margin-bottom:22px;border-bottom:1px solid rgba(191,161,115,.25)}
-.tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--smoke);padding:0 0 12px;cursor:pointer;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.9rem;margin-bottom:-1px}
-.tabs button[aria-selected="true"]{color:var(--bone);border-bottom-color:var(--red)}
-form{display:grid;gap:16px}
-.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.row.three{grid-template-columns:2fr 1fr 1fr}
-.f{display:grid;gap:6px}
-.f label{font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;color:var(--brass)}
-.f label i{font-style:normal;color:var(--smoke);letter-spacing:.08em;text-transform:none;font-family:var(--body);font-weight:400}
-input[type=text],input[type=email],input[type=tel],input[type=password]{width:100%;min-height:46px;padding:10px 12px;background:#120b0a;border:1px solid rgba(191,161,115,.4);color:var(--bone);font:inherit;border-radius:2px}
-input:focus{border-color:var(--bone);outline:none}
-fieldset{border:1px solid rgba(191,161,115,.25);padding:16px;margin:0;display:grid;gap:14px}
-legend{padding:0 8px;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;color:var(--brass)}
-.check{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;font-size:.95rem;color:#e9dfd0}
-.check input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--red)}
-.btn{font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.86rem;color:var(--ink);background:var(--bone);border:0;padding:14px 22px 13px;min-height:46px;cursor:pointer;border-radius:2px}
-.btn:hover{background:#fff}.btn[disabled]{opacity:.5;cursor:not-allowed}
-.btn.ghost{background:none;color:var(--bone);border:1px solid rgba(191,161,115,.5)}
-.link{background:none;border:0;color:var(--bone);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit;padding:0;justify-self:start}
-.msg{margin:0;padding:12px 14px;border:1px solid;font-size:.95rem}
-.msg.err{border-color:var(--red);color:#ffd9dc;background:rgba(207,36,48,.12)}
-.msg.ok{border-color:var(--ok);color:#dff3e3;background:rgba(143,199,154,.1)}
-.msg.note{border-color:var(--warn);color:#fbe6c4;background:rgba(240,179,90,.08)}
-.small{font-size:.84rem;color:var(--smoke);margin:0}
-.rooms{display:grid;gap:clamp(30px,5vw,60px)}
-.room h2{margin:0 0 6px;font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.05}
-.room header{display:flex;justify-content:space-between;align-items:baseline;gap:10px 20px;flex-wrap:wrap;padding-bottom:12px;margin-bottom:18px;border-bottom:1px solid rgba(191,161,115,.25)}
-.empty{color:var(--smoke);margin:0}
-.news article{padding:16px 0;border-bottom:1px solid rgba(191,161,115,.18)}
-.news h3{margin:2px 0 6px;font-family:var(--display);font-weight:500;font-size:1.5rem;line-height:1.15}
-.news p{margin:0;max-width:70ch;white-space:pre-line;color:#e9dfd0}
-.dir{width:100%;border-collapse:collapse;font-size:.96rem}
-.dir th{text-align:left;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;color:var(--brass);padding:8px 14px 8px 0;border-bottom:1px solid rgba(191,161,115,.35)}
-.dir td{padding:11px 14px 11px 0;border-bottom:1px solid rgba(191,161,115,.15);vertical-align:top;overflow-wrap:anywhere}
-.scroll{overflow-x:auto}
-.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-.photos figure{margin:0;background:var(--ink-2);border:1px solid rgba(191,161,115,.18)}
-.photos img{display:block;width:100%;height:auto}
-.photos figcaption{padding:10px 12px;font-size:.9rem;color:#e9dfd0}
-footer{border-top:1px solid rgba(191,161,115,.25);padding:22px var(--gutter) 34px;color:var(--smoke);font-size:.84rem}
-footer p{margin:0 auto;max-width:1300px}
-@media (max-width:860px){.desk{grid-template-columns:1fr}.row,.row.three{grid-template-columns:1fr}.big{font-size:clamp(6rem,34vw,11rem)}}
-
-.hello{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end;padding-bottom:clamp(26px,4vw,48px);margin-bottom:clamp(26px,4vw,48px);border-bottom:1px solid rgba(191,161,115,.25)}
-.hello h1{margin:.25em 0 .35em;font-family:var(--display);font-weight:500;font-size:clamp(2.1rem,5vw,4.4rem);line-height:1.02;text-wrap:balance}
-.hello h1 em{font-style:italic;color:var(--red)}
-.hello p{margin:0;max-width:60ch;color:#e9dfd0;font-size:1.06rem}
-.share{display:grid;gap:10px;justify-items:start}
-.share code{font-family:var(--display);font-style:italic;font-size:clamp(1.1rem,2vw,1.5rem);color:var(--bone);border-bottom:1px solid var(--brass);padding-bottom:4px;overflow-wrap:anywhere}
-textarea{width:100%;min-height:110px;padding:12px;background:#120b0a;border:1px solid rgba(191,161,115,.4);color:var(--bone);font:inherit;border-radius:2px;resize:vertical}
-textarea:focus{border-color:var(--bone);outline:none}
-.postbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.board{display:grid;gap:0;margin-top:22px}
-.post{padding:18px 0;border-top:1px solid rgba(191,161,115,.18)}
-.post header{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;margin:0 0 6px;padding:0;border:0}
-.post .by{font-family:var(--display);font-weight:500;font-size:1.25rem;line-height:1.1}
-.post .when{font-size:.82rem;color:var(--smoke)}
-.post p{margin:0;max-width:75ch;white-space:pre-wrap;overflow-wrap:anywhere;color:#e9dfd0}
-.post .link{margin-top:8px;font-size:.84rem;color:var(--smoke)}
-.search{max-width:420px;margin-bottom:16px}
-@media (max-width:860px){.hello{grid-template-columns:1fr;align-items:start}}
-</style>
+<link rel="stylesheet" href="assets/class.css">
 </head>
 <body>
-
 <div class="top">
-  <a href="index.html">&larr; Home</a>
+  <nav aria-label="Site"><a href="index.html">&larr; Home</a><a href="classes.html">All classes</a><a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact us</a></nav>
   <div class="who" id="who" hidden><span id="whoName"></span><button class="btn ghost" id="signOut" type="button">Sign out</button></div>
 </div>
-
 <div class="wrap" id="page" hidden>
   <section class="hello">
     <div>
       <span class="label">Saranac Lake High School</span>
-      <h1>Welcome to our 21st home of the <em>Class of 1988</em></h1>
+      <h1>Welcome to our 21st home of the <em>Class of <span id="yrTitle"></span></em></h1>
       <p>We&rsquo;re in the process of building this site. Please pass on the site info to fellow classmates, and feel free to leave a message on the bulletin board below or search the directory for classmates.</p>
     </div>
     <div class="share">
       <span class="label">Pass it on</span>
-      <code id="shareLink">saranaclakeredskins.com/88.html</code>
+      <code id="shareLink"></code>
       <button class="btn ghost" id="copyLink" type="button">Copy the link</button>
     </div>
   </section>
 
   <section class="rooms">
-    <p class="msg note" id="pending" hidden>You&rsquo;re in. Classmates&rsquo; email addresses, cell numbers and the class photos open up once a classmate confirms you are Class of &rsquo;88.</p>
+    <p class="msg note" id="pending" hidden>You&rsquo;re in. Classmates&rsquo; email addresses, cell numbers and class photos open up once an organizer confirms your class.</p>
 
     <div class="room" id="board">
       <header><h2>Bulletin board</h2><span class="label" id="postCount"></span></header>
+      <div class="roombar">
+        <div class="seg" role="group" aria-label="Choose a board">
+          <button type="button" id="bdClass" aria-pressed="true"></button>
+          <button type="button" id="bdAll" aria-pressed="false">All classes</button>
+        </div>
+        <p class="posting" id="postingTo"></p>
+      </div>
       <form id="formPost" novalidate>
-        <div class="f"><label for="postBody">Leave a message for the class</label><textarea id="postBody" maxlength="1000" required></textarea></div>
+        <div class="f"><label for="postBody" id="postLabel">Leave a message</label><textarea id="postBody" maxlength="1000" required></textarea></div>
         <p class="msg" id="postMsg" hidden role="status"></p>
         <div class="postbar"><button class="btn" type="submit" id="postBtn">Post message</button><span class="small" id="postLeft">1000 characters left</span></div>
       </form>
@@ -136,10 +51,16 @@ textarea:focus{border-color:var(--bone);outline:none}
     </div>
 
     <div class="room" id="roomDir">
-      <header><h2>Classmate directory</h2><span class="label" id="dirCount"></span></header>
-      <div class="f search"><label for="dirSearch">Search by name or city</label><input type="text" id="dirSearch" autocomplete="off"></div>
-      <div class="scroll"><table class="dir" id="dirTable" hidden><thead><tr><th scope="col">Name</th><th scope="col">City</th><th scope="col">Email</th><th scope="col">Cell</th></tr></thead><tbody></tbody></table></div>
-      <p class="empty" id="dirEmpty">No classmates listed yet.</p>
+      <header><h2>Directory</h2><span class="label" id="dirCount"></span></header>
+      <div class="roombar">
+        <div class="seg" role="group" aria-label="Choose a directory">
+          <button type="button" id="drClass" aria-pressed="true"></button>
+          <button type="button" id="drAll" aria-pressed="false">All classes</button>
+        </div>
+        <div class="f search" style="margin:0;flex:1 1 260px"><label for="dirSearch">Search by name or city</label><input type="text" id="dirSearch" autocomplete="off"></div>
+      </div>
+      <div class="scroll"><table class="dir" id="dirTable" hidden><thead><tr><th scope="col">Name</th><th scope="col" id="thClass">Class</th><th scope="col">City</th><th scope="col">Email</th><th scope="col">Cell</th></tr></thead><tbody></tbody></table></div>
+      <p class="empty" id="dirEmpty">No one listed yet.</p>
     </div>
 
     <div class="room news">
@@ -148,11 +69,13 @@ textarea:focus{border-color:var(--bone);outline:none}
     </div>
 
 
+
     <div class="room" id="roomPhotos">
-      <header><h2>Class photos</h2><span class="label">1984 to 1988</span></header>
+      <header><h2>Class photos</h2><span class="label" id="photoLabel"></span></header>
       <div class="photos" id="photoGrid"></div>
-      <p class="empty" id="photoEmpty">No photos posted yet. Send yours to <a href="mailto:imaredskin@saranaclakeredskins.com">imaredskin@saranaclakeredskins.com</a>.</p>
+      <p class="empty" id="photoEmpty">No photos posted yet. Send yours to <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">plinymiller@gmail.com</a>.</p>
     </div>
+
 
 
     <div class="room">
@@ -181,129 +104,12 @@ textarea:focus{border-color:var(--bone);outline:none}
       </form>
     </div>
 
+
   </section>
 </div>
-
-<footer><p>Class of &rsquo;88 page of saranaclakeredskins.com, an independent alumni history project. To have your account, messages and details removed, write to <a href="mailto:imaredskin@saranaclakeredskins.com">imaredskin@saranaclakeredskins.com</a>.</p></footer>
-
+<footer><p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1960 to 2000. Questions, corrections, or to have your account and details removed: <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">contact us</a> at plinymiller@gmail.com.</p></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
-<script>
-/* ---- Settings: the project address and its publishable (public) key. Never put a secret key here. ---- */
-var SUPABASE_URL = "https://hzetipekhvzrhpojykyx.supabase.co";
-var SUPABASE_ANON_KEY = "sb_publishable_U53zrnmAqS2GmBP_LRx3bA_EDQjT4ah";
-/* -------------------------------------------------------------------------------------------- */
-(function(){
-  var $=function(id){return document.getElementById(id)};
-  var val=function(id){return $(id).value.trim()};
-  function say(id,kind,text){var m=$(id);m.className='msg '+kind;m.textContent=text;m.hidden=false}
-  function hush(id){$(id).hidden=true}
-  if(!(SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase)){ location.replace('88.html'); return; }
-  var db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-  var uid = null, people = [];
-
-  $('signOut').addEventListener('click', function(){ db.auth.signOut(); });
-  $('copyLink').addEventListener('click', function(){
-    var b=$('copyLink'), done=function(){b.textContent='Link copied';setTimeout(function(){b.textContent='Copy the link'},2200)};
-    try{navigator.clipboard.writeText('https://saranaclakeredskins.com/88.html').then(done,function(){b.textContent='Select the link above'})}catch(e){b.textContent='Select the link above'}
-  });
-
-  /* ---- Bulletin board ---- */
-  $('postBody').addEventListener('input', function(){ $('postLeft').textContent=(1000-$('postBody').value.length)+' characters left'; });
-  $('formPost').addEventListener('submit', async function(e){
-    e.preventDefault(); hush('postMsg');
-    var body=val('postBody');
-    if(!body) return say('postMsg','err','Write a message first.');
-    if(body.length>1000) return say('postMsg','err','Keep it to 1,000 characters.');
-    $('postBtn').disabled=true;
-    var r = await db.from('class_posts').insert({body:body});
-    $('postBtn').disabled=false;
-    if(r.error) return say('postMsg','err', r.error.message || 'Could not post. Try again.');
-    $('postBody').value=''; $('postLeft').textContent='1000 characters left'; loadPosts();
-  });
-  function when(ts){ try{ return new Date(ts).toLocaleString([], {year:'numeric',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}); }catch(e){ return ''; } }
-  async function loadPosts(){
-    var r = await db.rpc('board_posts'); var rows=(r.error||!r.data)?[]:r.data; var box=$('postList'); box.textContent='';
-    $('postEmpty').hidden=!!rows.length; $('postCount').textContent = rows.length ? rows.length+(rows.length===1?' message':' messages') : '';
-    rows.forEach(function(p){
-      var a=document.createElement('article'); a.className='post';
-      var h=document.createElement('header');
-      var by=document.createElement('span'); by.className='by'; by.textContent=((p.first_name||'')+' '+(p.last_name||'')).trim()||'A classmate';
-      var w=document.createElement('span'); w.className='when'; w.textContent=when(p.created_at);
-      h.appendChild(by); h.appendChild(w); a.appendChild(h);
-      var t=document.createElement('p'); t.textContent=p.body||''; a.appendChild(t);
-      if(p.mine){ var d=document.createElement('button'); d.type='button'; d.className='link'; d.textContent='Remove my message';
-        d.addEventListener('click', async function(){ d.disabled=true; var x=await db.from('class_posts').delete().eq('id',p.id); if(x.error){ d.disabled=false; say('postMsg','err',x.error.message); } else loadPosts(); });
-        a.appendChild(d); }
-      box.appendChild(a);
-    });
-  }
-
-  /* ---- Directory ---- */
-  function cell(text){ var td=document.createElement('td'); td.textContent=text||''; return td; }
-  function drawDirectory(){
-    var q=val('dirSearch').toLowerCase(); var tb=$('dirTable').querySelector('tbody'); tb.textContent='';
-    var rows=people.filter(function(p){ return !q || [p.first_name,p.last_name,p.grad_name,p.addr_city,p.addr_state].join(' ').toLowerCase().indexOf(q)>-1; });
-    $('dirTable').hidden=!rows.length; $('dirEmpty').hidden=!!rows.length;
-    $('dirEmpty').textContent = people.length ? 'No classmates match that search.' : 'No classmates listed yet.';
-    $('dirCount').textContent = people.length ? (q ? rows.length+' of '+people.length+' listed' : people.length+' listed') : '';
-    rows.forEach(function(p){ var tr=document.createElement('tr');
-      tr.appendChild(cell(p.first_name+' '+p.last_name+(p.grad_name?' ('+p.grad_name+')':'')));
-      tr.appendChild(cell([p.addr_city,p.addr_state].filter(Boolean).join(', ')));
-      tr.appendChild(cell(p.email)); tr.appendChild(cell(p.cell)); tb.appendChild(tr); });
-  }
-  $('dirSearch').addEventListener('input', drawDirectory);
-  async function loadDirectory(){ var r = await db.rpc('class_directory'); people=(r.error||!r.data)?[]:r.data; drawDirectory(); }
-
-  /* ---- News and photos ---- */
-  async function loadNews(){
-    var r = await db.from('class_news').select('posted_on,title,body').order('posted_on',{ascending:false});
-    var box=$('newsList'); if(r.error||!r.data||!r.data.length) return;
-    box.textContent='';
-    r.data.forEach(function(n){ var a=document.createElement('article');
-      var d=document.createElement('span'); d.className='label'; d.textContent=n.posted_on||'';
-      var h=document.createElement('h3'); h.textContent=n.title||'';
-      var p=document.createElement('p'); p.textContent=n.body||'';
-      a.appendChild(d); a.appendChild(h); a.appendChild(p); box.appendChild(a); });
-  }
-  async function loadPhotos(){
-    var r = await db.from('class_photos').select('image_url,caption').order('sort_order',{ascending:true});
-    var g=$('photoGrid'); g.textContent=''; var rows=(r.error||!r.data)?[]:r.data; $('photoEmpty').hidden=!!rows.length;
-    rows.forEach(function(ph){ if(!/^https:\/\//.test(ph.image_url||'')) return;
-      var f=document.createElement('figure'); var i=document.createElement('img'); i.src=ph.image_url; i.alt=ph.caption||'Class photo'; i.loading='lazy';
-      var c=document.createElement('figcaption'); c.textContent=ph.caption||''; f.appendChild(i); f.appendChild(c); g.appendChild(f); });
-  }
-
-  /* ---- Your details ---- */
-  $('formMe').addEventListener('submit', async function(e){
-    e.preventDefault(); hush('meMsg');
-    if(!val('meFirst')||!val('meLast')) return say('meMsg','err','Enter your first and last name.');
-    if(val('meCell').replace(/\D/g,'').length<10) return say('meMsg','err','Enter your cell number with area code.');
-    if(!uid) return;
-    var r = await db.from('profiles').update({ first_name:val('meFirst'), last_name:val('meLast'), grad_name:val('meGrad'), cell:val('meCell'),
-      addr_street:val('meStreet'), addr_city:val('meCity'), addr_state:val('meState'), addr_zip:val('meZip'),
-      listed:$('meListed').checked, show_email:$('meShowEmail').checked, show_cell:$('meShowCell').checked }).eq('id', uid);
-    if(r.error) say('meMsg','err', r.error.message); else { say('meMsg','ok','Saved.'); loadDirectory(); loadPosts(); }
-  });
-
-  async function render(session){
-    if(!session){ location.replace('88.html'); return; }
-    uid=session.user.id; $('page').hidden=false; $('who').hidden=false;
-    var r = await db.from('profiles').select('*').eq('id',uid).maybeSingle();
-    var me = r.data || {};
-    $('whoName').textContent = me.first_name ? me.first_name+' '+(me.last_name||'') : session.user.email;
-    $('meUser').textContent = me.username ? 'Username: '+me.username : '';
-    [['meFirst','first_name'],['meLast','last_name'],['meGrad','grad_name'],['meCell','cell'],['meStreet','addr_street'],['meCity','addr_city'],['meState','addr_state'],['meZip','addr_zip']]
-      .forEach(function(p){ $(p[0]).value = me[p[1]] || ''; });
-    $('meListed').checked=!!me.listed; $('meShowEmail').checked=!!me.show_email; $('meShowCell').checked=!!me.show_cell;
-    var ok=!!me.approved; $('pending').hidden=ok; $('roomPhotos').hidden=!ok;
-    loadPosts(); loadDirectory(); loadNews(); if(ok) loadPhotos();
-  }
-  var drawn=false;
-  db.auth.onAuthStateChange(function(event, session){
-    if(session && drawn && event!=='SIGNED_OUT') return;   // token refreshes should not redraw the page mid-typing
-    drawn=!!session; setTimeout(function(){ render(session); },0);
-  });
-})();
-</script>
+<script src="assets/config.js"></script>
+<script src="assets/home.js"></script>
 </body>
 </html>
