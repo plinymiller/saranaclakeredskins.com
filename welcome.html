@@ -3,23 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Class Home</title>
+<title>My Class Home | Saranac Lake Redskins</title>
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F1E6">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/class.css">
 </head>
 <body>
-<div class="top">
-  <nav aria-label="Site"><a href="index.html">&larr; Home</a><a href="classes.html">All classes</a><a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact us</a></nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html"><img src="assets/mark.jpg" width="40" height="40" alt=""><span>Saranac Lake Redskins</span></a>
+  <nav aria-label="Site"><a href="index.html">Home</a> <a href="classes.html">Find your class</a> <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact us</a></nav>
   <div class="who" id="who" hidden><span id="whoName"></span><button class="btn ghost" id="signOut" type="button">Sign out</button></div>
-</div>
+</header>
+
+<main id="main">
 <div class="wrap" id="page" hidden>
   <section class="hello">
     <div>
       <span class="label">Saranac Lake High School</span>
-      <h1>Welcome to our 21st home of the <em>Class of <span id="yrTitle"></span></em></h1>
+      <h1>Welcome to the virtual home of the <em>Class of <span id="yrTitle"></span></em></h1>
       <p>We&rsquo;re in the process of building this site. Please pass on the site info to fellow classmates, and feel free to leave a message on the bulletin board below or search the directory for classmates.</p>
     </div>
     <div class="share">
@@ -59,24 +67,21 @@
         </div>
         <div class="f search" style="margin:0;flex:1 1 260px"><label for="dirSearch">Search by name or city</label><input type="text" id="dirSearch" autocomplete="off"></div>
       </div>
+      <div class="dir-cards" id="dirCards"></div>
       <div class="scroll"><table class="dir" id="dirTable" hidden><thead><tr><th scope="col">Name</th><th scope="col" id="thClass">Class</th><th scope="col">City</th><th scope="col">Email</th><th scope="col">Cell</th></tr></thead><tbody></tbody></table></div>
       <p class="empty" id="dirEmpty">No one listed yet.</p>
     </div>
 
     <div class="room news">
       <header><h2>Reunion news</h2><span class="label">From the organizers</span></header>
-      <div id="newsList"><p class="empty">No news posted yet.</p></div>
+      <div id="newsList"><p class="empty">No news posted yet. Reunion dates will appear here when organizers share them.</p></div>
     </div>
-
-
 
     <div class="room" id="roomPhotos">
       <header><h2>Class photos</h2><span class="label" id="photoLabel"></span></header>
       <div class="photos" id="photoGrid"></div>
       <p class="empty" id="photoEmpty">No photos posted yet. Send yours to <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">plinymiller@gmail.com</a>.</p>
     </div>
-
-
 
     <div class="room">
       <header><h2>Your details</h2><span class="label" id="meUser"></span></header>
@@ -103,11 +108,21 @@
         <button class="btn" type="submit">Save changes</button>
       </form>
     </div>
-
-
   </section>
 </div>
-<footer><p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1960 to 2000. Questions, corrections, or to have your account and details removed: <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">contact us</a> at plinymiller@gmail.com.</p></footer>
+</main>
+<footer>
+  <div class="foot">
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact</a>
+    </nav>
+    <p class="credit">a plinymiller design – a B-Tuff Company</p>
+    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">contact us</a> at plinymiller@gmail.com.</p>
+  </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="assets/config.js"></script>
 <script src="assets/home.js"></script>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Class of 1909 | Saranac Lake Redskins</title>
+<meta name="description" content="Saranac Lake High School Class of 1909. Sign in for your class bulletin board, the classmate directory and reunion news.">
+<meta name="theme-color" content="#F7F1E6">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/class.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html"><img src="assets/mark.jpg" width="40" height="40" alt=""><span>Saranac Lake Redskins</span></a>
+  <nav aria-label="Site"><a href="index.html">Home</a> <a href="classes.html">Find your class</a> <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact us</a></nav>
+  
+</header>
+
+<main id="main" class="wrap">
+  <section class="desk" id="viewOut">
+    <div class="intro">
+      <p class="big" aria-hidden="true">1909</p>
+      <span class="label">Saranac Lake High School</span>
+      <h1>Class of 1909</h1>
+      <ol class="steps">
+        <li><b>1</b><span>Create your account. It takes about a minute.</span></li>
+        <li><b>2</b><span>Open the link we email you.</span></li>
+        <li><b>3</b><span>Post on the Class of 1909 board, find classmates, and say hello to every class.</span></li>
+      </ol>
+      <p class="pick">Not the Class of 1909? <a href="classes.html">Pick your year</a>.</p>
+    </div>
+
+    <div class="card">
+      <p class="msg note" id="offNote" hidden>Sign-up is not switched on yet. Check back soon.</p>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tabUp" aria-selected="true" aria-controls="formUp">Create account</button>
+        <button type="button" role="tab" id="tabIn" aria-selected="false" aria-controls="formIn">Log in</button>
+      </div>
+      <form id="formUp" novalidate>
+        <div class="row">
+          <div class="f"><label for="upFirst">First name</label><input type="text" id="upFirst" autocomplete="given-name" required></div>
+          <div class="f"><label for="upLast">Last name</label><input type="text" id="upLast" autocomplete="family-name" required></div>
+        </div>
+        <div class="f"><label for="upGrad">Name at graduation <i>(if different)</i></label><input type="text" id="upGrad"></div>
+        <div class="row">
+          <div class="f"><label for="upUser">Username</label><input type="text" id="upUser" autocomplete="username" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_.\-]+"></div>
+          <div class="f"><label for="upPass">Password <i>(8 or more characters)</i></label><input type="password" id="upPass" autocomplete="new-password" required minlength="8"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="upEmail">Email</label><input type="email" id="upEmail" autocomplete="email" required></div>
+          <div class="f"><label for="upCell">Cell phone</label><input type="tel" id="upCell" autocomplete="tel" required></div>
+        </div>
+        <fieldset>
+          <legend>Mailing address, optional</legend>
+          <div class="f"><label for="upStreet">Street</label><input type="text" id="upStreet" autocomplete="street-address"></div>
+          <div class="row three">
+            <div class="f"><label for="upCity">City</label><input type="text" id="upCity" autocomplete="address-level2"></div>
+            <div class="f"><label for="upState">State</label><input type="text" id="upState" autocomplete="address-level1"></div>
+            <div class="f"><label for="upZip">ZIP</label><input type="text" id="upZip" autocomplete="postal-code"></div>
+          </div>
+        </fieldset>
+        <label class="check" for="upListed"><input type="checkbox" id="upListed"><span>List my name and city in the classmate directory.</span></label>
+        <label class="check" for="upShowEmail"><input type="checkbox" id="upShowEmail"><span>Show my email to classmates in the directory.</span></label>
+        <label class="check" for="upShowCell"><input type="checkbox" id="upShowCell"><span>Show my cell number to classmates in the directory.</span></label>
+        <label class="check" for="upConsent"><input type="checkbox" id="upConsent" required><span>I agree that the class organizers may contact me about class news and reunions using the details above.</span></label>
+        <p class="msg" id="upMsg" hidden role="status"></p>
+        <button class="btn" type="submit" id="upBtn">Create account</button>
+        <p class="small">Your email, cell number and mailing address are seen only by the class organizers unless you tick the boxes above. They are never sold or shared outside the class. See our <a href="privacy.html">Privacy</a> page for details.</p>
+      </form>
+
+      <form id="formIn" hidden novalidate>
+        <div class="f"><label for="inEmail">Email</label><input type="email" id="inEmail" autocomplete="email" required></div>
+        <div class="f"><label for="inPass">Password</label><input type="password" id="inPass" autocomplete="current-password" required></div>
+        <p class="msg" id="inMsg" hidden role="status"></p>
+        <button class="btn" type="submit" id="inBtn">Log in</button>
+        <button class="link" type="button" id="forgot">Forgot your password?</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="desk" id="viewReset" hidden>
+    <div class="intro"><p class="big" aria-hidden="true">1909</p><h1>Choose a new password</h1></div>
+    <div class="card">
+      <form id="formReset" novalidate>
+        <div class="f"><label for="rsPass">New password <i>(8 or more characters)</i></label><input type="password" id="rsPass" autocomplete="new-password" required minlength="8"></div>
+        <p class="msg" id="rsMsg" hidden role="status"></p>
+        <button class="btn" type="submit">Save password</button>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="foot">
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact</a>
+    </nav>
+    <p class="credit">a plinymiller design – a B-Tuff Company</p>
+    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">contact us</a> at plinymiller@gmail.com.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="assets/config.js"></script>
+<script>var CLASS_YEAR = 1909;</script>
+<script src="assets/signin.js"></script>
+</body>
+</html>

@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saranac Lake Redskins</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #4a0e0e;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      overflow: hidden;
-    }
-    .wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-    }
-    .wrapper img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .feather-tip {
-      position: absolute;
-      left: 34.9%;
-      top: 84%;
-      width: 5.5%;
-      height: 10%;
-      background: transparent;
-      z-index: 10;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saranac Lake Redskins</title>
+<meta name="description" content="An independent alumni project for Saranac Lake High School classes of 1890 to 2000. Find your class, sign in, and reconnect.">
+<meta name="theme-color" content="#F7F1E6">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/class.css">
 </head>
-<body>
-  <div class="wrapper">
-    <img src="logo.jpg" alt="Saranac Lake Redskins">
-    <a href="88.html" class="feather-tip" aria-label="88"></a>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html"><img src="assets/mark.jpg" width="40" height="40" alt=""><span>Saranac Lake Redskins</span></a>
+  <nav aria-label="Site"><a href="index.html" aria-current="page">Home</a> <a href="classes.html">Find your class</a> <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact us</a></nav>
+  
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="logo-wrap">
+      <img src="logo.jpg" width="1328" height="784" alt="Saranac Lake Redskins">
+      <a href="88.html" class="feather-tip" aria-label="Class of 1988"></a>
+    </div>
+    <div class="hero-copy">
+      <p class="label">Saranac Lake High School alumni</p>
+      <h1>Find your class</h1>
+      <p>An independent alumni project for the classes of 1890 to 2000. Sign in for your class bulletin board, the classmate directory, and reunion news.</p>
+      <a class="btn" href="classes.html">Find your class</a>
+    </div>
+  </section>
+  <section class="panel" aria-labelledby="news-heading">
+    <div class="panel-box">
+      <h2 id="news-heading">Class news</h2>
+      <p>Reunion dates, photos, and class group links will be posted here. To share one, <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">email us</a> at plinymiller@gmail.com.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="foot">
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact</a>
+    </nav>
+    <p class="credit">a plinymiller design – a B-Tuff Company</p>
+    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">contact us</a> at plinymiller@gmail.com.</p>
   </div>
+</footer>
+
 </body>
 </html>

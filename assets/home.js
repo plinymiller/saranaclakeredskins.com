@@ -4,7 +4,24 @@
   var val=function(id){return $(id).value.trim()};
   function say(id,kind,text){var m=$(id);m.className='msg '+kind;m.textContent=text;m.hidden=false}
   function hush(id){$(id).hidden=true}
-  function yy(y){ return ('0'+(y%100)).slice(-2); }
+  var firstYear = (typeof FIRST_YEAR==='number') ? FIRST_YEAR : 1890;
+  var lastYear = (typeof LAST_YEAR==='number') ? LAST_YEAR : 2000;
+  function yearFile(y){
+    y = Number(y);
+    if (y === 2000) return '00.html';
+    if (y >= 1960 && y <= 1999) return ('0'+(y%100)).slice(-2)+'.html';
+    return y + '.html';
+  }
+  function yy(y){
+    y = Number(y);
+    if (y >= 1960 && y <= 2000) return ('0'+(y%100)).slice(-2);
+    return String(y);
+  }
+  function yearMark(y){
+    y = Number(y);
+    if (y >= 1960 && y <= 2000) return '\u2019'+yy(y);
+    return String(y);
+  }
 
   if(!(SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase)){ location.replace('classes.html'); return; }
   var db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -22,7 +39,7 @@
     $('bdClass').setAttribute('aria-pressed', String(!all)); $('bdAll').setAttribute('aria-pressed', String(all));
     $('postingTo').textContent='';
     var t=document.createTextNode('Posting to: '), b=document.createElement('b');
-    b.textContent = all ? 'All classes, 1960 to 2000' : 'Class of '+myYear+' only';
+    b.textContent = all ? 'All classes, '+firstYear+' to '+lastYear : 'Class of '+myYear+' only';
     $('postingTo').appendChild(t); $('postingTo').appendChild(b);
     $('postLabel').textContent = all ? 'Leave a message for every class' : 'Leave a message for the Class of '+myYear;
     hush('postMsg'); loadPosts();
@@ -45,7 +62,7 @@
   async function loadPosts(){
     var want=boardAll;
     var r = await db.rpc('board_posts',{p_all:want});
-    if(want!==boardAll) return;                       // the member switched boards while this was loading
+    if(want!==boardAll) return;
     var rows=(r.error||!r.data)?[]:r.data; var box=$('postList'); box.textContent='';
     $('postEmpty').hidden=!!rows.length;
     $('postEmpty').textContent = want ? 'No messages on the all-classes board yet. Be the first to say hello.' : 'No messages from the Class of '+myYear+' yet. Be the first to say hello.';
@@ -54,7 +71,7 @@
       var a=document.createElement('article'); a.className='post';
       var h=document.createElement('header');
       var by=document.createElement('span'); by.className='by'; by.textContent=((p.first_name||'')+' '+(p.last_name||'')).trim()||'A classmate';
-      if(want && p.author_year){ var tg=document.createElement('span'); tg.className='tag'; tg.textContent='’'+yy(p.author_year); by.appendChild(tg); }
+      if(want && p.author_year){ var tg=document.createElement('span'); tg.className='tag'; tg.textContent=yearMark(p.author_year); by.appendChild(tg); }
       var w=document.createElement('span'); w.className='when'; w.textContent=when(p.created_at);
       h.appendChild(by); h.appendChild(w); a.appendChild(h);
       var t=document.createElement('p'); t.textContent=p.body||''; a.appendChild(t);
@@ -67,17 +84,39 @@
 
   /* ---------- Directory ---------- */
   function cell(text){ var td=document.createElement('td'); td.textContent=text||''; return td; }
+  function personName(p){ return (p.first_name+' '+p.last_name+(p.grad_name?' ('+p.grad_name+')':'')).trim(); }
+  function personCity(p){ return [p.addr_city,p.addr_state].filter(Boolean).join(', '); }
+  function addRow(dl, label, value){
+    if(!value) return;
+    var dt=document.createElement('dt'); dt.textContent=label;
+    var dd=document.createElement('dd'); dd.textContent=value;
+    dl.appendChild(dt); dl.appendChild(dd);
+  }
   function drawDirectory(){
-    var q=val('dirSearch').toLowerCase(); var tb=$('dirTable').querySelector('tbody'); tb.textContent='';
+    var q=val('dirSearch').toLowerCase();
+    var tb=$('dirTable').querySelector('tbody'); tb.textContent='';
+    var cards=$('dirCards'); if(cards) cards.textContent='';
     var rows=people.filter(function(p){ return !q || [p.first_name,p.last_name,p.grad_name,p.addr_city,p.addr_state,p.class_year].join(' ').toLowerCase().indexOf(q)>-1; });
     $('dirTable').hidden=!rows.length; $('dirEmpty').hidden=!!rows.length;
     $('dirEmpty').textContent = people.length ? 'No one matches that search.' : (dirAll ? 'No one listed yet.' : 'No one from the Class of '+myYear+' is listed yet.');
     $('dirCount').textContent = people.length ? (q ? rows.length+' of '+people.length+' listed' : people.length+' listed') : '';
-    rows.forEach(function(p){ var tr=document.createElement('tr');
-      tr.appendChild(cell(p.first_name+' '+p.last_name+(p.grad_name?' ('+p.grad_name+')':'')));
+    rows.forEach(function(p){
+      var tr=document.createElement('tr');
+      tr.appendChild(cell(personName(p)));
       tr.appendChild(cell(p.class_year ? String(p.class_year) : ''));
-      tr.appendChild(cell([p.addr_city,p.addr_state].filter(Boolean).join(', ')));
-      tr.appendChild(cell(p.email)); tr.appendChild(cell(p.cell)); tb.appendChild(tr); });
+      tr.appendChild(cell(personCity(p)));
+      tr.appendChild(cell(p.email)); tr.appendChild(cell(p.cell)); tb.appendChild(tr);
+      if(cards){
+        var art=document.createElement('article'); art.className='person';
+        var h=document.createElement('h3'); h.textContent=personName(p); art.appendChild(h);
+        var dl=document.createElement('dl');
+        addRow(dl,'Class', p.class_year ? String(p.class_year) : '');
+        addRow(dl,'City', personCity(p));
+        addRow(dl,'Email', p.email||'');
+        addRow(dl,'Cell', p.cell||'');
+        art.appendChild(dl); cards.appendChild(art);
+      }
+    });
   }
   $('dirSearch').addEventListener('input', drawDirectory);
   async function loadDirectory(){
@@ -97,7 +136,7 @@
     var box=$('newsList'); if(r.error||!r.data||!r.data.length) return;
     box.textContent='';
     r.data.forEach(function(n){ var a=document.createElement('article');
-      var d=document.createElement('span'); d.className='label'; d.textContent=(n.posted_on||'')+(n.class_year?'  ·  Class of '+n.class_year:'  ·  All classes');
+      var d=document.createElement('span'); d.className='label'; d.textContent=(n.posted_on||'')+(n.class_year?'  \u00b7  Class of '+n.class_year:'  \u00b7  All classes');
       var h=document.createElement('h3'); h.textContent=n.title||'';
       var p=document.createElement('p'); p.textContent=n.body||'';
       a.appendChild(d); a.appendChild(h); a.appendChild(p); box.appendChild(a); });
@@ -130,11 +169,11 @@
     myYear = me.class_year || 1988;
     document.title = 'Class of '+myYear+' Home';
     $('yrTitle').textContent = myYear;
-    $('shareLink').textContent = 'saranaclakeredskins.com/'+yy(myYear)+'.html';
+    $('shareLink').textContent = 'saranaclakeredskins.com/'+yearFile(myYear);
     $('bdClass').textContent = 'Class of '+myYear; $('drClass').textContent = 'Class of '+myYear;
     $('photoLabel').textContent = 'Class of '+myYear;
-    $('whoName').textContent = (me.first_name ? me.first_name+' '+(me.last_name||'') : session.user.email)+'  ·  ’'+yy(myYear);
-    $('meUser').textContent = (me.username ? 'Username: '+me.username+'  ·  ' : '')+'Class of '+myYear;
+    $('whoName').textContent = (me.first_name ? me.first_name+' '+(me.last_name||'') : session.user.email)+'  \u00b7  '+yearMark(myYear);
+    $('meUser').textContent = (me.username ? 'Username: '+me.username+'  \u00b7  ' : '')+'Class of '+myYear;
     [['meFirst','first_name'],['meLast','last_name'],['meGrad','grad_name'],['meCell','cell'],['meStreet','addr_street'],['meCity','addr_city'],['meState','addr_state'],['meZip','addr_zip']]
       .forEach(function(p){ $(p[0]).value = me[p[1]] || ''; });
     $('meListed').checked=!!me.listed; $('meShowEmail').checked=!!me.show_email; $('meShowCell').checked=!!me.show_cell;
@@ -144,7 +183,7 @@
   }
   var drawn=false;
   db.auth.onAuthStateChange(function(event, session){
-    if(session && drawn && event!=='SIGNED_OUT') return;   // token refreshes should not redraw the page mid-typing
+    if(session && drawn && event!=='SIGNED_OUT') return;
     drawn=!!session; setTimeout(function(){ render(session); },0);
   });
 })();
