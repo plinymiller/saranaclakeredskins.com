@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONTACT = "plinymiller@gmail.com"
 MAIL = "mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site"
-CREDIT = "a plinymiller design \u2013 a B-Tuff Company"
+CREDIT = "a <a href=\"https://plinymiller.com\" target=\"_blank\" rel=\"noopener\">plinymiller design</a> \u2013 a <a href=\"https://b-tuff.co\" target=\"_blank\" rel=\"noopener\">B-Tuff Company</a>"
 FIRST, LAST = 1890, 2000
 FONTS = "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap"
 

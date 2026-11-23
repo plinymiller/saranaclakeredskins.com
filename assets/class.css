@@ -205,3 +205,4 @@ footer p{margin:0}
   .brand span{max-width:12ch}
   .top{align-items:flex-start}
 }
+.credit a{color:inherit;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:10px 0}
