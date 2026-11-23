@@ -37,7 +37,7 @@ def head(title: str, description: str | None = None, robots: str | None = None) 
           f'<meta property="og:site_name" content="Saranac Lake Redskins">\n'
           f'<meta property="og:title" content="{title}">\n'
           f'<meta property="og:description" content="{og_desc}">\n'
-          f'<meta property="og:image" content="{SITE}/assets/og-card.png">\n'
+          f'<meta property="og:image" content="{SITE}/assets/og-card.png?v=4">\n'
           f'<meta property="og:image:width" content="1200">\n'
           f'<meta property="og:image:height" content="630">\n'
           f'<meta property="og:image:alt" content="Saranac Lake Redskins badge">\n'
