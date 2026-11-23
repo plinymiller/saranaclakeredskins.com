@@ -9,7 +9,7 @@ CREDIT = "a <a href=\"https://plinymiller.com\" target=\"_blank\" rel=\"noopener
 KOFI = "https://ko-fi.com/plinymiller"
 SUPPORT_BLURB = "This site is a volunteer labor of love. Contributions help cover web hosting, the domain, and upkeep \u2014 nothing more. This site is not a nonprofit, and contributions are not tax-deductible."
 FIRST, LAST = 1890, 2000
-FONTS = "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;0,6..96,700;0,6..96,800;1,6..96,600;1,6..96,700;1,6..96,800&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@500;600;700&display=swap"
+FONTS = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap"
 
 
 def year_file(y: int) -> str:

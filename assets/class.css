@@ -24,9 +24,9 @@
   --warn-bg:#FBECD0;
   --err-ink:#8B1220;
   --err-bg:#F8E6E8;
-  --display:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
-  --label:"Barlow Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
-  --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+  --display:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;
+  --label:"Bebas Neue","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --body:"Roboto","Helvetica Neue",Arial,sans-serif;
   --gutter:clamp(16px,4vw,56px);
   --header-h:64px;
 }
@@ -275,3 +275,7 @@ b,strong{font-weight:700}
   .top nav a{white-space:nowrap;font-size:.88rem}
 }
 @media (max-width:560px){.teasers{grid-template-columns:1fr}.teaser{min-height:0}}
+
+/* v3 fonts: Bebas Neue (headings, labels, nav) + Roboto (body).
+   Bebas Neue ships one weight; never fake-bold or fake-italic it. Roboto weights 400-800 are all loaded. */
+html{font-synthesis:none}
