@@ -26,8 +26,22 @@ def year_mark(y: int) -> str:
     return str(y)
 
 
+SITE = "https://saranaclakeredskins.com"
+OG_DEFAULT = "An independent alumni project for Saranac Lake High School classes of 1890 to 2000."
+
+
 def head(title: str, description: str | None = None, robots: str | None = None) -> str:
     desc = f'<meta name="description" content="{description}">\n' if description else ""
+    og_desc = description or OG_DEFAULT
+    og = (f'<meta property="og:type" content="website">\n'
+          f'<meta property="og:site_name" content="Saranac Lake Redskins">\n'
+          f'<meta property="og:title" content="{title}">\n'
+          f'<meta property="og:description" content="{og_desc}">\n'
+          f'<meta property="og:image" content="{SITE}/assets/og-card.png">\n'
+          f'<meta property="og:image:width" content="1200">\n'
+          f'<meta property="og:image:height" content="630">\n'
+          f'<meta property="og:image:alt" content="Saranac Lake Redskins badge">\n'
+          f'<meta name="twitter:card" content="summary_large_image">\n')
     rob = f'<meta name="robots" content="{robots}">\n' if robots else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -35,9 +49,10 @@ def head(title: str, description: str | None = None, robots: str | None = None) 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
-{desc}{rob}<meta name="theme-color" content="#F7F1E6">
+{desc}{rob}{og}<meta name="theme-color" content="#F7F1E6">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,9 +73,9 @@ def header(current: str | None = None, extra: str = "", home: bool = False) -> s
     ])
     if home:
         brand = ('<a class="brand" href="index.html" aria-label="Saranac Lake Redskins home">'
-                 '<img src="assets/mark.jpg" width="64" height="64" alt=""></a>')
+                 f'<img src="assets/logo-badge.svg" width="64" height="64" alt="{BADGE_ALT}"></a>')
     else:
-        brand = ('<a class="brand" href="index.html"><img src="assets/mark.jpg" width="40" height="40" alt="">'
+        brand = ('<a class="brand" href="index.html"><img src="assets/logo-badge.svg" width="48" height="48" alt="">'
                  '<span>Saranac Lake Redskins</span></a>')
     return f"""<a class="skip" href="#main">Skip to content</a>
 <header class="top">
@@ -71,11 +86,17 @@ def header(current: str | None = None, extra: str = "", home: bool = False) -> s
 """
 
 
-LOGO_NOTICE = "The Redskins logo is a trademark and copyright of the Washington Redskins football club (now the Washington Commanders). This site is not affiliated with or endorsed by the club or the NFL."
+BADGE_ALT = "Saranac Lake Redskins badge"
+LOGO_NOTICE = "This site is not affiliated with or endorsed by the Washington Commanders (formerly the Washington Redskins) or the NFL."
+
+
+def divider() -> str:
+    return ('<div class="brand-divider" aria-hidden="true"><span></span>'
+            '<img src="assets/mark-red.svg" width="56" height="62" alt=""><span></span></div>')
 
 
 def footer(logo_notice: bool = False) -> str:
-    notice = f'\n    <p class="logo-notice">&copy; {LOGO_NOTICE}</p>' if logo_notice else ""
+    notice = f'\n    <p class="logo-notice">{LOGO_NOTICE}</p>' if logo_notice else ""
     return f"""<footer>
   <div class="foot">
     <nav aria-label="Legal">
@@ -84,7 +105,7 @@ def footer(logo_notice: bool = False) -> str:
       <a href="support.html">Support</a>
       <a href="{MAIL}">Contact</a>
     </nav>
-    <p class="credit">{CREDIT}</p>
+    <p class="credit"><img class="foot-mark" src="assets/mark-maroon.svg" width="34" height="38" alt="">{CREDIT}</p>
     <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="{MAIL}">contact us</a> at {CONTACT}.</p>{notice}
   </div>
 </footer>
@@ -106,7 +127,7 @@ def index_page() -> str:
 <main id="main">
   <section class="hero">
     <div class="logo-wrap">
-      <img src="logo.jpg" width="1328" height="784" alt="Saranac Lake Redskins">
+      <img src="assets/logo-badge.svg" width="1480" height="1480" alt="{BADGE_ALT}" fetchpriority="high">
       <a href="88.html" class="feather-tip" aria-label="Class of 1988"></a>
     </div>
     <div class="hero-copy">
@@ -122,6 +143,7 @@ def index_page() -> str:
       <p>Reunion dates, photos, and class group links will be posted here. To share one, <a href="{MAIL}">email us</a> at {CONTACT}.</p>
     </div>
   </section>
+  {divider()}
   <section class="panel support-panel" id="support" aria-labelledby="support-heading">
     <div class="panel-box">
       <p class="label">Support</p>
@@ -445,6 +467,7 @@ def not_found_page() -> str:
     return head("Page not found | Saranac Lake Redskins") + f"""<body>
 {header()}
 <main id="main" class="lost">
+  <img class="lost-mark" src="assets/mark-red.svg" width="120" height="134" alt="">
   <span class="label">Saranac Lake Redskins</span>
   <h1>This page is not here</h1>
   <p>The address may be mistyped, or the page may have moved. You can go back home or find your class by year.</p>
@@ -465,7 +488,8 @@ def support_page() -> str:
         "Help keep this alumni site online. Contributions cover web hosting, the domain, and upkeep.",
     ) + f"""<body>
 {header()}
-<main id="main" class="wrap prose">
+<main id="main" class="wrap prose support-page">
+  <img class="page-mark" src="assets/mark-maroon.svg" width="96" height="107" alt="">
   <span class="label">Support</span>
   <h1>Support this site</h1>
   <p>{SUPPORT_BLURB}</p>

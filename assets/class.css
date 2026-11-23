@@ -1,5 +1,6 @@
 /* Saranac Lake Redskins alumni site
-   Colors sampled from logo.jpg: maroon #65121E, gold #F3A71D. */
+   Brand kit palette (sampled from the official logo files):
+   maroon #65121E, gold #F3A71D, cream #F7F1E6, heritage red #A6192E, white #FFFFFF. */
 
 :root{
   color-scheme:light;
@@ -7,6 +8,7 @@
   --maroon-deep:#4A1018;
   --maroon-soft:#8A2A36;
   --gold:#F3A71D;
+  --red:#A6192E;
   --gold-ink:#8A5A08;
   --cream:#F7F1E6;
   --cream-2:#EFE4D0;
@@ -46,7 +48,7 @@ a:hover{color:var(--maroon-deep)}
 /* Header */
 .top{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding:10px var(--gutter);border-bottom:1px solid var(--line);background:var(--cream);position:sticky;top:0;z-index:20}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--maroon);font-family:var(--display);font-weight:700;font-size:1.05rem;line-height:1.15;min-height:44px}
-.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid var(--line-strong);background:var(--maroon)}
+.brand img{width:48px;height:48px;display:block}
 .brand span{max-width:16ch}
 .top nav{display:flex;gap:4px 6px;align-items:center;flex-wrap:wrap}
 .top nav a,.top .who{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none;font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:.95rem;color:var(--maroon)}
@@ -60,9 +62,9 @@ a:hover{color:var(--maroon-deep)}
 @media (min-width:880px){
   .hero{grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr)}
 }
-.logo-wrap{position:relative;background:var(--maroon);border-radius:4px;overflow:hidden;box-shadow:0 10px 40px rgba(26,18,16,.18)}
+.logo-wrap{position:relative;width:100%;max-width:560px;margin:0 auto;aspect-ratio:1/1;filter:drop-shadow(0 10px 28px rgba(26,18,16,.16))}
 .logo-wrap img{width:100%;height:auto;display:block}
-.feather-tip{position:absolute;left:37.6%;top:90.1%;width:8%;height:14%;min-width:48px;min-height:48px;transform:translate(-50%,-50%);background:transparent;z-index:10}
+.feather-tip{position:absolute;left:30%;top:74.5%;width:8%;height:10%;min-width:48px;min-height:48px;transform:translate(-50%,-50%);background:transparent;z-index:10}
 .hero-copy .label{margin:0 0 .4em}
 .hero-copy h1{margin:0 0 .35em;font-family:var(--display);font-weight:500;font-size:clamp(2.3rem,6vw,4.6rem);line-height:1.02;color:var(--maroon);text-wrap:balance}
 .hero-copy p{margin:0 0 1.2em;max-width:40ch;color:var(--ink-soft);font-size:1.08rem}
@@ -219,3 +221,14 @@ footer p{margin:0}
 .home .brand img{width:64px;height:64px}
 .site-title{flex:1 1 12ch;margin:0;font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.05;color:var(--maroon);text-wrap:balance}
 .logo-notice{font-size:.85rem;border-top:1px solid var(--line);padding-top:10px}
+
+/* Brand kit: badge (#3) as primary logo, maroon mark (#1) and heritage red mark (#2) as accents */
+.brand-divider{display:flex;align-items:center;gap:18px;max-width:1300px;margin:0 auto;padding:0 var(--gutter) clamp(32px,5vw,56px)}
+.brand-divider span{flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold) 70%,transparent)}
+.brand-divider img{width:56px;height:auto;display:block}
+.support-panel .panel-box{position:relative;overflow:hidden}
+.support-panel .panel-box::after{content:"";position:absolute;right:-28px;bottom:-36px;width:220px;height:246px;background:url(mark-maroon.svg) no-repeat center/contain;opacity:.07;pointer-events:none}
+.support-panel .panel-box > *{position:relative;z-index:1}
+.foot-mark{width:34px;height:auto;vertical-align:middle;margin-right:10px}
+.page-mark{display:block;width:96px;height:auto;margin:0 0 14px}
+.lost-mark{display:block;width:120px;height:auto;margin:0 auto 18px}
