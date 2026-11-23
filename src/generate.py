@@ -9,7 +9,7 @@ CREDIT = "a <a href=\"https://plinymiller.com\" target=\"_blank\" rel=\"noopener
 KOFI = "https://ko-fi.com/plinymiller"
 SUPPORT_BLURB = "This site is a volunteer labor of love. Contributions help cover web hosting, the domain, and upkeep \u2014 nothing more. This site is not a nonprofit, and contributions are not tax-deductible."
 FIRST, LAST = 1890, 2000
-FONTS = "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500;1,6..96,700&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap"
+FONTS = "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;0,6..96,700;0,6..96,800;1,6..96,600;1,6..96,700;1,6..96,800&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@500;600;700&display=swap"
 
 
 def year_file(y: int) -> str:
@@ -62,26 +62,34 @@ def head(title: str, description: str | None = None, robots: str | None = None) 
 """
 
 
+SITE_TITLE = "Home of the Saranac Lake Redskins"
+SECTIONS = [
+    ("sports", "sports.html", "Sports"),
+    ("arts", "arts.html", "Arts"),
+    ("news", "news.html", "News"),
+    ("memoriam", "in-memoriam.html", "In Memoriam"),
+]
+
+
 def header(current: str | None = None, extra: str = "", home: bool = False) -> str:
     def item(href, label, key):
         cur = ' aria-current="page"' if current == key else ""
         return f'<a href="{href}"{cur}>{label}</a>'
-    nav = " ".join([
-        item("index.html", "Home", "home"),
-        item("classes.html", "Find your class", "classes"),
-        f'<a href="{MAIL}">Contact us</a>',
-    ])
-    if home:
-        brand = ('<a class="brand" href="index.html" aria-label="Saranac Lake Redskins home">'
-                 f'<img src="assets/logo-badge.svg" width="64" height="64" alt="{BADGE_ALT}"></a>')
-    else:
-        brand = ('<a class="brand" href="index.html"><img src="assets/logo-badge.svg" width="48" height="48" alt="">'
-                 '<span>Saranac Lake Redskins</span></a>')
+    links = [item("index.html", "Home", "home")]
+    links += [item(href, label, key) for key, href, label in SECTIONS]
+    links += [item("classes.html", "Find your class", "classes"), f'<a href="{MAIL}">Contact us</a>']
+    nav = " ".join(links)
+    brand = ('<a class="brand" href="index.html">'
+             f'<img src="assets/logo-badge.svg" width="64" height="64" alt="{BADGE_ALT}">'
+             f'<span class="brand-title">{SITE_TITLE}</span></a>')
+    extra_html = f'<div class="top-extra">{extra}</div>' if extra else ""
     return f"""<a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  {brand}
+  <div class="top-row">
+    {brand}
+    {extra_html}
+  </div>
   <nav aria-label="Site">{nav}</nav>
-  {extra}
 </header>
 """
 
@@ -132,7 +140,7 @@ def index_page() -> str:
     </div>
     <div class="hero-copy">
       <p class="label">Saranac Lake High School alumni</p>
-      <h1>Home of the Saranac Lake Redskins</h1>
+      <h1>Welcome home, alumni</h1>
       <p>An independent alumni project for the classes of 1890 to 2000. Sign in for your class bulletin board, the classmate directory, and reunion news.</p>
       <a class="btn" href="classes.html">Find your class</a>
     </div>
@@ -143,6 +151,7 @@ def index_page() -> str:
       <p>Reunion dates, photos, and class group links will be posted here. To share one, <a href="{MAIL}">email us</a> at {CONTACT}.</p>
     </div>
   </section>
+  {teasers()}
   {divider()}
   <section class="panel support-panel" id="support" aria-labelledby="support-heading">
     <div class="panel-box">
@@ -501,7 +510,79 @@ def support_page() -> str:
 """
 
 
+SECTION_COPY = {
+    "sports": ("Sports", "Redskins sports",
+               "Teams, seasons, coaches and the games people still talk about.",
+               "Stories and photos coming soon. Send yours, with your class year, to"),
+    "arts": ("Arts", "Arts and music",
+             "Band, chorus, drama, art and the stage crews behind them.",
+             "Stories and photos coming soon. Send yours, with your class year, to"),
+    "news": ("News", "Alumni news",
+             "Reunions, milestones and updates from Saranac Lake alumni.",
+             "News and announcements coming soon. Send yours, with your class year, to"),
+    "memoriam": ("In Memoriam", "In memoriam",
+                 "Remembering classmates, teachers and coaches.",
+                 "Remembrances will be shared here with care."),
+}
+
+
+def teasers() -> str:
+    cards = []
+    for key, href, label in SECTIONS:
+        _, _, blurb, _ = SECTION_COPY[key]
+        cls = " memoriam" if key == "memoriam" else ""
+        cards.append(f'<a class="teaser{cls}" href="{href}"><span class="label">{label}</span>'
+                     f'<strong>{SECTION_COPY[key][1]}</strong><span class="teaser-text">{blurb}</span>'
+                     f'<span class="teaser-go" aria-hidden="true">&rarr;</span></a>')
+    return f"""<section class="panel" aria-labelledby="sections-heading">
+    <h2 id="sections-heading" class="sr-only">Explore</h2>
+    <div class="teasers">{''.join(cards)}</div>
+  </section>"""
+
+
+def section_page(key: str) -> str:
+    href = next(h for k, h, _ in SECTIONS if k == key)
+    label, title, blurb, soon = SECTION_COPY[key]
+    if key == "memoriam":
+        body = f"""<main id="main" class="wrap memoriam-page">
+  <header class="pagehead">
+    <span class="label">{label}</span>
+    <h1>{title}</h1>
+    <p class="lede">{blurb}</p>
+  </header>
+  <div class="memoriam-box">
+    <p>{soon}</p>
+    <p>To remember a classmate, teacher or coach, email their name, class year, and a few words to <a href="{MAIL}">{CONTACT}</a>. A photo is welcome. We will check details with you before anything is posted.</p>
+  </div>
+</main>"""
+    else:
+        body = f"""<main id="main" class="wrap section-page">
+  <header class="pagehead">
+    <span class="label">{label}</span>
+    <h1>{title}</h1>
+    <p class="lede">{blurb}</p>
+  </header>
+  <div class="panel-box soon">
+    <img src="assets/mark-red.svg" width="64" height="71" alt="">
+    <div>
+      <h2>Coming soon</h2>
+      <p>{soon} <a href="{MAIL}">{CONTACT}</a>.</p>
+    </div>
+  </div>
+</main>"""
+    return head(f"{label} | Saranac Lake Redskins",
+                f"{blurb} Saranac Lake High School alumni, classes of 1890 to 2000.") + f"""<body>
+{header(key)}
+{body}
+{footer()}
+</body>
+</html>
+"""
+
+
 def main() -> None:
+    for key, href, _ in SECTIONS:
+        write(href, section_page(key))
     write("index.html", index_page())
     write("classes.html", classes_page())
     write("welcome.html", welcome_page())
