@@ -366,7 +366,7 @@ def build(g: dict) -> None:
         href = gfile(gm) if gm else E(v["url"])
         ext = "" if gm else ' target="_blank" rel="noopener"'
         sc = f'<span class="sc {gm["result"]}">{gm["result"]} {score(gm)}</span>' if gm and has_score(gm) and gm.get("result") else ""
-        mine = '<span class="own">Brian&rsquo;s film</span>' if v.get("owner_is_brian") else ""
+        mine = '<span class="own">adkdon&rsquo;s film</span>' if v.get("owner_is_brian") else ""
         label = f'{gm["season"]} {ha(gm)} {E(gm["opponent"])}' if gm else E(v["title"])
         return (f'<a class="tile" href="{href}"{ext}><span class="th"><img src="{yt_thumb(E(v["youtube_id"]))}" alt="" loading="lazy" width="480" height="360">{sc}{mine}</span>'
                 f'<span class="tt">{label}</span><span class="ts">{E(v.get("channel"))}{(" &middot; " + E(v["length"])) if v.get("length") else ""}</span></a>')
@@ -375,7 +375,7 @@ def build(g: dict) -> None:
             return int(v.get("season"))
         except Exception:
             return 0
-    rails = [("Brian&rsquo;s film archive", "Uploaded by Brian P Fina", [v for v in vids if v.get("owner_is_brian")]),
+    rails = [("adkdon&rsquo;s film archive", "Uploaded by adkdon", [v for v in vids if v.get("owner_is_brian")]),
              ("The Massena series, 1957&ndash;2010", "Massena Sports Archive", [v for v in vids if "Massena Sports" in (v.get("channel") or "")]),
              ("The &rsquo;90s run", "1991&ndash;2001, including the 1995 Carrier Dome season",
               [v for v in vids if 1990 <= sy(v) <= 2001 and "Massena Sports" not in (v.get("channel") or "") and not v.get("owner_is_brian") and "hall of fame" not in (v.get("title") or "").lower()]),
