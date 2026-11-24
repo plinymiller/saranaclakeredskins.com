@@ -17,7 +17,7 @@
     var media=c.youtube_id?'<button class="play" type="button" data-yt="'+esc(c.youtube_id)+'" aria-label="Play clip"><i></i></button>':'';
     var badge=c.tier==="likely"?'<span class="soon">Band playing</span>':'<span class="soon chk">Music &middot; check</span>';
     return '<li class="cc" id="'+esc(c.id)+'"><div class="player"><img src="'+esc(c.thumb)+'" alt="Still from '+esc(c.tape)+' at '+esc(c.tape_time)+'" loading="lazy" width="640" height="480">'+badge+media+'<span class="dur">'+mm(c.duration)+'</span></div>'+
-      '<h4 class="cc-t">'+(c.song?esc(c.song):'<span class="tbc">Song not yet named</span>')+'</h4>'+
+      '<h4 class="cc-t">'+(c.song?esc(c.song):esc(c.display_title||'Band selection')+' <span class="tbc">&middot; song not yet named</span>')+'</h4>'+
       '<p class="cc-m">Starts '+esc(tapeTime(c.tape_time))+' into the tape'+(c.youtube_id?'':' &middot; YouTube soon')+'</p>'+
       '<details class="roster"><summary>Credits ('+named+' named)</summary><dl class="credits"><dt>Band</dt><dd>'+(c.band?esc(c.band):'<span class="need">Which band? Tell us</span>')+'</dd><dt>Director</dt><dd>'+director(c)+'</dd>'+
       '<dt>Drum major</dt><dd>'+(c.drum_major?esc(c.drum_major):'<span class="need">Not yet named</span>')+'</dd><dt>Soloists</dt><dd>'+(c.soloists?esc(c.soloists):'<span class="need">Not yet named</span>')+'</dd></dl><ul>'+rows+'</ul></details>'+
