@@ -205,6 +205,7 @@ def classes_page() -> str:
     <span class="label">Saranac Lake High School alumni</span>
     <h1>Find your class</h1>
     <p class="lede">Pick the year you graduated. Each class has its own bulletin board and directory, and there is one board that every class shares.</p>
+    <p>New: <a href="alumni/index.html">classmates found in public records, and the world the year you graduated (1960 to 2000)</a>.</p>
   </header>
   <nav class="decade-jump" aria-label="Jump to a decade">
     {''.join(jumps)}
@@ -613,6 +614,8 @@ def main() -> None:
     write("404.html", not_found_page())
     from football import build as build_football
     build_football(globals())
+    from alumni import build as build_alumni
+    build_alumni(globals())
     for y in range(FIRST, LAST + 1):
         write(year_file(y), class_page(y))
     print("done")
