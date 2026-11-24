@@ -1,0 +1,785 @@
+[
+ {
+  "season": 1923,
+  "type": "team list",
+  "source": "Historic Saranac Lake Wiki \u2014 Football",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Football",
+  "players": [
+   "Bob Brewer",
+   "John Cook",
+   "Bill Duprey",
+   "Edgar Duprey",
+   "Henry Fadden",
+   "Tony Gedroiz",
+   "Bob Herron",
+   "Bill Lytle",
+   "Dick Lytle",
+   "Lou Mahony",
+   "Walter Mulflur",
+   "Dick O'Brien",
+   "Ed Twokey",
+   "Merv Witherbee"
+  ],
+  "staff": {
+   "head coach": "Russell Sackett",
+   "assistant coach": "Al Jordan",
+   "manager": "Cornelius J. Carey"
+  },
+  "note": "First SLHS football team"
+ },
+ {
+  "season": 1925,
+  "type": "star player",
+  "source": "HSL Wiki \u2014 Tom Wallace",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Tom_Wallace",
+  "players": [
+   "Tom Wallace (fullback; 24 TDs in 1926; NYS-record 11 TDs in one game)",
+   "Bill Duprey"
+  ],
+  "note": "Partial"
+ },
+ {
+  "season": 1929,
+  "type": "yearbook roster (1930 Canaras)",
+  "source": "HSL Wiki \u2014 Football (1930 Canaras caption)",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Football",
+  "players": [
+   "Beiderbecke",
+   "Berwick",
+   "Bishop",
+   "Bowker",
+   "Clancy",
+   "Dewey",
+   "Dietz",
+   "Downs",
+   "Edelberg",
+   "Walter Finnegan",
+   "Griffith",
+   "Herron",
+   "Hickok",
+   "Hopkins",
+   "Keough",
+   "Lobdell",
+   "Lytle",
+   "Malone",
+   "Minney",
+   "Mitchell",
+   "Murphy",
+   "Plumadore",
+   "Plummer",
+   "H. Ryan",
+   "L. Ryan",
+   "Tagliabue"
+  ],
+  "staff": {
+   "coach": "Kenneth M. Wilson",
+   "managers": "Francis Trombley, William Wallace"
+  },
+  "note": "Yearbook published spring 1930; squad is the fall 1929 team"
+ },
+ {
+  "season": 1932,
+  "type": "seniors named in 1933 Canaras",
+  "source": "HSL Wiki \u2014 Football",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Football",
+  "players": [
+   "Capt. Plumadore",
+   "Leonard Ryan",
+   "Karl Minney",
+   "Cantwell",
+   "Meehan",
+   "Gardner",
+   "Carl Ryan (1933 captain-elect)"
+  ],
+  "note": "Partial"
+ },
+ {
+  "season": 1937,
+  "type": "players named in 1938 Canaras",
+  "source": "HSL Wiki \u2014 Football",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Football",
+  "players": [
+   "Rube Skeels",
+   "Hugh Kelly",
+   "Ducker Dupree",
+   "Jack Ryan",
+   "Shipwreck Kelly",
+   "Ray LaRose",
+   "Jake Edelberg",
+   "Leo Miller",
+   "Beef Knapp"
+  ],
+  "staff": {
+   "coach": "Art Mahoney"
+  },
+  "note": "Partial"
+ },
+ {
+  "season": 1944,
+  "type": "team photo caption",
+  "source": "Adirondack Daily Enterprise, Oct 2, 2010, via HSL Wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Football",
+  "players": [
+   "William Hall",
+   "William McGrain",
+   "Philip Hammond",
+   "Robert Pederson",
+   "Howard Harvey",
+   "George Rankin",
+   "William Mulflur",
+   "Gordon Tyler",
+   "Austin Gowan",
+   "Robert Dupree",
+   "Jack Peightal",
+   "John Fitzpatrick",
+   "Nathaniel Oddy",
+   "Raymond Cassavaugh",
+   "Richard Newell",
+   "Clyde Baker",
+   "Herbert Turner",
+   "George Garrant",
+   "Timothy Sweet",
+   "John Harrigan",
+   "Benjamin Muncil",
+   "Edward Mullen",
+   "Wayne Sweet",
+   "Francis Pelkey"
+  ],
+  "staff": {
+   "coach": "Ken Wilson"
+  }
+ },
+ {
+  "season": 1958,
+  "type": "yearbook team photo (1958 Canaras)",
+  "source": "HSL Wiki \u2014 Football",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Football",
+  "players": [
+   "Williams",
+   "Fountain",
+   "Gowan",
+   "Turner",
+   "Odell",
+   "Cheney",
+   "Stunzi",
+   "Mose MacKay",
+   "Cassavaugh",
+   "Rascoe",
+   "Morgan",
+   "Beebe",
+   "Callahan",
+   "LaMay",
+   "Hoffer",
+   "Crowley",
+   "Goetz",
+   "Richardson",
+   "Luce",
+   "Van Cour",
+   "Clark",
+   "Peria",
+   "Cushman",
+   "Lahart",
+   "Baker",
+   "Simmons",
+   "Gladd",
+   "Hennessy",
+   "Sklaryk"
+  ],
+  "staff": {
+   "coaches": "George Benz, J. Butler Sullivan",
+   "managers": "Reynolds, Webb"
+  },
+  "note": "Yearbook published 1958; may be the fall 1957 squad"
+ },
+ {
+  "season": 1974,
+  "type": "players named in ADE game coverage",
+  "source": "Adirondack Daily Enterprise",
+  "url": "https://nyshistoricnewspapers.org/?a=d&d=ade19740916-01.1.7",
+  "players": [
+   "Kim Townsel (QB)",
+   "Pat Oddy",
+   "Mark Moody",
+   "Vibert",
+   "John Falvey",
+   "Paul Gonyea",
+   "John Muldowney",
+   "Frank Ryan",
+   "Pat Doyle",
+   "Tod Fobare"
+  ],
+  "note": "Not a full roster"
+ },
+ {
+  "season": 1977,
+  "type": "players named in ADE game coverage",
+  "source": "Adirondack Daily Enterprise",
+  "url": "https://nyshistoricnewspapers.org/?a=d&d=ade19771107-01.1.8",
+  "players": [
+   "Tod Fobare (QB/K)",
+   "Pete Camelo (HB, All-NAC)",
+   "Dan Capone (WB)",
+   "Mario Brindisi",
+   "Mark Farmer",
+   "D. Lewis",
+   "J. Lewis",
+   "Gallagher",
+   "Webb",
+   "Daly",
+   "Morgan",
+   "Bill Bach",
+   "Harold Morford",
+   "Dave Fitch",
+   "Barry Sageman",
+   "Herbert"
+  ],
+  "staff": {
+   "head coach": "John Raymond",
+   "line coach": "Pat Hogan"
+  },
+  "note": "Not a full roster"
+ },
+ {
+  "season": 1981,
+  "type": "players named in ADE coverage",
+  "source": "Adirondack Daily Enterprise",
+  "url": "https://nyshistoricnewspapers.org/?a=d&d=ade19811109-01.1.10",
+  "players": [
+   "Rick Samuels (RB)",
+   "Steve Miner"
+  ],
+  "note": "Not a full roster"
+ },
+ {
+  "season": 1987,
+  "type": "players named in ADE coverage",
+  "source": "Adirondack Daily Enterprise",
+  "url": "https://nyshistoricnewspapers.org/?a=d&d=ade19871109-01.1.8",
+  "players": [
+   "Chris Blanchard (QB)",
+   "Steve McCormick",
+   "Goodrow",
+   "Joe Turner",
+   "Matt Munn"
+  ],
+  "note": "Not a full roster"
+ },
+ {
+  "season": 1988,
+  "type": "players named in ADE coverage",
+  "source": "Adirondack Daily Enterprise",
+  "url": "https://nyshistoricnewspapers.org/?a=d&d=ade19881121-01.1.10",
+  "players": [
+   "Dennis Dwyer (Super Bowl X MVP)",
+   "Breen"
+  ],
+  "note": "Not a full roster"
+ },
+ {
+  "season": 1970,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1971,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1972,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1973,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1974,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1975,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1976,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1977,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1978,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1979,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1980,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1981,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1982,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1983,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1984,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1985,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1986,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1987,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1988,
+  "type": "SLOT \u2014 awaiting Brian's roster/program/yearbook",
+  "source": null,
+  "url": null,
+  "players": [],
+  "note": "Brian will supply rosters, programs and yearbooks; drop files into /workspace/scl-football/media/from-brian/<year>/"
+ },
+ {
+  "season": 1927,
+  "type": "yearbook line-up by position (1928 Canaras)",
+  "source": "1928 Canaras scan, HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/1928_Canaras",
+  "players": [
+   "Paul Clancy (E)",
+   "James Munn (E)",
+   "Walter Herron (E)",
+   "Tuffield Latour (E)",
+   "Thomas Daley (E)",
+   "Raymond Horowitz (E)",
+   "Harold Hill (T, captain)",
+   "William Wallace (T)",
+   "Phelps Utting (T)",
+   "Walter Finnegan (T)",
+   "Eugene Miller (T)",
+   "Robert Downs (T)",
+   "Jack McGrath (T)",
+   "Hall Parker (C)",
+   "Gilson Slater (C)",
+   "Charles Bowker (C)",
+   "Joseph Knapp (C)",
+   "Harris Ryan (G)",
+   "Bernard Dupree (G)",
+   "Milford Deitz (G)",
+   "William Hopkins (G)",
+   "Thomas Kunz (QB)",
+   "William Natter (QB)",
+   "Thomas Wallace (FB)",
+   "George Scollins (FB)",
+   "George Munn (HB)",
+   "William Cavanaugh (HB)",
+   "Orville LaBarge (HB)",
+   "Harold Gallup (HB)"
+  ],
+  "staff": {
+   "captain": "Harold Hill",
+   "coach": "Kenneth M. Wilson"
+  },
+  "note": "Fall 1927 squad; printed in the spring 1928 yearbook",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1930,
+  "type": "letter winners by position (banquet story, Jan 5, 1931)",
+  "source": "Coogan scrapbook clipping, HSL wiki \u2014 Petrova School",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Petrova_School",
+  "players": [
+   "Howard Malone (E, captain)",
+   "Hayward Plumadore (T)",
+   "Lawrence Griffin (G)",
+   "Leonard Ryan (C)",
+   "Harold Middleton (G)",
+   "Theron Lobdell (T)",
+   "Leonard Morgan (E)",
+   "Edward Plummer (QB)",
+   "Robert Dorlon (HB)",
+   "Ronald Bishop (FB)",
+   "Walter Herron (HB)",
+   "Earl Minney (G)",
+   "Neil McCarthy (G)",
+   "Bernard Murphy (E/B)",
+   "Thomas Mitchell",
+   "Edward Leonard",
+   "Bernard Brown"
+  ],
+  "staff": {
+   "coach": "Kenneth Wilson",
+   "managers": "Emil Matthews, Irving Edelberg, Leonard Berwick"
+  },
+  "note": "First 14 are the letter winners named at the banquet; Mitchell, Leonard and Brown come from 1932 Canaras senior entries (Football 3,4)",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1931,
+  "type": "players from 1932 Canaras senior entries",
+  "source": "1932 Canaras captions, HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Football",
+  "players": [
+   "Carl J. Ryan (captain 1931 and 1932)",
+   "Thomas Mitchell",
+   "Edward Leonard",
+   "Bernard Brown"
+  ],
+  "staff": {
+   "manager": "Elbert Bellows"
+  },
+  "note": "Partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1924,
+  "type": "players from 1926-1928 Canaras senior entries",
+  "source": "Canaras scans, HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/1926_Canaras",
+  "players": [
+   "Bob Herron (captain)",
+   "Henry Fadden",
+   "John Kenneth Lawless",
+   "Ed Toohey (A. H. Denny Football Trophy)",
+   "Murvill Witherbee (C)",
+   "Tom Wallace (first season)",
+   "Edward Mulflur",
+   "George Munn",
+   "Lucien Platt",
+   "Jackson Farrington",
+   "Edward Garvey",
+   "Theodore Marden"
+  ],
+  "staff": {
+   "manager": "Cornelius J. Carey Jr.",
+   "coach": "Russell Sackett"
+  },
+  "note": "Reconstructed from senior-page football years; partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1925,
+  "type": "players from 1926-1928 Canaras senior entries",
+  "source": "Canaras scans, HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/1926_Canaras",
+  "players": [
+   "Bob Herron (captain)",
+   "Henry Fadden",
+   "John Kenneth Lawless",
+   "Ed Toohey",
+   "Murvill Witherbee (C)",
+   "Leonard Lazarus (squad)",
+   "Tom Wallace (FB)",
+   "Bill Duprey",
+   "Edward Mulflur",
+   "George Munn",
+   "Lucien Platt",
+   "Jackson Farrington",
+   "William Collins",
+   "Frank Kelly",
+   "Ernest LeClair",
+   "Edward Robinson",
+   "Theodore Marden",
+   "Thomas Daley",
+   "Harold Hill"
+  ],
+  "staff": {
+   "manager": "Cornelius J. Carey Jr.",
+   "coach": "Kenneth M. Wilson"
+  },
+  "note": "Reconstructed from senior-page football years; partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1926,
+  "type": "players from 1927-1930 Canaras senior entries",
+  "source": "Canaras scans, HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/1927_Canaras",
+  "players": [
+   "Tom Wallace (FB, 24 TDs, A. H. Denny cup)",
+   "Edward Mulflur",
+   "George Munn",
+   "Lucien Platt",
+   "Jackson Farrington",
+   "William Collins",
+   "Frank Kelly",
+   "Ernest LeClair",
+   "Theodore Marden",
+   "Nelson Sageman (scrub)",
+   "Thomas Daley",
+   "Harold Hill",
+   "Paul Clancy",
+   "Thomas Kunz",
+   "Wilbur Tagliabue",
+   "Walter Finnegan",
+   "Walter Herron",
+   "Harry Dreyfuss",
+   "Jack McGrath"
+  ],
+  "staff": {
+   "assistant managers": "William Cavanaugh, Raymond Horowitz, Bernard Dupree"
+  },
+  "note": "Reconstructed from senior-page football years; partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1928,
+  "type": "players from 1930 Canaras senior entries",
+  "source": "1930 Canaras scans, HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/1930_Canaras",
+  "players": [
+   "Walter Finnegan",
+   "Walter Herron",
+   "Wilbur Tagliabue",
+   "Charles Bowker",
+   "Harris H. Ryan",
+   "William J. Wallace",
+   "Milford Deitz",
+   "J. Robert Downs",
+   "Tuffield Latour",
+   "Joseph Beiderbecke",
+   "William Hopkins",
+   "Jack McGrath"
+  ],
+  "staff": null,
+  "note": "Reconstructed from senior-page football years; partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1929,
+  "type": "1930 Canaras team photo rows + officers",
+  "source": "1930 Canaras scan, HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/1930_Canaras",
+  "players": [
+   "Walter Finnegan (captain)",
+   "Beiderbecke",
+   "Bowker",
+   "Downs",
+   "Herron",
+   "Dietz",
+   "Tagliabue",
+   "Lytle",
+   "Lobdell",
+   "Minney",
+   "Keough",
+   "L. Ryan",
+   "Plummer",
+   "Howard 'Bud' Malone (captain-elect)",
+   "H. Ryan",
+   "Hopkins",
+   "Dewey",
+   "Mitchell",
+   "Bishop",
+   "Hickok",
+   "Murphy",
+   "Griffith",
+   "Clancy",
+   "Plumadore",
+   "Edelberg"
+  ],
+  "staff": {
+   "coach": "Kenneth M. Wilson",
+   "managers": "Francis Trombley, William Wallace"
+  },
+  "note": null,
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1935,
+  "type": "named players",
+  "source": "HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Remembering_things_past_in_Saranac_Lake",
+  "players": [
+   "Pat Hickey (captain)",
+   "John Munn (HB)",
+   "John Duquette",
+   "Art Charland"
+  ],
+  "staff": null,
+  "note": "Partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1937,
+  "type": "named players",
+  "source": "HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Hugh_L._Kelly",
+  "players": [
+   "Hugh Kelly (captain)",
+   "Rube Skeels",
+   "Bill McLaughlin",
+   "Ducker Dupree",
+   "Jake Edelberg (1938 captain-elect)"
+  ],
+  "staff": null,
+  "note": "Partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1938,
+  "type": "named players",
+  "source": "HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/George_S._Doty",
+  "players": [
+   "George Doty (captain, All-Northern)",
+   "Jake Edelberg (captain)"
+  ],
+  "staff": null,
+  "note": "Partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1951,
+  "type": "named players",
+  "source": "HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Gene_Walsh",
+  "players": [
+   "Gene Walsh (All-State, All-Northern)",
+   "James Duprey"
+  ],
+  "staff": null,
+  "note": "Partial",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1957,
+  "type": "named players",
+  "source": "HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Al_Stunzi",
+  "players": [
+   "Al Stunzi (co-captain)",
+   "Rouse Fountain (class of 1955)",
+   "Billy O'Dell (#35, 'the Saranac Lake Express')"
+  ],
+  "staff": null,
+  "note": "Partial; years approximate",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1961,
+  "type": "1987 reunion photo of early-1960s players",
+  "source": "ADE June 4, 1987, HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Saranac_Lake_Sports_Hall_of_Fame",
+  "players": [
+   "Gerald 'Faker' LaFountain (captain)",
+   "Bill Peria",
+   "Jan Plumadore",
+   "Bob Birk",
+   "Bill Delahant",
+   "John Viscome",
+   "Charles Walsh",
+   "Phil Dupree",
+   "Jerry Cheney",
+   "Jim LaFountain",
+   "Tim Kilroy",
+   "Bill Donnelly",
+   "Wayne McGinnis",
+   "Mac Fobare"
+  ],
+  "staff": {
+   "coaches in photo": "Butler Sullivan, Fraser Sturgeon, Bill Gallagher, John Raymond"
+  },
+  "note": "Players from the early 1960s; not all from one season",
+  "via": "HSL wiki deep pass"
+ },
+ {
+  "season": 1974,
+  "type": "named players (HSL wiki)",
+  "source": "HSL wiki",
+  "url": "https://wiki.historicsaranaclake.org/index.php/Dirk_Ewan",
+  "players": [
+   "Dirk Ewan (HB/LB)",
+   "Charles Decker"
+  ],
+  "staff": null,
+  "note": "Adds to ADE-named players",
+  "via": "HSL wiki deep pass"
+ }
+]

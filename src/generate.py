@@ -76,7 +76,10 @@ def header(current: str | None = None, extra: str = "", home: bool = False) -> s
         cur = ' aria-current="page"' if current == key else ""
         return f'<a href="{href}"{cur}>{label}</a>'
     links = [item("index.html", "Home", "home")]
-    links += [item(href, label, key) for key, href, label in SECTIONS]
+    for key, href, label in SECTIONS:
+        links.append(item(href, label, key))
+        if key == "sports":
+            links.append(item("football/index.html", "Football", "football"))
     links += [item("classes.html", "Find your class", "classes"), f'<a href="{MAIL}">Contact us</a>']
     nav = " ".join(links)
     brand = ('<a class="brand" href="index.html">'
@@ -555,6 +558,24 @@ def section_page(key: str) -> str:
     <p>To remember a classmate, teacher or coach, email their name, class year, and a few words to <a href="{MAIL}">{CONTACT}</a>. A photo is welcome. We will check details with you before anything is posted.</p>
   </div>
 </main>"""
+    elif key == "sports":
+        body = f"""<main id="main" class="wrap section-page">
+  <header class="pagehead">
+    <span class="label">{label}</span>
+    <h1>{title}</h1>
+    <p class="lede">{blurb}</p>
+  </header>
+  <div class="teasers sport-cards">
+    <a class="teaser feature" href="football/index.html"><span class="label">Football &middot; since 1923</span><strong>Redskins football</strong><span class="teaser-text">The Film Room: every game we can find, with scores, newspaper write-ups, rosters, team photos and game film.</span><span class="teaser-go" aria-hidden="true">&rarr;</span></a>
+  </div>
+  <div class="panel-box soon">
+    <img src="assets/mark-red.svg" width="64" height="71" alt="">
+    <div>
+      <h2>More sports coming soon</h2>
+      <p>Basketball, hockey, skiing, track and more are on the way. {soon} <a href="{MAIL}">{CONTACT}</a>.</p>
+    </div>
+  </div>
+</main>"""
     else:
         body = f"""<main id="main" class="wrap section-page">
   <header class="pagehead">
@@ -590,6 +611,8 @@ def main() -> None:
     write("terms.html", terms_page())
     write("support.html", support_page())
     write("404.html", not_found_page())
+    from football import build as build_football
+    build_football(globals())
     for y in range(FIRST, LAST + 1):
         write(year_file(y), class_page(y))
     print("done")
