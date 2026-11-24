@@ -1,0 +1,40 @@
+{
+ "clips": [
+  {
+   "id": "1986_graduation-slhs_song-01",
+   "song": "",
+   "song_confirmed": false,
+   "composer": "",
+   "event": "Commencement processional",
+   "date": "1986",
+   "venue": "",
+   "season": "",
+   "band": "Saranac Lake High School Band",
+   "director": "",
+   "director_suggested": "Fred Baker (confirm)",
+   "assistant_directors": "",
+   "drum_major": "",
+   "roster": {
+    "Flutes/Piccolos": [],
+    "Clarinets": [],
+    "Saxophones": [],
+    "Trumpets": [],
+    "Mellophones/Horns": [],
+    "Trombones": [],
+    "Baritones/Euphoniums": [],
+    "Tubas/Sousaphones": [],
+    "Snare": [],
+    "Tenors": [],
+    "Bass drums": [],
+    "Cymbals": [],
+    "Front ensemble": [],
+    "Color guard": []
+   },
+   "soloists": "",
+   "duration": 128.0,
+   "thumb": "assets/music/1986_graduation-slhs_song-01.jpg",
+   "youtube_id": "",
+   "review_status": "pending"
+  }
+ ]
+}
