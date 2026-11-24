@@ -66,3 +66,27 @@
 .sources li{margin:0 0 .5em}
 .sec{margin:clamp(40px,6vw,72px) 0 0}
 .sec>h2{font-family:var(--display);font-weight:600;font-size:clamp(1.7rem,3vw,2.2rem);margin:0 0 .5em;padding-top:14px;border-top:3px solid var(--red);letter-spacing:-.01em}
+/* Tapes + compact clip cards */
+.tape{margin:0 0 clamp(36px,5vw,64px)}
+.tape-h{border-top:2px solid var(--ink);padding-top:12px;margin-bottom:18px}
+.tape-h h3{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,2.6vw,2rem);margin:0 0 .15em;letter-spacing:-.01em}
+.tape-h .kicker{margin:0 0 .2em}
+.cc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:28px 22px}
+.cc .player{aspect-ratio:4/3}
+.cc-t{font-family:var(--display);font-weight:600;font-size:1.2rem;margin:10px 0 2px}
+.cc-t .tbc{font-style:italic;font-weight:400;color:var(--ink-soft)}
+.cc-m{margin:0 0 10px;font-size:.95rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.cc .roster{margin-bottom:6px}
+.cc .roster ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+.cc .roster li{font-size:.9rem;overflow-wrap:anywhere}
+.cc .roster li b{font-size:.72rem}
+.cc .credits{margin:0 14px 10px;grid-template-columns:auto 1fr;font-size:.95rem}
+.soon.chk{background:var(--wash);color:var(--muted)}
+.mu-tools{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin:0 0 22px}
+.mu-tools label{display:inline-flex;gap:8px;align-items:center;min-height:44px;font-family:var(--label);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem;cursor:pointer}
+.mu-tools input{width:20px;height:20px;accent-color:var(--red)}
+.tape-jump{list-style:none;margin:0 0 28px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tape-jump a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 12px;border:1px solid var(--line-strong);border-radius:2px;text-decoration:none;color:var(--ink);font-size:.95rem}
+.tape-jump a:hover{border-color:var(--red);color:var(--red)}
+.tape-jump span{font-family:var(--label);font-weight:600;color:var(--muted)}
+.tape>.tape-h~.cc-grid{margin:0}
