@@ -1,0 +1,24 @@
+{
+ "shane-graham": {
+  "card_name": "Shane Graham",
+  "number": "22",
+  "position": "RB",
+  "positions_long": "Running back / linebacker",
+  "class_year": 1989,
+  "card_year": 1988,
+  "team": "Saranac Lake Redskins",
+  "highlights": [
+   {"text": "1988 North Country Super Bowl at Watertown (Saranac Lake 21, Watertown 12): offensive player of the game, 19 carries for 94 yards and a 47-yard touchdown run.", "url": "https://www.nyshistoricnewspapers.org/?a=d&d=ade19881121-01.1.10"},
+   {"text": "1988 regular season through Oct. 21: 245 yards on 50 carries, 3 touchdowns, 18 points (team stats in the Enterprise).", "url": "https://www.nyshistoricnewspapers.org/?a=d&d=ade19881021-01.1.8"},
+   {"text": "Sept. 1988: first varsity start.", "url": "https://www.nyshistoricnewspapers.org/?a=d&d=ade19880919-01.1.12"},
+   {"text": "1987 varsity roster: No. 22, running back and linebacker, on the CVAC champion team.", "url": "https://www.nyshistoricnewspapers.org/?a=d&d=ade19870918-01.1.10"},
+   {"text": "1986 junior varsity: touchdowns against AuSable Valley and Saranac Central.", "url": "https://www.nyshistoricnewspapers.org/?a=d&d=ade19861028-01.1.9"},
+   {"text": "Listed among the Saranac Lake Central High School graduates of 1989 as Shane G. Graham.", "url": "https://www.nyshistoricnewspapers.org/?a=d&d=ade19890626-01.1.11"}
+  ],
+  "stat_rows": [
+   {"label": "1988 through Oct. 21", "att": "50", "yds": "245", "td": "3", "url": "https://www.nyshistoricnewspapers.org/?a=d&d=ade19881021-01.1.8"},
+   {"label": "1988 Super Bowl vs Watertown", "att": "19", "yds": "94", "td": "1", "url": "https://www.nyshistoricnewspapers.org/?a=d&d=ade19881121-01.1.10"}
+  ],
+  "team_record": "1988 team: 9-1, CVAC and North Country Super Bowl champions"
+ }
+}

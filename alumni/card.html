@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Football card maker | Saranac Lake alumni preview</title>
+<meta name="description" content="Make a Saranac Lake Redskins football card.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Saranac Lake Redskins">
+<meta property="og:title" content="Football card maker | Saranac Lake alumni preview">
+<meta property="og:description" content="Make a Saranac Lake Redskins football card.">
+<meta property="og:image" content="https://saranaclakeredskins.com/assets/og-card.png?v=4">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Saranac Lake Redskins badge">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F7F1E6">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/class.css">
+<link rel="stylesheet" href="../assets/alumni.css?v=1">
+</head>
+<body class="al al-cardpage">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-row">
+    <a class="brand" href="../index.html"><img src="../assets/logo-badge.svg" width="64" height="64" alt="Saranac Lake Redskins badge"><span class="brand-title">Home of the Saranac Lake Redskins</span></a>
+    
+  </div>
+  <nav aria-label="Site"><a href="../index.html">Home</a> <a href="../sports.html">Sports</a> <a href="../football/index.html">Football</a> <a href="../arts.html">Arts</a> <a href="../news.html">News</a> <a href="../in-memoriam.html">In Memoriam</a> <a href="../classes.html">Find your class</a> <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact us</a></nav>
+</header>
+
+<main id="main">
+<div class="al-preview" role="note"><strong>Preview.</strong> This section is unpublished and hidden from search engines. It is not linked from the site menu yet.</div>
+<section class="al-hero al-hero-sm">
+  <p class="al-eyebrow">Redskins football</p>
+  <h1>Make a football card</h1>
+  <p>Look up a player, check every stat and mention we found, pick or upload a photo, then download your card as a PNG. Inspired by 1970s cards. Not affiliated with any card company.</p>
+</section>
+<section class="al-sec al-card-app">
+  <div class="al-card-left">
+    <label for="al-q" class="al-lbl">Find a player</label>
+    <input id="al-q" type="search" autocomplete="off" placeholder="Try Shane Graham" aria-describedby="al-q-help" aria-controls="al-results">
+    <p id="al-q-help" class="al-small">Search 409 players from rosters, the football history pages and newspaper stories.</p>
+    <ul id="al-results" class="al-results" aria-live="polite"></ul>
+    <div id="al-player" class="al-player" hidden></div>
+  </div>
+  <div class="al-card-right">
+    <div class="al-canvas-wrap">
+      <canvas id="al-front" width="750" height="1050" role="img" aria-label="Card front preview"></canvas>
+      <canvas id="al-back" width="1050" height="750" role="img" aria-label="Card back preview"></canvas>
+    </div>
+    <fieldset class="al-fields">
+      <legend>Card details</legend>
+      <label>Name on card<input id="f-name" maxlength="28"></label>
+      <div class="al-row">
+        <label>Position<input id="f-pos" maxlength="4" placeholder="RB"></label>
+        <label>Number<input id="f-num" maxlength="3" inputmode="numeric"></label>
+        <label>Season<input id="f-year" maxlength="4" inputmode="numeric"></label>
+      </div>
+      <label>Class of<input id="f-class" maxlength="4" inputmode="numeric"></label>
+      <label>Card back notes (one per line)<textarea id="f-notes" rows="5"></textarea></label>
+    </fieldset>
+    <fieldset class="al-fields">
+      <legend>Photo</legend>
+      <div id="al-photos" class="al-photos"></div>
+      <label class="al-upload">Upload your own photo<input id="f-upload" type="file" accept="image/*"></label>
+      <p class="al-small">Your photo stays on your device. It is never uploaded.</p>
+      <div class="al-row">
+        <label>Zoom<input id="f-zoom" type="range" min="1" max="3" step="0.01" value="1"></label>
+        <label>Left / right<input id="f-x" type="range" min="-1" max="1" step="0.01" value="0"></label>
+        <label>Up / down<input id="f-y" type="range" min="-1" max="1" step="0.01" value="0"></label>
+      </div>
+    </fieldset>
+    <div class="al-cta">
+      <button id="dl-front" class="al-btn" type="button">Download front (PNG)</button>
+      <button id="dl-back" class="al-btn al-btn-2" type="button">Download back (PNG)</button>
+    </div>
+    <p class="al-small">Sample: <a href="sample/shane-graham-front.png">Shane Graham card front</a> &middot; <a href="sample/shane-graham-back.png">back</a></p>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="foot">
+    <nav aria-label="Legal">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../support.html">Support</a>
+      <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact</a>
+    </nav>
+    <p class="credit"><img class="foot-mark" src="../assets/mark-maroon.svg" width="34" height="38" alt="">a <a href="https://plinymiller.com" target="_blank" rel="noopener">plinymiller design</a> – a <a href="https://b-tuff.co" target="_blank" rel="noopener">B-Tuff Company</a></p>
+    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">contact us</a> at plinymiller@gmail.com.</p>
+  </div>
+</footer>
+
+<script src="../assets/alumni-card.js?v=1" defer></script>
+</body>
+</html>

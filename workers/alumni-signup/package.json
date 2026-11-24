@@ -1,0 +1,7 @@
+{
+  "name": "slr-alumni-signup",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "wrangler dev", "test": "node test/match.test.mjs" },
+  "devDependencies": { "wrangler": "^4" }
+}

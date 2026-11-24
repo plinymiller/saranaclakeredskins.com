@@ -1,0 +1,25 @@
+# Copy to wrangler.toml and fill in the ids. Nothing here is deployed yet.
+name = "slr-alumni-signup"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "slr-alumni"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[[kv_namespaces]]
+binding = "RATE"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[vars]
+SITE_ORIGIN = "https://saranaclakeredskins.com"
+FROM_EMAIL = "alumni@saranaclakeredskins.com"
+CAPTCHA = "turnstile"          # or "hcaptcha"
+RATE_LIMIT_PER_HOUR = "5"
+
+# Secrets (set with `wrangler secret put NAME`, never commit them):
+#   CAPTCHA_SECRET   Turnstile or hCaptcha secret key
+#   ADMIN_TOKEN      long random string for the review-queue endpoints
+#   IP_SALT          random string used to hash IPs
+#   RESEND_API_KEY   (or another mail provider key) for verification email

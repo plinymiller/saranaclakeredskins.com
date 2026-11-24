@@ -613,6 +613,8 @@ def main() -> None:
     write("404.html", not_found_page())
     from football import build as build_football
     build_football(globals())
+    from alumni import build as build_alumni
+    build_alumni(globals())
     for y in range(FIRST, LAST + 1):
         write(year_file(y), class_page(y))
     print("done")
