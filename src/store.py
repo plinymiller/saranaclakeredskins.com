@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "store"
-V = "1"  # asset cache-buster
+V = "2"  # asset cache-buster
 
 
 def E(s) -> str:
@@ -24,7 +24,7 @@ def up(chrome: str) -> str:
 
 
 def money(n) -> str:
-    return f"${n:,.0f}" if float(n).is_integer() else f"${n:,.2f}"
+    return "TBD"
 
 
 # ---------------------------------------------------------------- beneficiaries
@@ -40,6 +40,7 @@ BEN = {b["id"]: b for b in BENEFICIARIES}
 
 # ---------------------------------------------------------------- colors
 C = {
+    "red": ("Red", "#A6192E"),
     "burgundy": ("Burgundy", "#5A1414"),
     "gold": ("Gold", "#FFB612"),
     "white": ("White", "#F6F5F1"),
@@ -48,58 +49,58 @@ C = {
     "charcoal": ("Charcoal", "#3B3A3A"),
 }
 # one-color chief mark that reads on each garment color
-MARK_ON = {"burgundy": "gold", "gold": "burgundy", "white": "burgundy", "heather": "burgundy",
-           "black": "gold", "charcoal": "gold"}
+MARK_ON = {"red": "white", "burgundy": "white", "gold": "burgundy", "white": "burgundy", "heather": "burgundy",
+           "black": "white", "charcoal": "white"}
 
-ADULT = [("S", 0), ("M", 0), ("L", 0), ("XL", 0), ("2XL", 2), ("3XL", 4)]
+ADULT = [("S", 0), ("M", 0), ("L", 0), ("XL", 0), ("2XL", 0), ("3XL", 0)]
 YOUTH = [("Youth S", 0), ("Youth M", 0), ("Youth L", 0)]
 
 PRODUCTS = [
-    {"slug": "classic-tee", "name": "Classic Tee", "cat": "tees", "price": 25, "shape": "tee",
-     "colors": ["burgundy", "gold", "white", "heather"], "sizes": YOUTH + ADULT, "logos": ["badge", "mark"],
+    {"slug": "classic-tee", "name": "Classic Tee", "cat": "tees", "shape": "tee",
+     "colors": ["red", "white", "burgundy", "heather"], "sizes": YOUTH + ADULT, "logos": ["badge", "mark"],
      "blurb": "Soft ringspun cotton tee with the Redskins badge or the chief mark across the chest.",
      "details": [("Fabric", "100% ringspun cotton, 4.3 oz. Heather Gray is 90/10 cotton/poly."),
                  ("Fit", "Unisex classic fit. Order your usual size; size up for a roomier fit."),
                  ("Decoration", "Screen printed or direct-to-garment printed, 10 in. wide on adult sizes.")]},
-    {"slug": "crewneck-sweatshirt", "name": "Crewneck Sweatshirt", "cat": "sweatshirts", "price": 40, "shape": "crew",
-     "colors": ["burgundy", "heather", "gold", "black"], "sizes": ADULT, "logos": ["badge", "mark"],
+    {"slug": "crewneck-sweatshirt", "name": "Crewneck Sweatshirt", "cat": "sweatshirts", "shape": "crew",
+     "colors": ["red", "burgundy", "heather", "white"], "sizes": ADULT, "logos": ["badge", "mark"],
      "blurb": "Heavyweight fleece crew for Adirondack Friday nights in October.",
      "details": [("Fabric", "8 oz. cotton/poly fleece, ribbed cuffs and waistband."),
                  ("Fit", "Unisex relaxed fit."),
                  ("Decoration", "Printed chest graphic, 11 in. wide.")]},
-    {"slug": "hoodie", "name": "Pullover Hoodie", "cat": "sweatshirts", "price": 48, "shape": "hoodie",
-     "colors": ["burgundy", "heather", "gold", "black"], "sizes": YOUTH + ADULT, "logos": ["badge", "mark"],
+    {"slug": "hoodie", "name": "Pullover Hoodie", "cat": "sweatshirts", "shape": "hoodie",
+     "colors": ["red", "burgundy", "heather", "black"], "sizes": YOUTH + ADULT, "logos": ["badge", "mark"],
      "blurb": "The sideline hoodie: lined hood, kangaroo pocket, big chest logo.",
      "details": [("Fabric", "8 oz. cotton/poly fleece, lined hood with drawcord."),
                  ("Fit", "Unisex classic fit with ribbed cuffs."),
                  ("Decoration", "Printed chest graphic, 11 in. wide.")]},
-    {"slug": "quarter-zip", "name": "Quarter-Zip Pullover", "cat": "quarter-zips", "price": 55, "shape": "qzip",
-     "colors": ["burgundy", "charcoal", "black", "heather"], "sizes": ADULT, "logos": ["mark", "badge"],
+    {"slug": "quarter-zip", "name": "Quarter-Zip Pullover", "cat": "quarter-zips", "shape": "qzip",
+     "colors": ["red", "burgundy", "charcoal", "black"], "sizes": ADULT, "logos": ["mark", "badge"],
      "blurb": "Clean, embroidered left-chest mark on a mid-weight quarter-zip. Office to bleachers.",
      "details": [("Fabric", "Mid-weight brushed-back performance knit, stand-up collar."),
                  ("Fit", "Men's/unisex athletic fit."),
                  ("Decoration", "Embroidered left chest, about 3.5 in.")]},
-    {"slug": "polo", "name": "Performance Polo", "cat": "polos", "price": 42, "shape": "polo",
-     "colors": ["burgundy", "white", "gold", "black"], "sizes": ADULT, "logos": ["mark", "badge"],
+    {"slug": "polo", "name": "Performance Polo", "cat": "polos", "shape": "polo",
+     "colors": ["red", "white", "burgundy", "black"], "sizes": ADULT, "logos": ["mark", "badge"],
      "blurb": "Moisture-wicking polo with an embroidered left-chest logo. Reunion and golf-outing ready.",
      "details": [("Fabric", "100% polyester pique, moisture-wicking, snag-resistant."),
                  ("Fit", "Unisex classic fit, three-button placket."),
                  ("Decoration", "Embroidered left chest, about 3.5 in.")]},
-    {"slug": "bucket-hat", "name": "Bucket Hat", "cat": "hats", "price": 30, "shape": "bucket",
-     "colors": ["burgundy", "gold", "white"], "sizes": [("S/M", 0), ("L/XL", 0)], "logos": ["mark", "badge"],
+    {"slug": "bucket-hat", "name": "Bucket Hat", "cat": "hats", "shape": "bucket",
+     "colors": ["red", "white", "burgundy"], "sizes": [("S/M", 0), ("L/XL", 0)], "logos": ["mark", "badge"],
      "blurb": "Cotton twill bucket hat with an embroidered front logo. Lake days and tailgates.",
      "details": [("Fabric", "100% cotton twill, stitched brim, metal eyelets."),
                  ("Fit", "S/M fits 21.5-22.5 in.; L/XL fits 22.5-23.5 in."),
                  ("Decoration", "Embroidered front, about 2.5 in.")]},
-    {"slug": "trucker-hat", "name": "Trucker Hat", "cat": "hats", "price": 28, "shape": "trucker",
-     "colors": ["burgundy/gold", "burgundy/white", "gold/burgundy", "white/burgundy"],
+    {"slug": "trucker-hat", "name": "Trucker Hat", "cat": "hats", "shape": "trucker",
+     "colors": ["red/white", "white/red", "burgundy/white", "red/red"],
      "sizes": [("One size", 0)], "logos": ["badge", "mark"],
      "blurb": "Structured mid-profile trucker with mesh back, snapback and an embroidered front.",
      "details": [("Fabric", "Cotton/poly front, nylon mesh back, plastic snapback."),
                  ("Fit", "One size fits most, adjustable."),
                  ("Decoration", "Embroidered front, about 3.5 in.")]},
-    {"slug": "leather-patch-hat", "name": "Leather Patch Hat", "cat": "hats", "price": 35, "shape": "patch",
-     "colors": ["burgundy/burgundy", "charcoal/white", "heather/burgundy", "black/black"],
+    {"slug": "leather-patch-hat", "name": "Leather Patch Hat", "cat": "hats", "shape": "patch",
+     "colors": ["red/white", "burgundy/burgundy", "charcoal/white", "heather/red"],
      "sizes": [("One size", 0)], "logos": ["patch"],
      "blurb": "Laser-engraved leather patch of the chief mark, stitched onto a structured trucker.",
      "details": [("Fabric", "Cotton/poly front, mesh back, snapback."),
@@ -112,10 +113,11 @@ CATS = [("all", "All"), ("tees", "Tees"), ("sweatshirts", "Sweatshirts"), ("quar
 
 # ---------------------------------------------------------------- posters
 # Only photos we may reproduce: pre-1931 yearbook scans (public domain) plus our own brand marks.
-POSTER_SIZES = [("8x10", "8 × 10 in.", 15, 1000), ("11x14", "11 × 14 in.", 22, 1400),
-                ("16x20", "16 × 20 in.", 32, 2000), ("18x24", "18 × 24 in.", 38, 2400),
-                ("24x36", "24 × 36 in.", 48, 3600)]
-FRAME = 40
+# Prices are TBD until vendor quotes are in (owner's request, Nov 23 2026).
+POSTER_SIZES = [("8x10", "8 × 10 in.", None, 1000), ("11x14", "11 × 14 in.", None, 1400),
+                ("16x20", "16 × 20 in.", None, 2000), ("18x24", "18 × 24 in.", None, 2400),
+                ("24x36", "24 × 36 in.", None, 3600)]
+TBD = "Price TBD"
 POSTERS = [
     {"slug": "poster-1925-team", "title": "The 1925 Redskins", "year": "1925", "img": "../football/img/1925_SLHS_Football.jpg",
      "w": 1158, "h": 620, "kind": "photo",
@@ -302,15 +304,15 @@ def build(g: dict) -> None:
     catalog = {}
     for p in PRODUCTS:
         catalog[p["slug"]] = {
-            "name": p["name"], "price": p["price"], "shape": p["shape"], "type": "apparel",
+            "name": p["name"], "shape": p["shape"], "type": "apparel",
             "colors": {k: {"name": color_name(k), "c1": colors_of(p, k)[0], "c2": colors_of(p, k)[1],
                            "mark": _logo_src("mark", k.split("/")[0])} for k in p["colors"]},
-            "sizes": {s: up_ for s, up_ in p["sizes"]},
+            "sizes": [sz for sz, _u in p["sizes"]],
             "svg": mockup(p["shape"], p["colors"][0], p["logos"][0], "UID", label=p["name"]),
         }
     for p in POSTERS:
         catalog[p["slug"]] = {"name": f"Poster: {p['title']}", "type": "poster", "img": p["img"], "kind": p["kind"],
-                              "sizes": {k: price for k, _l, price, ok in poster_sizes(p) if ok}, "frame": FRAME,
+                              "sizes": [k for k, _l, _pr, ok in poster_sizes(p) if ok],
                               "labels": {k: l for k, l, _p, _o in POSTER_SIZES}}
     data_js = ("window.SLR_STORE=" + json.dumps({"catalog": catalog, "ben": {b["id"]: b["short"] for b in BENEFICIARIES},
                                                   "mail": CONTACT}, separators=(",", ":")) + ";")
@@ -319,7 +321,7 @@ def build(g: dict) -> None:
     def page(title, desc, body, crumbs=None, cls=""):
         chrome = up(head(title, desc)).replace(
             "</head>", f'<link rel="stylesheet" href="../assets/store.css?v={V}">\n</head>')
-        chrome = chrome.replace('content="#F7F1E6"', 'content="#5A1414"')
+        chrome = chrome.replace('content="#F7F1E6"', 'content="#A6192E"')
         crumb = ""
         if crumbs:
             crumb = ('<nav class="st-crumbs" aria-label="Breadcrumb"><ol>' +
@@ -351,9 +353,9 @@ def build(g: dict) -> None:
   <div class="st-drawer-body" data-bag-lines><p class="st-empty">Your bag is empty.</p></div>
   <div class="st-drawer-ft">
     <div class="st-split" data-bag-split></div>
-    <div class="st-row st-total"><span>Subtotal</span><b data-bag-subtotal>$0</b></div>
-    <p class="st-fine">Shipping and pickup options at checkout.</p>
-    <a class="st-btn st-btn-gold st-wide" href="checkout.html" data-bag-checkout>{ICON["lock"]}<span>Secure checkout</span></a>
+    <div class="st-row st-total"><span>Subtotal</span><b data-bag-subtotal>TBD</b></div>
+    <p class="st-fine">Prices are to be determined. Shipping and pickup options at checkout.</p>
+    <a class="st-btn st-btn-pri st-wide" href="checkout.html" data-bag-checkout>{ICON["lock"]}<span>Secure checkout</span></a>
     <button class="st-btn st-btn-ghost st-wide" type="button" data-close-bag>Keep shopping</button>
   </div>
 </aside>
@@ -384,7 +386,7 @@ def build(g: dict) -> None:
         out = []
         for s, upc in p["sizes"]:
             chk = " checked" if len(p["sizes"]) == 1 else ""
-            extra = f'<small>+{money(upc)}</small>' if upc else ""
+            extra = ""
             out.append(f'<label class="st-size"><input type="radio" name="size" value="{E(s)}" data-up="{upc}"{chk} required>'
                        f'<span>{E(s)}{extra}</span></label>')
         guide = ""
@@ -417,7 +419,7 @@ def build(g: dict) -> None:
         sw = "".join(f'<span style="background:{colors_of(p, c)[0]}" title="{E(color_name(c))}"></span>' for c in p["colors"])
         return (f'<li class="st-card" data-cat="{p["cat"]}"><a href="{p["slug"]}.html">'
                 f'<span class="st-card-img">{mockup(p["shape"], k, p["logos"][0], f"c{i}", label=p["name"] + ", " + color_name(k))}</span>'
-                f'<span class="st-card-tx"><b>{E(p["name"])}</b><span class="st-price">{money(p["price"])}</span>'
+                f'<span class="st-card-tx"><b>{E(p["name"])}</b><span class="st-price">{TBD}</span>'
                 f'<span class="st-dots" aria-label="{len(p["colors"])} colors">{sw}</span></span></a></li>')
 
     def poster_frame(p, cls="st-poster"):
@@ -430,10 +432,9 @@ def build(g: dict) -> None:
 
     def poster_card(p):
         ok = [l for k, l, _pr, o in poster_sizes(p) if o]
-        frm = min(pr for k, l, pr, o in poster_sizes(p) if o)
         return (f'<li class="st-card st-pcard" data-cat="posters"><a href="{p["slug"]}.html">'
                 f'<span class="st-card-img st-wall">{poster_frame(p)}</span>'
-                f'<span class="st-card-tx"><b>{E(p["title"])}</b><span class="st-price">From {money(frm)}</span>'
+                f'<span class="st-card-tx"><b>{E(p["title"])}</b><span class="st-price">{TBD}</span>'
                 f'<span class="st-meta">{E(p["year"])} &middot; {len(ok)} size{"s" if len(ok) != 1 else ""}</span></span></a></li>')
 
     # ------------------------------------------------ store home
@@ -445,17 +446,17 @@ def build(g: dict) -> None:
     bens = "".join(f'<li class="st-bencard"><span class="st-ben-ic big">{ICON[b["icon"]]}</span><div><h3>{E(b["name"])}</h3>'
                    f'<p>{E(b["line"])}</p></div></li>' for b in BENEFICIARIES)
     hero_art = (f'<div class="st-hero-art" aria-hidden="true">'
-                f'<div class="st-hero-a">{mockup("hoodie", "burgundy", "badge", "h1", label="")}</div>'
-                f'<div class="st-hero-b">{mockup("trucker", "burgundy/gold", "badge", "h2", label="")}</div>'
+                f'<div class="st-hero-a">{mockup("hoodie", "red", "badge", "h1", label="")}</div>'
+                f'<div class="st-hero-b">{mockup("trucker", "white/red", "badge", "h2", label="")}</div>'
                 f'<div class="st-hero-c">{mockup("patch", "charcoal/white", "patch", "h3", label="")}</div></div>')
     body = f"""<main id="main" class="st-main">
   <section class="st-hero">
     <div class="st-wrap st-hero-grid">
       <div class="st-hero-tx">
         <span class="st-kicker">The Redskins Store &middot; Fundraiser</span>
-        <h1>Burgundy &amp; Gold, <span>for a good cause.</span></h1>
+        <h1>Red &amp; White, <span>for a good cause.</span></h1>
         <p class="st-lede">Tees, sweatshirts, quarter-zips, polos, hats and vintage team posters. <b>100% of proceeds</b> go to the Saranac Lake 5th Quarter Club or Santa's Jukebox, and you pick which one with every item.</p>
-        <div class="st-cta"><a class="st-btn st-btn-gold" href="#shop">Shop the collection</a><a class="st-btn st-btn-line" href="posters.html">Vintage posters</a></div>
+        <div class="st-cta"><a class="st-btn st-btn-pri" href="#shop">Shop the collection</a><a class="st-btn st-btn-line" href="posters.html">Vintage posters</a></div>
         <ul class="st-proof"><li>{ICON["heart"]}100% of proceeds to local causes</li><li>{ICON["shirt"]}Made to order</li><li>{ICON["truck"]}Ship or pick up in Saranac Lake</li></ul>
       </div>
       {hero_art}
@@ -474,14 +475,14 @@ def build(g: dict) -> None:
     <nav class="st-filters" aria-label="Filter products"><ul>{chips}</ul></nav>
     <p class="sr-only" aria-live="polite" data-filter-status></p>
     <ul class="st-grid" data-grid>{grid}</ul>
-    <p class="st-fine st-center">Prices are launch pricing and will be confirmed before checkout opens.</p>
+    <p class="st-fine st-center">Prices are to be determined and will be posted before checkout opens.</p>
   </section>
 
   <section class="st-posterband" aria-labelledby="post-h">
     <div class="st-wrap">
       <div class="st-sec-hd st-sec-row"><div><span class="st-kicker">From the archive</span><h2 id="post-h">Vintage team posters</h2>
       <p>The oldest Redskins team photos we have, from the 1926 to 1930 Canaras yearbooks.</p></div>
-      <a class="st-btn st-btn-gold" href="posters.html">See all posters</a></div>
+      <a class="st-btn st-btn-pri" href="posters.html">See all posters</a></div>
       <ul class="st-grid st-grid-posters">{pgrid}</ul>
     </div>
   </section>
@@ -492,7 +493,7 @@ def build(g: dict) -> None:
       <li><b>Pick your gear</b><span>Choose color, size and logo.</span></li>
       <li><b>Choose a cause</b><span>5th Quarter Club or Santa's Jukebox, per item.</span></li>
       <li><b>We make it</b><span>Printed or embroidered to order by local and trusted decorators.</span></li>
-      <li><b>Ship or pick up</b><span>Flat-rate shipping, or free pickup in Saranac Lake.</span></li>
+      <li><b>Ship or pick up</b><span>Shipping, or free pickup in Saranac Lake.</span></li>
     </ol>
   </section>
 
@@ -521,7 +522,7 @@ def build(g: dict) -> None:
         k = p["colors"][0]
         details = "".join(f'<details{" open" if j == 0 else ""}><summary>{E(t)}</summary><p>{E(d)}</p></details>' for j, (t, d) in enumerate(p["details"]))
         details += ('<details><summary>Shipping &amp; pickup</summary><p>Made to order in about two to three weeks. '
-                    'Flat-rate shipping in the U.S., or free pickup in Saranac Lake.</p></details>')
+                    'Shipping in the U.S., or free pickup in Saranac Lake.</p></details>')
         body = f"""<main id="main" class="st-main st-wrap st-pdp">
   <div class="st-pdp-grid">
     <div class="st-gallery">
@@ -531,14 +532,14 @@ def build(g: dict) -> None:
     <form class="st-buy" data-buy data-slug="{p["slug"]}" novalidate>
       <span class="st-kicker dk">{E(dict(CATS)[p["cat"]])}</span>
       <h1>{E(p["name"])}</h1>
-      <p class="st-pp"><span data-price>{money(p["price"])}</span> <span class="st-tag">Launch price</span></p>
+      <p class="st-pp"><span data-price>{TBD}</span></p>
       <p class="st-blurb">{E(p["blurb"])}</p>
       {swatches(p, i)}
       {logo_picker(p)}
       {sizes_html(p)}
       {ben_picker()}
       {qty()}
-      <div class="st-addbar"><button class="st-btn st-btn-gold st-wide st-add" type="submit">{ICON["bag"]}<span>Add to bag &middot; <span data-line-total>{money(p["price"])}</span></span></button></div>
+      <div class="st-addbar"><button class="st-btn st-btn-pri st-wide st-add" type="submit">{ICON["bag"]}<span>Add to bag</span></button></div>
       <ul class="st-assure"><li>{ICON["heart"]}100% of proceeds to your chosen cause</li><li>{ICON["lock"]}Secure checkout</li><li>{ICON["truck"]}Ship or free local pickup</li></ul>
       <div class="st-acc">{details}</div>
     </form>
@@ -580,15 +581,15 @@ def build(g: dict) -> None:
         for k, l, pr, ok in sz:
             chk = " checked" if k == first_ok else ""
             dis = "" if ok else " disabled"
-            note = f'<small>{money(pr)}</small>' if ok else '<small>Needs a sharper scan</small>'
-            opts.append(f'<label class="st-size st-psize"><input type="radio" name="size" value="{k}" data-price="{pr}"{chk}{dis}>'
+            note = "" if ok else '<small>Needs a sharper scan</small>'
+            opts.append(f'<label class="st-size st-psize"><input type="radio" name="size" value="{k}"{chk}{dis}>'
                         f'<span>{E(l)}{note}</span></label>')
         unavailable = [l for k, l, pr, ok in sz if not ok]
         why = (f'<p class="st-fine">Larger sizes are off for now: this scan is {p["w"]}&times;{p["h"]} pixels, which would print soft above '
                f'{E(next(l for k, l, pr, ok in reversed(sz) if ok))}.</p>') if unavailable else ""
         frame = ('<fieldset class="st-field"><legend>Finish</legend><div class="st-chips">'
                  '<label class="st-chip"><input type="radio" name="frame" value="0" checked><span>Print only</span></label>'
-                 f'<label class="st-chip"><input type="radio" name="frame" value="1"><span>Black frame +{money(FRAME)}</span></label></div></fieldset>')
+                 f'<label class="st-chip"><input type="radio" name="frame" value="1"><span>Black frame</span></label></div></fieldset>')
         body = f"""<main id="main" class="st-main st-wrap st-pdp">
   <div class="st-pdp-grid">
     <div class="st-gallery">
@@ -598,13 +599,13 @@ def build(g: dict) -> None:
     <form class="st-buy" data-buy data-slug="{p["slug"]}" data-kind="poster" novalidate>
       <span class="st-kicker dk">Poster &middot; {E(p["year"])}</span>
       <h1>{E(p["title"])}</h1>
-      <p class="st-pp"><span data-price>{money(dict((k, pr) for k, l, pr, ok in sz)[first_ok])}</span> <span class="st-tag">Launch price</span></p>
+      <p class="st-pp"><span data-price>{TBD}</span></p>
       <p class="st-blurb">{E(p["cap"])}</p>
       <fieldset class="st-field"><legend>Size</legend><div class="st-sizes st-sizes-wide">{"".join(opts)}</div>{why}</fieldset>
       {frame}
       {ben_picker()}
       {qty()}
-      <div class="st-addbar"><button class="st-btn st-btn-gold st-wide st-add" type="submit">{ICON["bag"]}<span>Add to bag &middot; <span data-line-total></span></span></button></div>
+      <div class="st-addbar"><button class="st-btn st-btn-pri st-wide st-add" type="submit">{ICON["bag"]}<span>Add to bag</span></button></div>
       <ul class="st-assure"><li>{ICON["heart"]}100% of proceeds to your chosen cause</li><li>{ICON["lock"]}Secure checkout</li><li>{ICON["truck"]}Ships rolled in a tube, or framed</li></ul>
       <div class="st-acc"><details open><summary>Paper &amp; print</summary><p>Archival matte paper, about 230 gsm, with a white border so the photo keeps its original shape.</p></details>
       <details><summary>About this photo</summary><p>{E(p["cap"])} {E(p["credit"])}</p></details></div>
@@ -629,7 +630,7 @@ def build(g: dict) -> None:
       </section>
       <section class="st-co-sec" aria-labelledby="c2"><h2 id="c2"><span>2</span>Delivery</h2>
         <div class="st-ship" role="radiogroup" aria-labelledby="c2">
-          <label class="st-opt"><input type="radio" name="ship" value="ship" checked><span><b>Ship to me</b><small>Flat rate, U.S. only</small></span><em data-ship-price>$8</em></label>
+          <label class="st-opt"><input type="radio" name="ship" value="ship" checked><span><b>Ship to me</b><small>U.S. only</small></span><em data-ship-price>TBD</em></label>
           <label class="st-opt"><input type="radio" name="ship" value="pickup"><span><b>Pick up in Saranac Lake</b><small>We'll email when it's ready</small></span><em>Free</em></label>
         </div>
         <div class="st-addr" data-addr>
@@ -650,7 +651,7 @@ def build(g: dict) -> None:
         <p>Card, Apple Pay and Google Pay will be handled on an encrypted, PCI-compliant payment page. Your card number never touches this site and is never stored by us.</p></div></div>
       </section>
       <div class="st-place">
-        <button class="st-btn st-btn-gold st-wide" type="submit" disabled aria-describedby="soon-note">{ICON["lock"]}<span>Checkout opens soon</span></button>
+        <button class="st-btn st-btn-pri st-wide" type="submit" disabled aria-describedby="soon-note">{ICON["lock"]}<span>Checkout opens soon</span></button>
         <p id="soon-note" class="st-fine">We're putting the finishing touches on secure payment. Your bag is saved on this device. Nothing you type on this page is sent or stored.</p>
         <a class="st-btn st-btn-ghost st-wide" data-notify href="{MAIL}">Email me when checkout opens</a>
       </div>
@@ -659,10 +660,10 @@ def build(g: dict) -> None:
       <details class="st-sum-toggle" open><summary><h2 id="sum-h">Order summary</h2><b data-sum-total-top></b></summary>
       <div data-sum-lines><p class="st-empty">Your bag is empty. <a href="index.html">Start shopping</a>.</p></div>
       <div class="st-sum-rows">
-        <div class="st-row"><span>Subtotal</span><span data-sum-sub>$0</span></div>
-        <div class="st-row"><span>Shipping</span><span data-sum-ship>$8</span></div>
+        <div class="st-row"><span>Subtotal</span><span data-sum-sub>TBD</span></div>
+        <div class="st-row"><span>Shipping</span><span data-sum-ship>TBD</span></div>
         <div class="st-row"><span>Tax</span><span>Calculated at payment</span></div>
-        <div class="st-row st-total"><span>Total</span><b data-sum-total>$0</b></div>
+        <div class="st-row st-total"><span>Total</span><b data-sum-total>TBD</b></div>
       </div>
       <div class="st-split" data-sum-split></div>
       </details>
