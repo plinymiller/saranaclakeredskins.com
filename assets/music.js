@@ -16,7 +16,7 @@
       return "<li><b>"+esc(s)+"</b>"+(n.length?esc(n.join(", ")):'<span class="need">Names needed</span>')+"</li>"}).join("");
     var media=c.youtube_id?'<button class="play" type="button" data-yt="'+esc(c.youtube_id)+'" aria-label="Play clip"><i></i></button>':'';
     var badge=c.tier==="likely"?'<span class="soon">Band playing</span>':'<span class="soon chk">Music &middot; check</span>';
-    return '<li class="cc" id="'+esc(c.id)+'"><div class="player"><img src="'+esc(c.thumb)+'" alt="Still from '+esc(c.tape)+' at '+esc(c.tape_time)+'" loading="lazy" width="640" height="480">'+badge+media+'<span class="dur">'+mm(c.duration)+'</span></div>'+
+    return '<li class="cc" id="'+esc(c.id)+'"><div class="player"><img src="'+esc(c.thumb)+'" alt="Still from '+esc(c.date+' '+(c.tape_label||c.tape))+' at '+esc(c.tape_time)+'" loading="lazy" width="640" height="480">'+badge+media+'<span class="dur">'+mm(c.duration)+'</span></div>'+
       '<h4 class="cc-t">'+(c.song?esc(c.song):esc(c.display_title||'Band selection')+' <span class="tbc">&middot; song not yet named</span>')+'</h4>'+
       '<p class="cc-m">Starts '+esc(tapeTime(c.tape_time))+' into the tape'+(c.youtube_id?'':' &middot; YouTube soon')+'</p>'+
       '<details class="roster"><summary>Credits ('+named+' named)</summary><dl class="credits"><dt>Band</dt><dd>'+(c.band?esc(c.band):'<span class="need">Which band? Tell us</span>')+'</dd><dt>Director</dt><dd>'+director(c)+'</dd>'+
@@ -24,11 +24,11 @@
       '<a class="addnames" href="'+mail(c)+'">Add names or the song &rarr;</a></li>'}
   function render(){
     var cs=all.filter(function(c){return !onlyLikely||c.tier==="likely"}), groups=[], by={};
-    cs.forEach(function(c){if(!by[c.tape]){by[c.tape]={tape:c.tape,date:c.date,clips:[]};groups.push(by[c.tape])}by[c.tape].clips.push(c)});
+    cs.forEach(function(c){if(!by[c.tape]){by[c.tape]={tape:c.tape,label:c.tape_label||c.tape.replace(/^\d{4}\s*/,""),date:c.date,clips:[]};groups.push(by[c.tape])}by[c.tape].clips.push(c)});
     document.getElementById("clip-count").textContent=cs.length+(cs.length===1?" clip":" clips")+" from "+groups.length+(groups.length===1?" tape":" tapes");
-    var jump=document.getElementById("tape-jump"); if(jump) jump.innerHTML=groups.map(function(g,i){return '<li><a href="#tape-'+i+'">'+esc(g.tape)+' <span>'+g.clips.length+'</span></a></li>'}).join("");
+    var jump=document.getElementById("tape-jump"); if(jump) jump.innerHTML=groups.map(function(g,i){return '<li><a href="#tape-'+i+'">'+esc(g.date+' \u00b7 '+g.label)+' <span>'+g.clips.length+'</span></a></li>'}).join("");
     list.innerHTML=groups.length?groups.map(function(g,i){var lk=g.clips.filter(function(c){return c.tier==="likely"}).length;
-      return '<li class="tape" id="tape-'+i+'"><div class="tape-h"><p class="kicker">'+esc(g.date)+'</p><h3>'+esc(g.tape.replace(/^\d{4}\s*/,""))+'</h3><p class="mu-count">'+g.clips.length+(g.clips.length===1?' clip':' clips')+' &middot; '+lk+' with the band clearly playing</p></div><ul class="cc-grid">'+g.clips.map(card).join("")+'</ul></li>'}).join(""):'<li class="need">The first clips are being cut now.</li>';
+      return '<li class="tape" id="tape-'+i+'"><div class="tape-h"><p class="kicker">'+esc(g.date)+'</p><h3>'+esc(g.label)+'</h3><p class="mu-count">'+g.clips.length+(g.clips.length===1?' clip':' clips')+' &middot; '+lk+' with the band clearly playing</p></div><ul class="cc-grid">'+g.clips.map(card).join("")+'</ul></li>'}).join(""):'<li class="need">The first clips are being cut now.</li>';
   }
   fetch("data/music.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){all=d.clips||[];render()})
     .catch(function(){list.innerHTML='<li class="need">Clips could not load. Try again in a moment.</li>'});
