@@ -92,3 +92,10 @@
 .tape>.tape-h~.cc-grid{margin:0}
 .cc.hl{outline:3px solid #a51c30;outline-offset:6px}
 .cc,.tape{scroll-margin-top:90px}
+.mu-portrait.has-img{padding:0;overflow:hidden;min-height:0;background:#e9e6e1}
+.mu-portrait.has-img picture,.mu-portrait.has-img img{display:block;width:100%;height:100%}
+.mu-portrait.has-img img{object-fit:cover;object-position:50% 20%;aspect-ratio:4/5;filter:grayscale(1)}
+.mu-portrait.has-img .credit{position:absolute;bottom:0;right:0;left:auto;padding:4px 8px;background:rgba(255,255,255,.85);font-size:.66rem;letter-spacing:.1em;color:var(--muted);text-align:right}
+.fb-photo.has-img{border:0;padding:0;background:none;aspect-ratio:auto;display:block}
+.fb-photo.has-img img{display:block;width:100%;height:auto;box-shadow:0 1px 0 var(--line),0 12px 30px -18px rgba(0,0,0,.45)}
+.fb-photo.has-img figcaption{margin-top:10px;font-family:var(--label);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.75rem;color:var(--muted);text-align:left}
