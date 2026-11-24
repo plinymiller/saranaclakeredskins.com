@@ -80,6 +80,7 @@ def header(current: str | None = None, extra: str = "", home: bool = False) -> s
         links.append(item(href, label, key))
         if key == "sports":
             links.append(item("football/index.html", "Football", "football"))
+            links.append(item("store/index.html", "Store", "store"))
     links += [item("classes.html", "Find your class", "classes"), f'<a href="{MAIL}">Contact us</a>']
     nav = " ".join(links)
     brand = ('<a class="brand" href="index.html">'
@@ -613,6 +614,8 @@ def main() -> None:
     write("404.html", not_found_page())
     from football import build as build_football
     build_football(globals())
+    from store import build as build_store
+    build_store(globals())
     for y in range(FIRST, LAST + 1):
         write(year_file(y), class_page(y))
     print("done")
