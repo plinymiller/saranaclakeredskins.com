@@ -1129,7 +1129,7 @@
  {
   "season": 1999,
   "nickname": "Redskins",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "Champlain Valley Athletic Conference (CVAC) / Section VII",
   "championship": null,
   "official_record": null,
@@ -1142,7 +1142,7 @@
  {
   "season": 2000,
   "nickname": "Redskins",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "Champlain Valley Athletic Conference (CVAC) / Section VII",
   "championship": null,
   "official_record": null,
@@ -1155,7 +1155,7 @@
  {
   "season": 2001,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": null,
   "official_record": null,
@@ -1168,7 +1168,7 @@
  {
   "season": 2002,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": null,
   "official_record": null,
@@ -1181,7 +1181,7 @@
  {
   "season": 2003,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": null,
   "official_record": null,
@@ -1194,7 +1194,7 @@
  {
   "season": 2004,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": "CVAC champions",
   "official_record": "9-1",
@@ -1207,7 +1207,7 @@
  {
   "season": 2005,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": null,
   "official_record": "6-4",
@@ -1220,7 +1220,7 @@
  {
   "season": 2006,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": null,
   "official_record": "4-5",
@@ -1233,7 +1233,7 @@
  {
   "season": 2007,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": "CVAC champions",
   "official_record": "6-4",
@@ -1246,7 +1246,7 @@
  {
   "season": 2008,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": "Section 7/10 and NYS Regional champions",
   "official_record": "10-2",
@@ -1259,7 +1259,7 @@
  {
   "season": 2009,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Mark Farmer",
   "league": "CVAC / Section VII",
   "championship": null,
   "official_record": "7-2",
@@ -1272,7 +1272,7 @@
  {
   "season": 2010,
   "nickname": "Red Storm",
-  "coach": null,
+  "coach": "Eric Bennett",
   "league": "CVAC / Section VII",
   "championship": "Section 7/10 and NYS Regional champions",
   "official_record": "10-2",

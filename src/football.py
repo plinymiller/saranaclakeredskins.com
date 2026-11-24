@@ -14,6 +14,15 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "src" / "football_data"
 OUT = ROOT / "football"
 UNVERIFIED = {"auto-ocr", "probable", "derived"}
+COACHES_SRC = "https://wiki.historicsaranaclake.org/index.php/Football"
+# Varsity head football coaches, from the Historic Saranac Lake wiki's Football page table.
+COACHES = [("1923", "1924", "Russell Sackett"), ("1925", "1936", "Ken Wilson"), ("1937", "1939", "Art Mahoney"),
+           ("1940", "1943", "Ken Wilson"), ("1944", None, "Ron Knapp"), ("1945", None, "Bill Leroy"),
+           ("1946", None, "Art Mahoney"), ("1947", None, "Lou George"), ("1948", "1951", "Butler Sullivan"),
+           ("1952", None, "Ken Wilson"), ("1953", "1955", "Bill Gallagher"), ("1956", "1958", "Duke Benz"),
+           ("1959", "1969", "Fraser Sturgeon"), ("1970", "1984", "John Raymond"), ("1985", None, "Larry Ewald"),
+           ("1986", "1991", "John Raymond"), ("1992", "1994", "Bruce Bullock"), ("1995", "1998", "John Raymond"),
+           ("1999", "2009", "Mark Farmer"), ("2010", "", "Eric Bennett")]
 FEATURED = "TKof5enjrdg"  # 1983 Class C Super Bowl vs AuSable Valley
 
 
@@ -162,6 +171,18 @@ def photo_link(m) -> str:
             f'<span class="src-note">Photo: {E(m.get("source"))}. Link only; not reproduced here.</span></li>')
 
 
+def coaches_html(sfile=None) -> str:
+    rows = []
+    for a, b, name in COACHES:
+        yrs = a if b is None else (f"{a}&ndash;" if b == "" else f"{a}&ndash;{b}")
+        if sfile:
+            yrs = f'<a href="{sfile(int(a))}">{yrs}</a>'
+        rows.append(f"<tr><td>{yrs}</td><td>{E(name)}</td></tr>")
+    return (f'<table class="riv coaches"><thead><tr><th>Years</th><th>Head coach</th></tr></thead><tbody>{"".join(rows)}</tbody></table>'
+            f'<p class="fine">Varsity head coaches, from the <a href="{COACHES_SRC}" target="_blank" rel="noopener">Historic Saranac Lake wiki</a>. '
+            f'Our sources list Eric Bennett from 2010 but not when his tenure ended, or the coaches since. <a href="mailto:plinymiller@gmail.com?subject=Football%20coaches">Know more? Contact us</a>.</p>')
+
+
 def build(g: dict) -> None:
     head, header, footer, MAIL, CONTACT = g["head"], g["header"], g["footer"], g["MAIL"], g["CONTACT"]
     G = load("games")
@@ -206,7 +227,7 @@ def build(g: dict) -> None:
         return f"{y}.html"
 
     def page(title, desc, body, crumbs=None):
-        chrome = up(head(title, desc)).replace("</head>", '<link rel="stylesheet" href="../assets/football.css?v=1">\n</head>')
+        chrome = up(head(title, desc)).replace("</head>", '<link rel="stylesheet" href="../assets/football.css?v=2">\n</head>')
         crumb = ""
         if crumbs:
             crumb = '<nav class="crumbs" aria-label="Breadcrumb">' + ' <span aria-hidden="true">/</span> '.join(crumbs) + "</nav>"
@@ -468,7 +489,9 @@ def build(g: dict) -> None:
 <section><div class="rail-h"><h2 class="h2">Team photos</h2><span>Canaras yearbooks, 1920s</span></div><div class="photos two">{pd_photos}</div>
 <p class="fine">Later photos are linked from each season page with credit to their owners.</p></section>
 </div>
-<section class="more-links"><a class="teaser" href="players.html"><span class="label">People</span><strong>Players and coaches</strong><span class="teaser-text">{len(P)} short bios, from Tom Wallace&rsquo;s 11-touchdown game to the Raymond era.</span></a>
+<section id="coaches"><div class="rail-h"><h2 class="h2">Head coaches</h2><span>Varsity head coaches since 1923</span></div>
+{coaches_html(sfile)}</section>
+<section class="more-links"><a class="teaser" href="players.html"><span class="label">People</span><strong>Players and coaches</strong><span class="teaser-text">{sum(1 for p in P if not any("coach" in x.lower() for x in p.get("positions") or []))} player bios, plus every varsity head coach since 1923.</span></a>
 <a class="teaser" href="credits.html"><span class="label">Credits</span><strong>Sources and credits</strong><span class="teaser-text">Where every score, story and film comes from, and how we handle copyright.</span></a></section>
 </div>
 </main>
@@ -496,7 +519,7 @@ def build(g: dict) -> None:
 <header class="pagehead"><span class="label">Football</span><h1>Players and coaches</h1>
 <p class="lede">Short bios drawn mostly from the Historic Saranac Lake wiki, Canaras yearbooks and newspaper stories. Each one links to its source. Know someone who belongs here? <a href="{MAIL}">Contact us</a>.</p></header>
 <h2 class="h2">Players</h2><div class="pgrid">{"".join(pcard(p) for p in players)}</div>
-<h2 class="h2">Coaches</h2><div class="pgrid">{"".join(pcard(p) for p in coaches)}</div>
+<h2 class="h2" id="coaches">Coaches</h2>{coaches_html(sfile)}
 </main>"""
     write("players.html", page("Players and Coaches | Football | Saranac Lake Redskins",
                                "Bios of Saranac Lake High School football players and coaches, 1923 to today.", body,
