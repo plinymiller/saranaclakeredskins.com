@@ -30,7 +30,7 @@
     list.innerHTML=groups.length?groups.map(function(g,i){var lk=g.clips.filter(function(c){return c.tier==="likely"}).length;
       return '<li class="tape" id="tape-'+i+'"><div class="tape-h"><p class="kicker">'+esc(g.date)+'</p><h3>'+esc(g.label)+'</h3><p class="mu-count">'+g.clips.length+(g.clips.length===1?' clip':' clips')+' &middot; '+lk+' with the band clearly playing</p></div><ul class="cc-grid">'+g.clips.map(card).join("")+'</ul></li>'}).join(""):'<li class="need">The first clips are being cut now.</li>';
   }
-  fetch("data/music.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){all=d.clips||[];render()})
+  fetch("data/music.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){all=d.clips||[];render();var h=decodeURIComponent(location.hash.slice(1)),el=h&&document.getElementById(h);if(el){el.scrollIntoView();el.classList.add("hl")}})
     .catch(function(){list.innerHTML='<li class="need">Clips could not load. Try again in a moment.</li>'});
   var f=document.getElementById("only-likely"); if(f) f.addEventListener("change",function(){onlyLikely=f.checked;render()});
   list.addEventListener("click",function(e){var b=e.target.closest(".play");if(!b)return;

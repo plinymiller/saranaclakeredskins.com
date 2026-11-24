@@ -90,3 +90,4 @@
 .tape-jump a:hover{border-color:var(--red);color:var(--red)}
 .tape-jump span{font-family:var(--label);font-weight:600;color:var(--muted)}
 .tape>.tape-h~.cc-grid{margin:0}
+.cc.hl{outline:3px solid #a51c30;outline-offset:6px}
