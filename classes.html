@@ -14,24 +14,33 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Saranac Lake Redskins badge">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F7F1E6">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/class.css">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/site.js?v=1" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="top-row">
-    <a class="brand" href="index.html"><img src="assets/logo-badge.svg" width="64" height="64" alt="Saranac Lake Redskins badge"><span class="brand-title">Home of the Saranac Lake Redskins</span></a>
-    <div class="top-extra"><a class="btn ghost" href="welcome.html">My class home</a></div>
+<header class="masthead" id="top">
+  <div class="mast-row">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-badge.svg" width="48" height="48" alt="Saranac Lake Redskins badge">
+      <span class="brand-words"><span class="brand-kicker">Saranac Lake High School &middot; Alumni</span><span class="brand-title">Saranac Lake Redskins</span></span>
+    </a>
+    <div class="top-extra"><a class="btn ghost hide-sm" href="welcome.html">My class home</a></div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-ic" aria-hidden="true"></span><span class="menu-l">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list"><li><a class="nav-a" href="index.html">Home</a></li><li><a class="nav-a" href="news.html">News</a></li><li class="has-sub"><a class="nav-a" href="classes.html" aria-current="page">Find Your Class</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-classes"><span class="sr-only">Find Your Class pages</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><ul class="sub" id="sub-classes"><li><a href="classes.html"><span class="sub-t">Pick your class year</span><span class="sub-d">Every class from 1890 to 2000</span></a></li><li><a href="alumni/index.html"><span class="sub-t">Classmates &amp; the year you graduated</span><span class="sub-d">Names from public records, 1960 to 2000</span></a></li><li><a href="welcome.html"><span class="sub-t">My class home</span><span class="sub-d">For members who have signed up</span></a></li></ul></li><li class="has-sub"><a class="nav-a" href="sports.html">Sports</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-sports"><span class="sr-only">Sports pages</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><ul class="sub" id="sub-sports"><li><a href="sports.html"><span class="sub-t">All sports</span><span class="sub-d">Teams, seasons and coaches</span></a></li><li><a href="football/index.html"><span class="sub-t">Football: The Film Room</span><span class="sub-d">Every game since 1923, with film</span></a></li><li><a href="football/index.html#scoreboard"><span class="sub-t">Football scoreboard</span><span class="sub-d">Scores and newspaper write-ups</span></a></li><li><a href="football/players.html"><span class="sub-t">Football players</span><span class="sub-d">Rosters, captains and honors</span></a></li></ul></li><li><a class="nav-a" href="arts.html">Arts</a></li><li><a class="nav-a" href="in-memoriam.html">In Memoriam</a></li><li><a class="nav-a" href="shop.html">Shop</a></li><li><a class="nav-a" href="contact.html">Contact Us</a></li></ul>
+    </nav>
   </div>
-  <nav aria-label="Site"><a href="index.html">Home</a> <a href="sports.html">Sports</a> <a href="football/index.html">Football</a> <a href="arts.html">Arts</a> <a href="news.html">News</a> <a href="in-memoriam.html">In Memoriam</a> <a href="classes.html" aria-current="page">Find your class</a> <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact us</a></nav>
 </header>
 
 <main id="main" class="wrap">
@@ -48,16 +57,23 @@
     <details class="decade" id="d1890"><summary>The 1890s</summary><div class="years"><a href="1890.html" aria-label="Class of 1890">1890</a><a href="1891.html" aria-label="Class of 1891">1891</a><a href="1892.html" aria-label="Class of 1892">1892</a><a href="1893.html" aria-label="Class of 1893">1893</a><a href="1894.html" aria-label="Class of 1894">1894</a><a href="1895.html" aria-label="Class of 1895">1895</a><a href="1896.html" aria-label="Class of 1896">1896</a><a href="1897.html" aria-label="Class of 1897">1897</a><a href="1898.html" aria-label="Class of 1898">1898</a><a href="1899.html" aria-label="Class of 1899">1899</a></div></details><details class="decade" id="d1900"><summary>The 1900s</summary><div class="years"><a href="1900.html" aria-label="Class of 1900">1900</a><a href="1901.html" aria-label="Class of 1901">1901</a><a href="1902.html" aria-label="Class of 1902">1902</a><a href="1903.html" aria-label="Class of 1903">1903</a><a href="1904.html" aria-label="Class of 1904">1904</a><a href="1905.html" aria-label="Class of 1905">1905</a><a href="1906.html" aria-label="Class of 1906">1906</a><a href="1907.html" aria-label="Class of 1907">1907</a><a href="1908.html" aria-label="Class of 1908">1908</a><a href="1909.html" aria-label="Class of 1909">1909</a></div></details><details class="decade" id="d1910"><summary>The 1910s</summary><div class="years"><a href="1910.html" aria-label="Class of 1910">1910</a><a href="1911.html" aria-label="Class of 1911">1911</a><a href="1912.html" aria-label="Class of 1912">1912</a><a href="1913.html" aria-label="Class of 1913">1913</a><a href="1914.html" aria-label="Class of 1914">1914</a><a href="1915.html" aria-label="Class of 1915">1915</a><a href="1916.html" aria-label="Class of 1916">1916</a><a href="1917.html" aria-label="Class of 1917">1917</a><a href="1918.html" aria-label="Class of 1918">1918</a><a href="1919.html" aria-label="Class of 1919">1919</a></div></details><details class="decade" id="d1920"><summary>The 1920s</summary><div class="years"><a href="1920.html" aria-label="Class of 1920">1920</a><a href="1921.html" aria-label="Class of 1921">1921</a><a href="1922.html" aria-label="Class of 1922">1922</a><a href="1923.html" aria-label="Class of 1923">1923</a><a href="1924.html" aria-label="Class of 1924">1924</a><a href="1925.html" aria-label="Class of 1925">1925</a><a href="1926.html" aria-label="Class of 1926">1926</a><a href="1927.html" aria-label="Class of 1927">1927</a><a href="1928.html" aria-label="Class of 1928">1928</a><a href="1929.html" aria-label="Class of 1929">1929</a></div></details><details class="decade" id="d1930"><summary>The 1930s</summary><div class="years"><a href="1930.html" aria-label="Class of 1930">1930</a><a href="1931.html" aria-label="Class of 1931">1931</a><a href="1932.html" aria-label="Class of 1932">1932</a><a href="1933.html" aria-label="Class of 1933">1933</a><a href="1934.html" aria-label="Class of 1934">1934</a><a href="1935.html" aria-label="Class of 1935">1935</a><a href="1936.html" aria-label="Class of 1936">1936</a><a href="1937.html" aria-label="Class of 1937">1937</a><a href="1938.html" aria-label="Class of 1938">1938</a><a href="1939.html" aria-label="Class of 1939">1939</a></div></details><details class="decade" id="d1940"><summary>The 1940s</summary><div class="years"><a href="1940.html" aria-label="Class of 1940">1940</a><a href="1941.html" aria-label="Class of 1941">1941</a><a href="1942.html" aria-label="Class of 1942">1942</a><a href="1943.html" aria-label="Class of 1943">1943</a><a href="1944.html" aria-label="Class of 1944">1944</a><a href="1945.html" aria-label="Class of 1945">1945</a><a href="1946.html" aria-label="Class of 1946">1946</a><a href="1947.html" aria-label="Class of 1947">1947</a><a href="1948.html" aria-label="Class of 1948">1948</a><a href="1949.html" aria-label="Class of 1949">1949</a></div></details><details class="decade" id="d1950" open><summary>The 1950s</summary><div class="years"><a href="1950.html" aria-label="Class of 1950">1950</a><a href="1951.html" aria-label="Class of 1951">1951</a><a href="1952.html" aria-label="Class of 1952">1952</a><a href="1953.html" aria-label="Class of 1953">1953</a><a href="1954.html" aria-label="Class of 1954">1954</a><a href="1955.html" aria-label="Class of 1955">1955</a><a href="1956.html" aria-label="Class of 1956">1956</a><a href="1957.html" aria-label="Class of 1957">1957</a><a href="1958.html" aria-label="Class of 1958">1958</a><a href="1959.html" aria-label="Class of 1959">1959</a></div></details><details class="decade" id="d1960" open><summary>The 1960s</summary><div class="years"><a href="60.html" aria-label="Class of 1960">1960</a><a href="61.html" aria-label="Class of 1961">1961</a><a href="62.html" aria-label="Class of 1962">1962</a><a href="63.html" aria-label="Class of 1963">1963</a><a href="64.html" aria-label="Class of 1964">1964</a><a href="65.html" aria-label="Class of 1965">1965</a><a href="66.html" aria-label="Class of 1966">1966</a><a href="67.html" aria-label="Class of 1967">1967</a><a href="68.html" aria-label="Class of 1968">1968</a><a href="69.html" aria-label="Class of 1969">1969</a></div></details><details class="decade" id="d1970" open><summary>The 1970s</summary><div class="years"><a href="70.html" aria-label="Class of 1970">1970</a><a href="71.html" aria-label="Class of 1971">1971</a><a href="72.html" aria-label="Class of 1972">1972</a><a href="73.html" aria-label="Class of 1973">1973</a><a href="74.html" aria-label="Class of 1974">1974</a><a href="75.html" aria-label="Class of 1975">1975</a><a href="76.html" aria-label="Class of 1976">1976</a><a href="77.html" aria-label="Class of 1977">1977</a><a href="78.html" aria-label="Class of 1978">1978</a><a href="79.html" aria-label="Class of 1979">1979</a></div></details><details class="decade" id="d1980" open><summary>The 1980s</summary><div class="years"><a href="80.html" aria-label="Class of 1980">1980</a><a href="81.html" aria-label="Class of 1981">1981</a><a href="82.html" aria-label="Class of 1982">1982</a><a href="83.html" aria-label="Class of 1983">1983</a><a href="84.html" aria-label="Class of 1984">1984</a><a href="85.html" aria-label="Class of 1985">1985</a><a href="86.html" aria-label="Class of 1986">1986</a><a href="87.html" aria-label="Class of 1987">1987</a><a href="88.html" aria-label="Class of 1988">1988</a><a href="89.html" aria-label="Class of 1989">1989</a></div></details><details class="decade" id="d1990" open><summary>The 1990s</summary><div class="years"><a href="90.html" aria-label="Class of 1990">1990</a><a href="91.html" aria-label="Class of 1991">1991</a><a href="92.html" aria-label="Class of 1992">1992</a><a href="93.html" aria-label="Class of 1993">1993</a><a href="94.html" aria-label="Class of 1994">1994</a><a href="95.html" aria-label="Class of 1995">1995</a><a href="96.html" aria-label="Class of 1996">1996</a><a href="97.html" aria-label="Class of 1997">1997</a><a href="98.html" aria-label="Class of 1998">1998</a><a href="99.html" aria-label="Class of 1999">1999</a></div></details><details class="decade" id="d2000" open><summary>2000</summary><div class="years"><a href="00.html" aria-label="Class of 2000">2000</a></div></details>
   </div>
 </main>
-<footer>
+<footer class="site-foot">
   <div class="foot">
-    <nav aria-label="Legal">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="support.html">Support</a>
-      <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact</a>
-    </nav>
-    <p class="credit"><img class="foot-mark" src="assets/mark-maroon.svg" width="34" height="38" alt="">a <a href="https://plinymiller.com" target="_blank" rel="noopener">plinymiller design</a> – a <a href="https://b-tuff.co" target="_blank" rel="noopener">B-Tuff Company</a></p>
-    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">contact us</a> at plinymiller@gmail.com.</p>
+    <div class="foot-brand">
+      <img class="foot-mark" src="assets/mark-maroon.svg" width="40" height="45" alt="">
+      <p><strong>Saranac Lake Redskins</strong><br>An independent alumni project for Saranac Lake High School classes of 1890 to 2000.</p>
+    </div>
+    <nav aria-label="Footer: explore"><h2 class="foot-h">Explore</h2><ul><li><a href="news.html">News</a></li><li><a href="classes.html">Find Your Class</a></li><li><a href="sports.html">Sports</a></li><li><a href="arts.html">Arts</a></li><li><a href="in-memoriam.html">In Memoriam</a></li><li><a href="shop.html">Shop</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="football/index.html">Football</a></li></ul></nav>
+    <nav aria-label="Legal"><h2 class="foot-h">This site</h2><ul>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">plinymiller@gmail.com</a></li>
+    </ul></nav>
+  </div>
+  <div class="foot-base">
+    <p>Questions, corrections, or to have your account and details removed: <a href="contact.html">contact us</a>.</p>
+    <p class="credit">a <a href="https://plinymiller.com" target="_blank" rel="noopener">plinymiller design</a> – a <a href="https://b-tuff.co" target="_blank" rel="noopener">B-Tuff Company</a></p>
   </div>
 </footer>
 

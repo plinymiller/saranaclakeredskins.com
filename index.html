@@ -14,69 +14,131 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Saranac Lake Redskins badge">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#F7F1E6">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/class.css">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/site.js?v=1" defer></script>
 </head>
 <body class="home">
 <a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="top-row">
-    <a class="brand" href="index.html"><img src="assets/logo-badge.svg" width="64" height="64" alt="Saranac Lake Redskins badge"><span class="brand-title">Home of the Saranac Lake Redskins</span></a>
+<header class="masthead" id="top">
+  <div class="mast-row">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-badge.svg" width="48" height="48" alt="Saranac Lake Redskins badge">
+      <span class="brand-words"><span class="brand-kicker">Saranac Lake High School &middot; Alumni</span><span class="brand-title">Saranac Lake Redskins</span></span>
+    </a>
     
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-ic" aria-hidden="true"></span><span class="menu-l">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list"><li><a class="nav-a" href="index.html" aria-current="page">Home</a></li><li><a class="nav-a" href="news.html">News</a></li><li class="has-sub"><a class="nav-a" href="classes.html">Find Your Class</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-classes"><span class="sr-only">Find Your Class pages</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><ul class="sub" id="sub-classes"><li><a href="classes.html"><span class="sub-t">Pick your class year</span><span class="sub-d">Every class from 1890 to 2000</span></a></li><li><a href="alumni/index.html"><span class="sub-t">Classmates &amp; the year you graduated</span><span class="sub-d">Names from public records, 1960 to 2000</span></a></li><li><a href="welcome.html"><span class="sub-t">My class home</span><span class="sub-d">For members who have signed up</span></a></li></ul></li><li class="has-sub"><a class="nav-a" href="sports.html">Sports</a><button class="sub-btn" type="button" aria-expanded="false" aria-controls="sub-sports"><span class="sr-only">Sports pages</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><ul class="sub" id="sub-sports"><li><a href="sports.html"><span class="sub-t">All sports</span><span class="sub-d">Teams, seasons and coaches</span></a></li><li><a href="football/index.html"><span class="sub-t">Football: The Film Room</span><span class="sub-d">Every game since 1923, with film</span></a></li><li><a href="football/index.html#scoreboard"><span class="sub-t">Football scoreboard</span><span class="sub-d">Scores and newspaper write-ups</span></a></li><li><a href="football/players.html"><span class="sub-t">Football players</span><span class="sub-d">Rosters, captains and honors</span></a></li></ul></li><li><a class="nav-a" href="arts.html">Arts</a></li><li><a class="nav-a" href="in-memoriam.html">In Memoriam</a></li><li><a class="nav-a" href="shop.html">Shop</a></li><li><a class="nav-a" href="contact.html">Contact Us</a></li></ul>
+    </nav>
   </div>
-  <nav aria-label="Site"><a href="index.html" aria-current="page">Home</a> <a href="sports.html">Sports</a> <a href="football/index.html">Football</a> <a href="arts.html">Arts</a> <a href="news.html">News</a> <a href="in-memoriam.html">In Memoriam</a> <a href="classes.html">Find your class</a> <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact us</a></nav>
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="logo-wrap">
-      <img src="assets/logo-badge.svg" width="1480" height="1480" alt="Saranac Lake Redskins badge" fetchpriority="high">
-      <a href="88.html" class="feather-tip" aria-label="Class of 1988"></a>
+  <section class="h-hero" aria-labelledby="h-title">
+    <div class="h-hero-copy">
+      <p class="kicker">Saranac Lake High School &middot; Classes of 1890&ndash;2000</p>
+      <h1 id="h-title">Welcome home, <em>alumni.</em></h1>
+      <p class="lede">An independent alumni project for every class from 1890 to 2000. Find your class bulletin board and classmate directory, catch reunion news, and dig into a century of Redskins history.</p>
+      <form class="yearjump" action="classes.html" data-yearjump>
+        <label for="yj">What year did you graduate?</label>
+        <div class="yj-row">
+          <input id="yj" name="year" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="1988" autocomplete="off" aria-describedby="yj-msg">
+          <button class="btn" type="submit">Go to my class</button>
+        </div>
+        <p class="yj-msg" id="yj-msg" role="status">Or <a href="classes.html">browse every class</a>.</p>
+      </form>
     </div>
-    <div class="hero-copy">
-      <p class="label">Saranac Lake High School alumni</p>
-      <h1>Welcome home, alumni</h1>
-      <p>An independent alumni project for the classes of 1890 to 2000. Sign in for your class bulletin board, the classmate directory, and reunion news.</p>
-      <a class="btn" href="classes.html">Find your class</a>
+    <div class="h-hero-art">
+      <div class="logo-wrap">
+        <img src="assets/logo-badge.svg" width="1480" height="1480" alt="Saranac Lake Redskins badge" fetchpriority="high">
+        <a href="88.html" class="feather-tip" aria-label="Class of 1988"></a>
+      </div>
     </div>
   </section>
-  <section class="panel" aria-labelledby="news-heading">
-    <div class="panel-box">
-      <h2 id="news-heading">Class news</h2>
+
+  <section class="h-decades" aria-labelledby="dec-h">
+    <h2 id="dec-h" class="kicker">Jump to a decade</h2>
+    <ol class="decades-strip"><li><a href="classes.html#d1890" aria-label="Classes of the 1890s"><span class="dec-n">1890<small>s</small></span></a></li><li><a href="classes.html#d1900" aria-label="Classes of the 1900s"><span class="dec-n">1900<small>s</small></span></a></li><li><a href="classes.html#d1910" aria-label="Classes of the 1910s"><span class="dec-n">1910<small>s</small></span></a></li><li><a href="classes.html#d1920" aria-label="Classes of the 1920s"><span class="dec-n">1920<small>s</small></span></a></li><li><a href="classes.html#d1930" aria-label="Classes of the 1930s"><span class="dec-n">1930<small>s</small></span></a></li><li><a href="classes.html#d1940" aria-label="Classes of the 1940s"><span class="dec-n">1940<small>s</small></span></a></li><li><a href="classes.html#d1950" aria-label="Classes of the 1950s"><span class="dec-n">1950<small>s</small></span></a></li><li><a href="classes.html#d1960" aria-label="Classes of the 1960s"><span class="dec-n">1960<small>s</small></span></a></li><li><a href="classes.html#d1970" aria-label="Classes of the 1970s"><span class="dec-n">1970<small>s</small></span></a></li><li><a href="classes.html#d1980" aria-label="Classes of the 1980s"><span class="dec-n">1980<small>s</small></span></a></li><li><a href="classes.html#d1990" aria-label="Classes of the 1990s"><span class="dec-n">1990<small>s</small></span></a></li><li><a href="classes.html#d2000" aria-label="Class of 2000"><span class="dec-n">2000</span></a></li></ol>
+  </section>
+
+  <section class="h-feature" aria-labelledby="fb-h">
+    <figure class="h-feature-img">
+      <img src="football/img/1925_SLHS_Football.jpg" width="1158" height="620" alt="The 1925 Saranac Lake High School football team posing in uniform" loading="lazy">
+      <figcaption>The 1925 team, from the 1926 <i>Canaras</i> yearbook.</figcaption>
+    </figure>
+    <div class="h-feature-copy">
+      <p class="kicker">Sports &middot; Football since 1923</p>
+      <h2 id="fb-h">The Film Room</h2>
+      <p>Every game we can find, from the first kickoff against Mineville in 1923 to today: scores, newspaper write-ups, rosters, team photos and game film.</p>
+      <dl class="figures">
+        <div><dt>Games</dt><dd>346</dd></div>
+        <div><dt>Seasons</dt><dd>88</dd></div>
+        <div><dt>Films</dt><dd>49</dd></div>
+        <div><dt>Title seasons</dt><dd>34</dd></div>
+      </dl>
+      <p class="links"><a class="btn" href="football/index.html">Enter the Film Room</a> <a class="text-link" href="football/index.html#scoreboard">Scoreboard</a> <a class="text-link" href="football/players.html">Players</a></p>
+    </div>
+  </section>
+
+  <section class="h-years" aria-labelledby="yrs-h">
+    <div class="h-years-head">
+      <p class="kicker">Classmates &amp; the year you graduated</p>
+      <h2 id="yrs-h">What was playing when you walked</h2>
+      <p>1,750 classmates found so far in public records for the classes of 1960 to 2000, plus the songs, movies, prices and headlines of each graduation year.</p>
+      <p><a class="text-link strong" href="alumni/index.html">See all 41 class years</a></p>
+    </div>
+    <ol class="yr-list"><li><a href="alumni/class-1970.html"><span class="yr">1970</span><span class="yr-row"><span class="yr-k">No. 1 song</span> &ldquo;Bridge Over Troubled Water&rdquo; <span class="yr-by">Simon & Garfunkel</span></span><span class="yr-row"><span class="yr-k">Top movie</span> Love Story</span><span class="yr-row"><span class="yr-k">Gallon of gas</span> $0.36</span></a></li><li><a href="alumni/class-1988.html"><span class="yr">1988</span><span class="yr-row"><span class="yr-k">No. 1 song</span> &ldquo;Faith&rdquo; <span class="yr-by">George Michael</span></span><span class="yr-row"><span class="yr-k">Top movie</span> Rain Man</span><span class="yr-row"><span class="yr-k">Gallon of gas</span> $0.95</span></a></li><li><a href="alumni/class-2000.html"><span class="yr">2000</span><span class="yr-row"><span class="yr-k">No. 1 song</span> &ldquo;Breathe&rdquo; <span class="yr-by">Faith Hill</span></span><span class="yr-row"><span class="yr-k">Top movie</span> Mission: Impossible 2</span><span class="yr-row"><span class="yr-k">Gallon of gas</span> $1.51</span></a></li></ol>
+  </section>
+
+  <section class="h-index" aria-labelledby="more-h">
+    <h2 id="more-h" class="kicker">Also on the site</h2>
+    <ul class="index-list">
+      <li><a href="news.html"><span class="ix-t">Alumni news</span><span class="ix-d">Reunions, milestones and updates from Saranac Lake alumni.</span></a></li>
+      <li><a href="arts.html"><span class="ix-t">Arts and music</span><span class="ix-d">Band, chorus, drama, art and the stage crews behind them.</span></a></li>
+      <li class="quiet"><a href="in-memoriam.html"><span class="ix-t">In memoriam</span><span class="ix-d">Remembering classmates, teachers and coaches.</span></a></li>
+      <li><a href="shop.html"><span class="ix-t">Shop</span><span class="ix-d">Alumni gear and archival prints, coming soon.</span></a></li>
+    </ul>
+  </section>
+
+  <section class="h-close" id="support" aria-label="Share news and support">
+    <div>
+      <h2>Have class news?</h2>
       <p>Reunion dates, photos, and class group links will be posted here. To share one, <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">email us</a> at plinymiller@gmail.com.</p>
     </div>
-  </section>
-  <section class="panel" aria-labelledby="sections-heading">
-    <h2 id="sections-heading" class="sr-only">Explore</h2>
-    <div class="teasers"><a class="teaser" href="sports.html"><span class="label">Sports</span><strong>Redskins sports</strong><span class="teaser-text">Teams, seasons, coaches and the games people still talk about.</span><span class="teaser-go" aria-hidden="true">&rarr;</span></a><a class="teaser" href="arts.html"><span class="label">Arts</span><strong>Arts and music</strong><span class="teaser-text">Band, chorus, drama, art and the stage crews behind them.</span><span class="teaser-go" aria-hidden="true">&rarr;</span></a><a class="teaser" href="news.html"><span class="label">News</span><strong>Alumni news</strong><span class="teaser-text">Reunions, milestones and updates from Saranac Lake alumni.</span><span class="teaser-go" aria-hidden="true">&rarr;</span></a><a class="teaser memoriam" href="in-memoriam.html"><span class="label">In Memoriam</span><strong>In memoriam</strong><span class="teaser-text">Remembering classmates, teachers and coaches.</span><span class="teaser-go" aria-hidden="true">&rarr;</span></a></div>
-  </section>
-  <div class="brand-divider" aria-hidden="true"><span></span><img src="assets/mark-red.svg" width="56" height="62" alt=""><span></span></div>
-  <section class="panel support-panel" id="support" aria-labelledby="support-heading">
-    <div class="panel-box">
-      <p class="label">Support</p>
+    <div>
       <h2 id="support-heading">Support this site</h2>
       <p>This site is a volunteer labor of love. Contributions help cover web hosting, the domain, and upkeep — nothing more. This site is not a nonprofit, and contributions are not tax-deductible.</p>
-      <a class="btn gold" href="https://ko-fi.com/plinymiller" target="_blank" rel="noopener">Support this site</a>
+      <p><a class="btn ghost" href="https://ko-fi.com/plinymiller" target="_blank" rel="noopener">Support on Ko-fi</a></p>
     </div>
   </section>
 </main>
-<footer>
+<footer class="site-foot">
   <div class="foot">
-    <nav aria-label="Legal">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="support.html">Support</a>
-      <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">Contact</a>
-    </nav>
-    <p class="credit"><img class="foot-mark" src="assets/mark-maroon.svg" width="34" height="38" alt="">a <a href="https://plinymiller.com" target="_blank" rel="noopener">plinymiller design</a> – a <a href="https://b-tuff.co" target="_blank" rel="noopener">B-Tuff Company</a></p>
-    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">contact us</a> at plinymiller@gmail.com.</p>
+    <div class="foot-brand">
+      <img class="foot-mark" src="assets/mark-maroon.svg" width="40" height="45" alt="">
+      <p><strong>Saranac Lake Redskins</strong><br>An independent alumni project for Saranac Lake High School classes of 1890 to 2000.</p>
+    </div>
+    <nav aria-label="Footer: explore"><h2 class="foot-h">Explore</h2><ul><li><a href="news.html">News</a></li><li><a href="classes.html">Find Your Class</a></li><li><a href="sports.html">Sports</a></li><li><a href="arts.html">Arts</a></li><li><a href="in-memoriam.html">In Memoriam</a></li><li><a href="shop.html">Shop</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="football/index.html">Football</a></li></ul></nav>
+    <nav aria-label="Legal"><h2 class="foot-h">This site</h2><ul>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="mailto:plinymiller@gmail.com?subject=Saranac%20Lake%20alumni%20site">plinymiller@gmail.com</a></li>
+    </ul></nav>
+  </div>
+  <div class="foot-base">
+    <p>Questions, corrections, or to have your account and details removed: <a href="contact.html">contact us</a>.</p>
+    <p class="credit">a <a href="https://plinymiller.com" target="_blank" rel="noopener">plinymiller design</a> – a <a href="https://b-tuff.co" target="_blank" rel="noopener">B-Tuff Company</a></p>
     <p class="logo-notice">This site is not affiliated with or endorsed by the Washington Commanders (formerly the Washington Redskins) or the NFL.</p>
   </div>
 </footer>

@@ -9,7 +9,7 @@ CREDIT = "a <a href=\"https://plinymiller.com\" target=\"_blank\" rel=\"noopener
 KOFI = "https://ko-fi.com/plinymiller"
 SUPPORT_BLURB = "This site is a volunteer labor of love. Contributions help cover web hosting, the domain, and upkeep \u2014 nothing more. This site is not a nonprofit, and contributions are not tax-deductible."
 FIRST, LAST = 1890, 2000
-FONTS = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap"
+FONTS = "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap"
 
 
 def year_file(y: int) -> str:
@@ -49,7 +49,7 @@ def head(title: str, description: str | None = None, robots: str | None = None) 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
-{desc}{rob}{og}<meta name="theme-color" content="#F7F1E6">
+{desc}{rob}{og}<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
@@ -58,11 +58,14 @@ def head(title: str, description: str | None = None, robots: str | None = None) 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
 <link rel="stylesheet" href="assets/class.css">
+<link rel="stylesheet" href="assets/site.css?v=1">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/site.js?v=1" defer></script>
 </head>
 """
 
 
-SITE_TITLE = "Home of the Saranac Lake Redskins"
+SITE_TITLE = "Saranac Lake Redskins"
 SECTIONS = [
     ("sports", "sports.html", "Sports"),
     ("arts", "arts.html", "Arts"),
@@ -70,29 +73,60 @@ SECTIONS = [
     ("memoriam", "in-memoriam.html", "In Memoriam"),
 ]
 
+# Top menu, in the owner's order. Sub-menus are disclosure lists (not ARIA menus).
+NAV = [
+    ("home", "index.html", "Home", None),
+    ("news", "news.html", "News", None),
+    ("classes", "classes.html", "Find Your Class", [
+        ("classes.html", "Pick your class year", "Every class from 1890 to 2000"),
+        ("alumni/index.html", "Classmates &amp; the year you graduated", "Names from public records, 1960 to 2000"),
+        ("welcome.html", "My class home", "For members who have signed up"),
+    ]),
+    ("sports", "sports.html", "Sports", [
+        ("sports.html", "All sports", "Teams, seasons and coaches"),
+        ("football/index.html", "Football: The Film Room", "Every game since 1923, with film"),
+        ("football/index.html#scoreboard", "Football scoreboard", "Scores and newspaper write-ups"),
+        ("football/players.html", "Football players", "Rosters, captains and honors"),
+    ]),
+    ("arts", "arts.html", "Arts", None),
+    ("memoriam", "in-memoriam.html", "In Memoriam", None),
+    ("shop", "shop.html", "Shop", None),
+    ("contact", "contact.html", "Contact Us", None),
+]
+GROUP = {"football": "sports", "alumni": "classes", "classes-year": "classes"}
+
 
 def header(current: str | None = None, extra: str = "", home: bool = False) -> str:
-    def item(href, label, key):
-        cur = ' aria-current="page"' if current == key else ""
-        return f'<a href="{href}"{cur}>{label}</a>'
-    links = [item("index.html", "Home", "home")]
-    for key, href, label in SECTIONS:
-        links.append(item(href, label, key))
-        if key == "sports":
-            links.append(item("football/index.html", "Football", "football"))
-    links += [item("classes.html", "Find your class", "classes"), f'<a href="{MAIL}">Contact us</a>']
-    nav = " ".join(links)
-    brand = ('<a class="brand" href="index.html">'
-             f'<img src="assets/logo-badge.svg" width="64" height="64" alt="{BADGE_ALT}">'
-             f'<span class="brand-title">{SITE_TITLE}</span></a>')
+    cur = GROUP.get(current, current)
+    items = []
+    for key, href, label, sub in NAV:
+        here = ' aria-current="page"' if current == key else (' aria-current="true"' if cur == key else "")
+        if not sub:
+            items.append(f'<li><a class="nav-a" href="{href}"{here}>{label}</a></li>')
+            continue
+        sid = f"sub-{key}"
+        subs = "".join(
+            f'<li><a href="{h}"{" aria-current=\"page\"" if (current == "football" and h == "football/index.html") else ""}>'
+            f'<span class="sub-t">{t}</span><span class="sub-d">{d}</span></a></li>' for h, t, d in sub)
+        items.append(
+            f'<li class="has-sub"><a class="nav-a" href="{href}"{here}>{label}</a>'
+            f'<button class="sub-btn" type="button" aria-expanded="false" aria-controls="{sid}">'
+            f'<span class="sr-only">{label} pages</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>'
+            f'<ul class="sub" id="{sid}">{subs}</ul></li>')
     extra_html = f'<div class="top-extra">{extra}</div>' if extra else ""
     return f"""<a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="top-row">
-    {brand}
+<header class="masthead" id="top">
+  <div class="mast-row">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-badge.svg" width="48" height="48" alt="{BADGE_ALT}">
+      <span class="brand-words"><span class="brand-kicker">Saranac Lake High School &middot; Alumni</span><span class="brand-title">{SITE_TITLE}</span></span>
+    </a>
     {extra_html}
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-ic" aria-hidden="true"></span><span class="menu-l">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">{''.join(items)}</ul>
+    </nav>
   </div>
-  <nav aria-label="Site">{nav}</nav>
 </header>
 """
 
@@ -108,16 +142,24 @@ def divider() -> str:
 
 def footer(logo_notice: bool = False) -> str:
     notice = f'\n    <p class="logo-notice">{LOGO_NOTICE}</p>' if logo_notice else ""
-    return f"""<footer>
+    explore = "".join(f'<li><a href="{h}">{l}</a></li>' for k, h, l, _ in NAV if k != "home")
+    return f"""<footer class="site-foot">
   <div class="foot">
-    <nav aria-label="Legal">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="support.html">Support</a>
-      <a href="{MAIL}">Contact</a>
-    </nav>
-    <p class="credit"><img class="foot-mark" src="assets/mark-maroon.svg" width="34" height="38" alt="">{CREDIT}</p>
-    <p>saranaclakeredskins.com is an independent alumni project for Saranac Lake High School classes of 1890 to 2000. Questions, corrections, or to have your account and details removed: <a href="{MAIL}">contact us</a> at {CONTACT}.</p>{notice}
+    <div class="foot-brand">
+      <img class="foot-mark" src="assets/mark-maroon.svg" width="40" height="45" alt="">
+      <p><strong>Saranac Lake Redskins</strong><br>An independent alumni project for Saranac Lake High School classes of 1890 to 2000.</p>
+    </div>
+    <nav aria-label="Footer: explore"><h2 class="foot-h">Explore</h2><ul>{explore}<li><a href="football/index.html">Football</a></li></ul></nav>
+    <nav aria-label="Legal"><h2 class="foot-h">This site</h2><ul>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="{MAIL}">{CONTACT}</a></li>
+    </ul></nav>
+  </div>
+  <div class="foot-base">
+    <p>Questions, corrections, or to have your account and details removed: <a href="contact.html">contact us</a>.</p>
+    <p class="credit">{CREDIT}</p>{notice}
   </div>
 </footer>
 """
@@ -129,39 +171,124 @@ def write(name: str, html: str) -> None:
     print(f"wrote {name} ({path.stat().st_size} bytes)")
 
 
+def _site_stats():
+    import json as _j
+    D = ROOT / "src" / "football_data"
+    games = _j.loads((D / "games.json").read_text(encoding="utf-8"))
+    seasons = _j.loads((D / "seasons.json").read_text(encoding="utf-8"))
+    media = _j.loads((D / "media.json").read_text(encoding="utf-8"))
+    fb = {
+        "games": len(games),
+        "seasons": sum(1 for x in seasons if x.get("games_found")),
+        "films": sum(1 for x in media if str(x.get("type", "")).startswith("video")),
+        "titles": sum(1 for x in seasons if x.get("championship")),
+    }
+    al = {"names": 0, "years": {}}
+    try:
+        A = _j.loads((ROOT / "data" / "alumni.json").read_text(encoding="utf-8"))
+        al["names"] = len(A.get("people", []))
+        Y = _j.loads((ROOT / "src" / "alumni_data" / "years.json").read_text(encoding="utf-8"))
+        for y in ("1970", "1988", "2000"):
+            f = Y[y]
+            song = f["songs"]["list"][0]
+            al["years"][y] = (song["title"], song["artist"], f["gas"]["price"], f["films"]["list"][0]["title"])
+    except Exception:
+        pass
+    return fb, al
+
+
 def index_page() -> str:
+    fb, al = _site_stats()
+    decades = "".join(
+        f'<li><a href="classes.html#d{d}" aria-label="Classes of the {d}s"><span class="dec-n">{d}<small>s</small></span></a></li>'
+        for d in range(1890, 2000, 10)) + '<li><a href="classes.html#d2000" aria-label="Class of 2000"><span class="dec-n">2000</span></a></li>'
+    years = "".join(
+        f'<li><a href="alumni/class-{y}.html"><span class="yr">{y}</span>'
+        f'<span class="yr-row"><span class="yr-k">No. 1 song</span> &ldquo;{t}&rdquo; <span class="yr-by">{ar}</span></span>'
+        f'<span class="yr-row"><span class="yr-k">Top movie</span> {mv}</span>'
+        f'<span class="yr-row"><span class="yr-k">Gallon of gas</span> ${g:.2f}</span></a></li>'
+        for y, (t, ar, g, mv) in al["years"].items())
     return head(
         "Home of the Saranac Lake Redskins",
         "An independent alumni project for Saranac Lake High School classes of 1890 to 2000. Find your class, sign in, and reconnect.",
     ) + f"""<body class="home">
 {header("home", home=True)}
 <main id="main">
-  <section class="hero">
-    <div class="logo-wrap">
-      <img src="assets/logo-badge.svg" width="1480" height="1480" alt="{BADGE_ALT}" fetchpriority="high">
-      <a href="88.html" class="feather-tip" aria-label="Class of 1988"></a>
+  <section class="h-hero" aria-labelledby="h-title">
+    <div class="h-hero-copy">
+      <p class="kicker">Saranac Lake High School &middot; Classes of 1890&ndash;2000</p>
+      <h1 id="h-title">Welcome home, <em>alumni.</em></h1>
+      <p class="lede">An independent alumni project for every class from 1890 to 2000. Find your class bulletin board and classmate directory, catch reunion news, and dig into a century of Redskins history.</p>
+      <form class="yearjump" action="classes.html" data-yearjump>
+        <label for="yj">What year did you graduate?</label>
+        <div class="yj-row">
+          <input id="yj" name="year" inputmode="numeric" pattern="[0-9]{{4}}" maxlength="4" placeholder="1988" autocomplete="off" aria-describedby="yj-msg">
+          <button class="btn" type="submit">Go to my class</button>
+        </div>
+        <p class="yj-msg" id="yj-msg" role="status">Or <a href="classes.html">browse every class</a>.</p>
+      </form>
     </div>
-    <div class="hero-copy">
-      <p class="label">Saranac Lake High School alumni</p>
-      <h1>Welcome home, alumni</h1>
-      <p>An independent alumni project for the classes of 1890 to 2000. Sign in for your class bulletin board, the classmate directory, and reunion news.</p>
-      <a class="btn" href="classes.html">Find your class</a>
+    <div class="h-hero-art">
+      <div class="logo-wrap">
+        <img src="assets/logo-badge.svg" width="1480" height="1480" alt="{BADGE_ALT}" fetchpriority="high">
+        <a href="88.html" class="feather-tip" aria-label="Class of 1988"></a>
+      </div>
     </div>
   </section>
-  <section class="panel" aria-labelledby="news-heading">
-    <div class="panel-box">
-      <h2 id="news-heading">Class news</h2>
+
+  <section class="h-decades" aria-labelledby="dec-h">
+    <h2 id="dec-h" class="kicker">Jump to a decade</h2>
+    <ol class="decades-strip">{decades}</ol>
+  </section>
+
+  <section class="h-feature" aria-labelledby="fb-h">
+    <figure class="h-feature-img">
+      <img src="football/img/1925_SLHS_Football.jpg" width="1158" height="620" alt="The 1925 Saranac Lake High School football team posing in uniform" loading="lazy">
+      <figcaption>The 1925 team, from the 1926 <i>Canaras</i> yearbook.</figcaption>
+    </figure>
+    <div class="h-feature-copy">
+      <p class="kicker">Sports &middot; Football since 1923</p>
+      <h2 id="fb-h">The Film Room</h2>
+      <p>Every game we can find, from the first kickoff against Mineville in 1923 to today: scores, newspaper write-ups, rosters, team photos and game film.</p>
+      <dl class="figures">
+        <div><dt>Games</dt><dd>{fb["games"]}</dd></div>
+        <div><dt>Seasons</dt><dd>{fb["seasons"]}</dd></div>
+        <div><dt>Films</dt><dd>{fb["films"]}</dd></div>
+        <div><dt>Title seasons</dt><dd>{fb["titles"]}</dd></div>
+      </dl>
+      <p class="links"><a class="btn" href="football/index.html">Enter the Film Room</a> <a class="text-link" href="football/index.html#scoreboard">Scoreboard</a> <a class="text-link" href="football/players.html">Players</a></p>
+    </div>
+  </section>
+
+  <section class="h-years" aria-labelledby="yrs-h">
+    <div class="h-years-head">
+      <p class="kicker">Classmates &amp; the year you graduated</p>
+      <h2 id="yrs-h">What was playing when you walked</h2>
+      <p>{al["names"]:,} classmates found so far in public records for the classes of 1960 to 2000, plus the songs, movies, prices and headlines of each graduation year.</p>
+      <p><a class="text-link strong" href="alumni/index.html">See all 41 class years</a></p>
+    </div>
+    <ol class="yr-list">{years}</ol>
+  </section>
+
+  <section class="h-index" aria-labelledby="more-h">
+    <h2 id="more-h" class="kicker">Also on the site</h2>
+    <ul class="index-list">
+      <li><a href="news.html"><span class="ix-t">Alumni news</span><span class="ix-d">Reunions, milestones and updates from Saranac Lake alumni.</span></a></li>
+      <li><a href="arts.html"><span class="ix-t">Arts and music</span><span class="ix-d">Band, chorus, drama, art and the stage crews behind them.</span></a></li>
+      <li class="quiet"><a href="in-memoriam.html"><span class="ix-t">In memoriam</span><span class="ix-d">Remembering classmates, teachers and coaches.</span></a></li>
+      <li><a href="shop.html"><span class="ix-t">Shop</span><span class="ix-d">Alumni gear and archival prints, coming soon.</span></a></li>
+    </ul>
+  </section>
+
+  <section class="h-close" id="support" aria-label="Share news and support">
+    <div>
+      <h2>Have class news?</h2>
       <p>Reunion dates, photos, and class group links will be posted here. To share one, <a href="{MAIL}">email us</a> at {CONTACT}.</p>
     </div>
-  </section>
-  {teasers()}
-  {divider()}
-  <section class="panel support-panel" id="support" aria-labelledby="support-heading">
-    <div class="panel-box">
-      <p class="label">Support</p>
+    <div>
       <h2 id="support-heading">Support this site</h2>
       <p>{SUPPORT_BLURB}</p>
-      <a class="btn gold" href="{KOFI}" target="_blank" rel="noopener">Support this site</a>
+      <p><a class="btn ghost" href="{KOFI}" target="_blank" rel="noopener">Support on Ko-fi</a></p>
     </div>
   </section>
 </main>
@@ -199,7 +326,7 @@ def classes_page() -> str:
         "Find Your Class | Saranac Lake Redskins",
         "Saranac Lake High School alumni, classes of 1890 to 2000. Pick your graduation year to join your class.",
     ) + f"""<body>
-{header("classes", extra='<a class="btn ghost" href="welcome.html">My class home</a>')}
+{header("classes", extra='<a class="btn ghost hide-sm" href="welcome.html">My class home</a>')}
 <main id="main" class="wrap">
   <header class="pagehead">
     <span class="label">Saranac Lake High School alumni</span>
@@ -229,7 +356,7 @@ def class_page(year: int) -> str:
         f"Class of {year} | Saranac Lake Redskins",
         f"Saranac Lake High School Class of {year}. Sign in for your class bulletin board, the classmate directory and reunion news.",
     ) + f"""<body>
-{header()}
+{header("classes-year")}
 <main id="main" class="wrap">
   <section class="desk" id="viewOut">
     <div class="intro">
@@ -544,58 +671,109 @@ def teasers() -> str:
   </section>"""
 
 
+def pagehead(label: str, title: str, blurb: str) -> str:
+    return f"""<header class="pagehead">
+    <p class="kicker">{label}</p>
+    <h1>{title}</h1>
+    <p class="lede">{blurb}</p>
+  </header>"""
+
+
+def contribute(soon: str, what: str) -> str:
+    return f"""<aside class="contribute" aria-label="How to contribute">
+    <p class="kicker">Coming soon</p>
+    <p class="contribute-lede">{soon} <a href="{MAIL}">{CONTACT}</a>.</p>
+    <ol class="steps-plain">
+      <li>Email {what}, with your name and class year.</li>
+      <li>Add a photo if you have one. Tell us who is in it and roughly when.</li>
+      <li>We check the details with you before anything is posted.</li>
+    </ol>
+  </aside>"""
+
+
 def section_page(key: str) -> str:
-    href = next(h for k, h, _ in SECTIONS if k == key)
     label, title, blurb, soon = SECTION_COPY[key]
     if key == "memoriam":
         body = f"""<main id="main" class="wrap memoriam-page">
-  <header class="pagehead">
-    <span class="label">{label}</span>
-    <h1>{title}</h1>
-    <p class="lede">{blurb}</p>
-  </header>
+  {pagehead(label, title, blurb)}
   <div class="memoriam-box">
     <p>{soon}</p>
     <p>To remember a classmate, teacher or coach, email their name, class year, and a few words to <a href="{MAIL}">{CONTACT}</a>. A photo is welcome. We will check details with you before anything is posted.</p>
   </div>
 </main>"""
     elif key == "sports":
+        fb, _ = _site_stats()
         body = f"""<main id="main" class="wrap section-page">
-  <header class="pagehead">
-    <span class="label">{label}</span>
-    <h1>{title}</h1>
-    <p class="lede">{blurb}</p>
-  </header>
-  <div class="teasers sport-cards">
-    <a class="teaser feature" href="football/index.html"><span class="label">Football &middot; since 1923</span><strong>Redskins football</strong><span class="teaser-text">The Film Room: every game we can find, with scores, newspaper write-ups, rosters, team photos and game film.</span><span class="teaser-go" aria-hidden="true">&rarr;</span></a>
-  </div>
-  <div class="panel-box soon">
-    <img src="assets/mark-red.svg" width="64" height="71" alt="">
-    <div>
-      <h2>More sports coming soon</h2>
-      <p>Basketball, hockey, skiing, track and more are on the way. {soon} <a href="{MAIL}">{CONTACT}</a>.</p>
-    </div>
-  </div>
+  {pagehead(label, title, blurb)}
+  <a class="sport-feature" href="football/index.html">
+    <img src="football/img/1928_SLHS_Football.jpg" width="1000" height="583" alt="The 1928 Saranac Lake High School football team" loading="lazy">
+    <span class="sf-copy">
+      <span class="kicker">Football &middot; since 1923</span>
+      <span class="sf-title">Redskins football</span>
+      <span class="sf-text">The Film Room: every game we can find, with scores, newspaper write-ups, rosters, team photos and game film.</span>
+      <span class="sf-figs">{fb["games"]} games &middot; {fb["seasons"]} seasons &middot; {fb["films"]} films</span>
+      <span class="sf-go">Enter the Film Room <span aria-hidden="true">&rarr;</span></span>
+    </span>
+  </a>
+  <section class="more-sports" aria-labelledby="ms-h">
+    <h2 id="ms-h">More sports coming soon</h2>
+    <ul class="sport-list"><li>Basketball</li><li>Hockey</li><li>Skiing</li><li>Track</li><li>And more</li></ul>
+    <p>Basketball, hockey, skiing, track and more are on the way. {soon} <a href="{MAIL}">{CONTACT}</a>.</p>
+  </section>
 </main>"""
     else:
+        what = {"news": "your news (a reunion date, a milestone, a class group link)",
+                "arts": "your story or memory from band, chorus, drama, art or stage crew"}[key]
         body = f"""<main id="main" class="wrap section-page">
-  <header class="pagehead">
-    <span class="label">{label}</span>
-    <h1>{title}</h1>
-    <p class="lede">{blurb}</p>
-  </header>
-  <div class="panel-box soon">
-    <img src="assets/mark-red.svg" width="64" height="71" alt="">
-    <div>
-      <h2>Coming soon</h2>
-      <p>{soon} <a href="{MAIL}">{CONTACT}</a>.</p>
-    </div>
-  </div>
+  {pagehead(label, title, blurb)}
+  {contribute(soon, what)}
 </main>"""
     return head(f"{label} | Saranac Lake Redskins",
                 f"{blurb} Saranac Lake High School alumni, classes of 1890 to 2000.") + f"""<body>
 {header(key)}
 {body}
+{footer()}
+</body>
+</html>
+"""
+
+
+def shop_page() -> str:
+    return head("Shop | Saranac Lake Redskins",
+                "Saranac Lake Redskins alumni gear and archival prints are coming soon.") + f"""<body>
+{header("shop")}
+<main id="main" class="wrap section-page">
+  {pagehead("Shop", "The alumni shop", "Redskins alumni gear and archival prints of old team photos are on the way.")}
+  <aside class="contribute" aria-label="Shop status">
+    <p class="kicker">Coming soon</p>
+    <p class="contribute-lede">The shop is not open yet. Want to know when it opens, or have an idea for something you would wear? Email <a href="{MAIL}">{CONTACT}</a>.</p>
+    <p>In the meantime, you can help cover hosting and upkeep on the <a href="support.html">support page</a>.</p>
+  </aside>
+</main>
+{footer()}
+</body>
+</html>
+"""
+
+
+def contact_page() -> str:
+    return head("Contact Us | Saranac Lake Redskins",
+                "Contact the Saranac Lake Redskins alumni site: news, corrections, photos, remembrances and account removal.") + f"""<body>
+{header("contact")}
+<main id="main" class="wrap section-page">
+  {pagehead("Contact Us", "Get in touch", "This is a volunteer project. The best way to reach us is email.")}
+  <p class="contact-email"><a href="{MAIL}">{CONTACT}</a></p>
+  <section class="contact-topics" aria-labelledby="ct-h">
+    <h2 id="ct-h" class="kicker">Good reasons to write</h2>
+    <dl>
+      <div><dt>Class news</dt><dd>Reunion dates, milestones and class group links for the <a href="news.html">news page</a>.</dd></div>
+      <div><dt>Corrections</dt><dd>A misspelled name, a wrong score, a missing classmate. Tell us the page and what to fix.</dd></div>
+      <div><dt>Photos and film</dt><dd>Yearbooks, team photos, programs and game tapes help fill in the history.</dd></div>
+      <div><dt>In memoriam</dt><dd>A classmate, teacher or coach to remember. See <a href="in-memoriam.html">In Memoriam</a>.</dd></div>
+      <div><dt>Your details</dt><dd>To have your account and details removed, email us from the address on your account.</dd></div>
+    </dl>
+  </section>
+</main>
 {footer()}
 </body>
 </html>
@@ -611,6 +789,8 @@ def main() -> None:
     write("privacy.html", privacy_page())
     write("terms.html", terms_page())
     write("support.html", support_page())
+    write("shop.html", shop_page())
+    write("contact.html", contact_page())
     write("404.html", not_found_page())
     from football import build as build_football
     build_football(globals())

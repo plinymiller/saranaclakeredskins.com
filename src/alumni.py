@@ -50,7 +50,7 @@ def build(g):
             "</head>", '<link rel="stylesheet" href="../assets/alumni.css?v=1">\n</head>')
         script = f'\n<script src="../assets/{js}?v=1" defer></script>' if js else ""
         return chrome + f"""<body class="al {cls}">
-{up(header(None))}
+{up(header("alumni"))}
 <main id="main">
 {body}
 </main>
@@ -134,7 +134,7 @@ def build(g):
         films = "".join(f'<li><span class="al-t">{E(m["title"])}</span></li>' for m in f["films"]["list"][:10])
         tv = "".join(f'<li value="{t["rank"]}"><span class="al-t">{E(t["title"])}</span></li>' for t in f["tv"]["list"])
         metric = f["films"]["metric"] or "box office"
-        news = "".join(f'<li>{E(x["text"])} {ext(x["url"], "More")}</li>' for x in f["news"])
+        news = "".join(f'<li>{E(x["text"])} {ext(x["url"], "More" + chr(60) + "span class=" + chr(34) + "sr-only" + chr(34) + ">: " + E(x["text"]) + chr(60) + "/span>")}</li>' for x in f["news"])
         body = f"""<section class="al-hero">
   <p class="al-eyebrow">Saranac Lake High School</p>
   <h1>Class of {y}</h1>
@@ -162,8 +162,8 @@ def build(g):
   <h3>Big news</h3>
   <ul class="al-news">{news}</ul>
   <div class="al-fun">
-    <div><span class="al-k">Fad</span><p>{E(f['fad']['text'])} {ext(f['fad']['url'], 'More')}</p></div>
-    <div><span class="al-k">Gadget</span><p>{E(f['gadget']['text'])} {ext(f['gadget']['url'], 'More')}</p></div>
+    <div><span class="al-k">Fad</span><p>{E(f['fad']['text'])} {ext(f['fad']['url'], 'More<span class="sr-only"> about the fad</span>')}</p></div>
+    <div><span class="al-k">Gadget</span><p>{E(f['gadget']['text'])} {ext(f['gadget']['url'], 'More<span class="sr-only"> about the gadget</span>')}</p></div>
   </div>
   <p class="al-small">Songs, movies and news are for calendar {y}. TV is the {E(f['tv']['season'])} season, the World Series is the fall of senior year and the {'Super Bowl' if y >= 1967 else 'NFL title game'} is the one played that winter. Prices are U.S. averages, not Saranac Lake prices. {ext(f['year_url'], f'More about {y} in the United States')}.</p>
 </section>
