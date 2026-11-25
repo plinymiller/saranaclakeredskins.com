@@ -474,7 +474,7 @@
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:19:54",
    "tier": "check",
-   "featured_rank": null,
+   "featured_rank": 8,
    "favorite": false
   },
   {
@@ -517,7 +517,7 @@
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:22:15",
    "tier": "check",
-   "featured_rank": 5,
+   "featured_rank": 3,
    "favorite": false
   },
   {
@@ -1635,7 +1635,7 @@
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:34:52",
    "tier": "likely",
-   "featured_rank": null,
+   "featured_rank": 9,
    "favorite": false
   },
   {
@@ -2237,7 +2237,7 @@
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:03:05",
    "tier": "likely",
-   "featured_rank": 3,
+   "featured_rank": 1,
    "favorite": false
   },
   {
@@ -2624,7 +2624,7 @@
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:52:14",
    "tier": "likely",
-   "featured_rank": 9,
+   "featured_rank": null,
    "favorite": false
   },
   {
@@ -2667,7 +2667,7 @@
    "tape_label": "Saranac Lake High School Commencement",
    "tape_time": "00:01:03",
    "tier": "likely",
-   "featured_rank": 2,
+   "featured_rank": null,
    "favorite": false
   },
   {
@@ -2710,7 +2710,7 @@
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:15:00",
    "tier": "likely",
-   "featured_rank": null,
+   "featured_rank": 7,
    "favorite": false
   },
   {
@@ -3054,7 +3054,7 @@
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:52:45",
    "tier": "likely",
-   "featured_rank": 6,
+   "featured_rank": null,
    "favorite": false
   },
   {
@@ -3355,7 +3355,7 @@
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:49:07",
    "tier": "likely",
-   "featured_rank": 7,
+   "featured_rank": 4,
    "favorite": false
   },
   {
@@ -3785,7 +3785,7 @@
    "tape_label": "Saranac Lake Winter Carnival, Tape 2",
    "tape_time": "00:13:06",
    "tier": "likely",
-   "featured_rank": 8,
+   "featured_rank": 5,
    "favorite": false
   },
   {
@@ -3914,7 +3914,7 @@
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:15:09",
    "tier": "likely",
-   "featured_rank": 4,
+   "featured_rank": 2,
    "favorite": false
   },
   {
@@ -3957,7 +3957,7 @@
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:19:02",
    "tier": "likely",
-   "featured_rank": null,
+   "featured_rank": 10,
    "favorite": false
   },
   {
@@ -4000,7 +4000,7 @@
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:22:25",
    "tier": "likely",
-   "featured_rank": 10,
+   "featured_rank": 6,
    "favorite": false
   },
   {
@@ -4516,8 +4516,8 @@
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "01:34:07",
    "tier": "likely",
-   "featured_rank": 1,
-   "favorite": true
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-17",
