@@ -950,7 +950,8 @@
   "wiki_facts": [
    {
     "fact": "5th Quarter Club booster group founded; it built a new press box and concession stand in 1987.",
-    "source": "https://wiki.historicsaranaclake.org/index.php/Football"
+    "source": "https://wiki.historicsaranaclake.org/index.php/Football",
+    "see_also": {"href": "5th-quarter.html", "label": "how the 5th Quarter began"}
    }
   ]
  },

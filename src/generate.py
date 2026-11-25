@@ -87,6 +87,7 @@ NAV = [
         ("football/index.html", "Football: The Film Room", "Every game since 1923, with film"),
         ("football/index.html#scoreboard", "Football scoreboard", "Scores and newspaper write-ups"),
         ("football/players.html", "Football players", "Rosters, captains and honors"),
+        ("football/5th-quarter.html", "The 5th Quarter", "How the away-game tailgate began"),
     ]),
     ("arts", "arts.html", "Arts", None),
     ("memoriam", "in-memoriam.html", "In Memoriam", None),

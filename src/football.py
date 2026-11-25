@@ -331,7 +331,11 @@ def build(g: dict) -> None:
         sv = [v for v in vids if str(v.get("season")) == str(y)]
         hero_film = player(sv[0], big=True) if sv else ""
         more_films = "".join(player(v) for v in sv[1:])
-        facts = "".join(f'<li>{E(f["fact"])} <a class="src" href="{E(f["source"])}" target="_blank" rel="noopener">source</a></li>' for f in s.get("wiki_facts") or [])
+        def fact_li(f):
+            see = f.get("see_also") or {}
+            extra = f' Read <a href="{E(see["href"])}">{E(see["label"])}</a>.' if see.get("href") and see.get("label") else ""
+            return f'<li>{E(f["fact"])} <a class="src" href="{E(f["source"])}" target="_blank" rel="noopener">source</a>{extra}</li>'
+        facts = "".join(fact_li(f) for f in s.get("wiki_facts") or [])
         conflicts = "".join(f'<div class="note conflict"><strong>Sources disagree</strong><p>{E(c)}</p></div>' for c in s.get("conflicts") or [])
         rosters = []
         for r in [r for r in R if r.get("season") == y and r.get("players")]:
