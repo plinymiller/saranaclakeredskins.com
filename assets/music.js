@@ -21,7 +21,7 @@
     var rk=c.featured_rank&&!showAll?'<span class="rank">#'+c.featured_rank+'</span> ':'';
     var where='<p class="cc-w">'+esc(c.date+' \u00b7 '+(c.tape_label||c.tape))+'</p>';
     return '<li class="cc'+(c.favorite?' is-fav':'')+'" id="'+esc(c.id)+'"><div class="player"><img src="'+esc(c.thumb)+'" alt="Still from '+esc(c.date+' '+(c.tape_label||c.tape))+' at '+esc(c.tape_time)+'" loading="lazy" width="640" height="480">'+badge+media+'<span class="dur">'+mm(c.duration)+'</span></div>'+
-      '<h4 class="cc-t">'+rk+(c.song?esc(c.song):esc(c.display_title||'Band selection')+' <span class="tbc">&middot; song not yet named</span>')+'</h4>'+
+      '<h4 class="cc-t">'+rk+esc(c.song||c.display_title)+'</h4>'+
       (showAll?'':where)+'<p class="cc-m">Starts '+esc(tapeTime(c.tape_time))+' into the tape'+(c.youtube_id?' &middot; <a href="https://youtu.be/'+esc(c.youtube_id)+'" target="_blank" rel="noopener">Watch on YouTube</a>':' &middot; YouTube soon')+'</p>'+
       '<details class="roster"><summary>Credits ('+named+' named)</summary><dl class="credits"><dt>Band</dt><dd>'+(c.band?esc(c.band):'<span class="need">Which band? Tell us</span>')+'</dd><dt>Director</dt><dd>'+director(c)+'</dd>'+
       '<dt>Drum major</dt><dd>'+(c.drum_major?esc(c.drum_major):'<span class="need">Not yet named</span>')+'</dd><dt>Soloists</dt><dd>'+(c.soloists?esc(c.soloists):'<span class="need">Not yet named</span>')+'</dd></dl><ul>'+rows+'</ul></details>'+
