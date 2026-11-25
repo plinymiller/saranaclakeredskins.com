@@ -305,3 +305,4 @@ body .title-chip{background:var(--red);color:#fff!important}
 .sub-btn{margin-left:0;width:32px}
 .has-sub>.nav-a{padding-right:2px}
 @media (max-width:480px){.figures div{padding-right:12px;margin-right:12px}.figures dd{font-size:2rem}.figures dt{font-size:.74rem;letter-spacing:.08em}}
+.pm-loc{white-space:nowrap}.pm-mark{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.2em;margin:0 .15em}
