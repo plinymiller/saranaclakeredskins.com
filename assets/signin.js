@@ -69,7 +69,10 @@
 
   function render(session){
     if(recovering){ show('viewReset'); return; }
-    if(session){ location.replace('welcome.html'); return; }
+    if(session){
+      var next=null; try{ next=localStorage.getItem('slr_next'); localStorage.removeItem('slr_next'); }catch(e){}
+      location.replace(next && /^teachers\/index\.html(\?t=[a-z0-9-]{1,90})?$/.test(next) ? next : 'welcome.html'); return;
+    }
     show('viewOut');
   }
 

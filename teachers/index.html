@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Teachers | Saranac Lake Redskins</title>
-<meta name="description" content="Remembering the teachers, directors and coaches of Saranac Lake High School.">
+<meta name="description" content="Remembering the teachers, directors and coaches of Saranac Lake High School. Stories and photos for members.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Saranac Lake Redskins">
 <meta property="og:title" content="Teachers | Saranac Lake Redskins">
-<meta property="og:description" content="Remembering the teachers, directors and coaches of Saranac Lake High School.">
+<meta property="og:description" content="Remembering the teachers, directors and coaches of Saranac Lake High School. Stories and photos for members.">
 <meta property="og:image" content="https://saranaclakeredskins.com/assets/og-card.png?v=4">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -24,7 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/class.css">
 <link rel="stylesheet" href="../assets/site.css?v=1">
-<link rel="stylesheet" href="../assets/teachers.css?v=1">
+<link rel="stylesheet" href="../assets/teachers.css?v=2">
 <script>document.documentElement.classList.add("js")</script>
 <script src="../assets/site.js?v=1" defer></script>
 </head>
@@ -47,13 +47,27 @@
 <main id="main" class="wrap section-page">
   <div id="tList">
     <header class="pagehead">
-      <p class="kicker">Saranac Lake High School</p>
+      <p class="kicker">Saranac Lake High School &middot; Members</p>
       <h1>Teachers</h1>
       <p class="lede">The teachers, directors and coaches who shaped Saranac Lake High School, remembered by the students they taught.</p>
+      <p class="t-member" id="tMember" hidden>You&rsquo;re signed in as a member. <a href="../welcome.html">My class home</a> &middot; <button type="button" class="t-linkbtn" id="tSignOut">Sign out</button></p>
     </header>
-    <p class="msg note t-note" id="tNote" hidden></p>
+    <section class="t-gate" id="tGate" hidden aria-labelledby="gate-h">
+      <h2 id="gate-h">For members of the Saranac Lake alumni site</h2>
+      <p>The teacher stories and photos are shared with members only. Joining is free and takes about a minute: pick your class year, then create your account.</p>
+      <p class="t-gate-btns"><a class="btn t-big" href="../classes.html" data-signin>Sign up to view</a></p>
+      <form class="t-login" id="tLogin" novalidate>
+        <h3>Already a member? Log in</h3>
+        <div class="t-lf"><label for="lgEmail">Email</label><input type="email" id="lgEmail" autocomplete="email" required></div>
+        <div class="t-lf"><label for="lgPass">Password</label><input type="password" id="lgPass" autocomplete="current-password" required></div>
+        <p class="msg" id="lgMsg" hidden role="status"></p>
+        <p class="t-gate-btns"><button class="btn ghost t-big" type="submit" id="lgBtn">Log in</button> <button type="button" class="t-linkbtn" id="lgForgot">Forgot your password?</button></p>
+      </form>
+    </section>
+    <p class="msg note t-note" id="tNote" hidden>That teacher page is not available. Here are all the teachers.</p>
     <div class="t-bar"><h2>Our teachers</h2><span class="t-count" id="tCount"></span></div>
     <div class="t-grid" id="tGrid"></div>
+    <p class="t-empty" id="tEmpty" hidden>Teacher pages are on their way.</p>
     <section class="t-ask" aria-labelledby="ask-h">
       <h2 id="ask-h">Remember a teacher</h2>
       <p>Had a teacher who made a difference? Email their name, what they taught, about when, and a few words to <a href="mailto:plinymiller@gmail.com?subject=A%20Saranac%20Lake%20teacher%20to%20remember">plinymiller@gmail.com</a>. A photo is welcome. We will check details with you before anything is posted.</p>
@@ -61,7 +75,7 @@
   </div>
   <article class="t-article" id="tOne" hidden>
     <nav class="kicker" aria-label="Breadcrumb"><a href="index.html">Teachers</a> / Remembered</nav>
-    <div class="t-head has-photo">
+    <div class="t-head">
       <div>
         <p class="kicker"></p>
         <h1></h1>
@@ -97,10 +111,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script src="../assets/config.js"></script>
 <script src="../assets/teachers-md.js?v=1"></script>
-<script>
-window.TEACHERS_STATIC=[{teacher_name:"Fred Baker",subject:"Band director",years:"1972\u20131997",href:"../music/fred-baker.html",img:"../assets/photos/fred-baker-band-600.jpg",
-summary:"For 25 years he led the instrumental bands of the Saranac Lake Central School District, and founded the 52nd Street Band."}];
-</script>
-<script src="../assets/teachers.js?v=1"></script>
+<script src="../assets/teachers.js?v=2"></script>
 </body>
 </html>
