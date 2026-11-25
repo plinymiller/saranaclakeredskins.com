@@ -5,10 +5,12 @@
     var b = e.target.closest && e.target.closest(".yt-play");
     if(!b) return;
     e.preventDefault();
-    var id = b.getAttribute("data-yt");
-    if(!/^[\w-]{6,20}$/.test(id)) return;
+    var id = b.getAttribute("data-yt"), pl = b.getAttribute("data-ytl");
     var f = document.createElement("iframe");
-    f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1";
+    if(pl){ if(!/^[\w-]{10,64}$/.test(pl)) return;
+      f.src = "https://www.youtube-nocookie.com/embed/videoseries?list=" + pl + "&autoplay=1&rel=0&modestbranding=1";
+    } else { if(!/^[\w-]{6,20}$/.test(id)) return;
+      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1"; }
     f.title = b.getAttribute("data-title") || "Game film";
     f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
     f.loading = "lazy";
