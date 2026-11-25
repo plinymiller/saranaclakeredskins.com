@@ -99,3 +99,14 @@
 .fb-photo.has-img{border:0;padding:0;background:none;aspect-ratio:auto;display:block}
 .fb-photo.has-img img{display:block;width:100%;height:auto;box-shadow:0 1px 0 var(--line),0 12px 30px -18px rgba(0,0,0,.45)}
 .fb-photo.has-img figcaption{margin-top:10px;font-family:var(--label);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.75rem;color:var(--muted);text-align:left}
+/* Top 10 curation */
+.fav-badge{position:absolute;left:12px;top:12px;display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-family:var(--label);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;padding:6px 10px 6px 8px;border-radius:2px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.fav-badge svg{width:16px;height:16px;fill:#ffd54a}
+.cc.is-fav{outline:3px solid var(--red);outline-offset:6px}
+.rank{font-family:var(--label);font-weight:700;color:var(--red);letter-spacing:.04em;margin-right:.15em}
+.cc-w{margin:0 0 .25em;font-family:var(--label);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;color:var(--muted)}
+ol.cc-grid{padding-left:0}
+.mu-all,.mu-back{font-family:var(--label);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:.95rem;display:inline-flex;align-items:center;min-height:44px}
+.mu-back{margin-left:16px}
+.linked{margin-bottom:clamp(28px,4vw,48px);padding-bottom:clamp(20px,3vw,32px);border-bottom:2px dashed var(--line-strong)}
+.linked{scroll-margin-top:110px}

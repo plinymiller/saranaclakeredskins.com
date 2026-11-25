@@ -1,4 +1,8 @@
 {
+ "curation": {
+  "favorite_label": "Pliny's favorite",
+  "featured_count": 10
+ },
  "clips": [
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-01",
@@ -39,7 +43,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "00:16:26",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-02",
@@ -80,7 +86,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "00:19:20",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-03",
@@ -121,7 +129,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "00:20:13",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-04",
@@ -162,7 +172,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "00:24:01",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-05",
@@ -203,7 +215,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "00:30:42",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-06",
@@ -244,7 +258,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "00:41:21",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-07",
@@ -285,7 +301,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:08:21",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-08",
@@ -326,7 +344,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:11:07",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-09",
@@ -367,7 +387,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:12:08",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-10",
@@ -408,7 +430,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:13:57",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-11",
@@ -449,7 +473,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:19:54",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-12",
@@ -490,7 +516,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:22:15",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": 5,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-13",
@@ -531,7 +559,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:25:04",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-14",
@@ -572,7 +602,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:29:37",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-15",
@@ -613,7 +645,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:33:38",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-16",
@@ -654,7 +688,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:35:06",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-17",
@@ -695,7 +731,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:39:15",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-18",
@@ -736,7 +774,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:40:45",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-19",
@@ -777,7 +817,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:42:49",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-20",
@@ -818,7 +860,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:45:19",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-21",
@@ -859,7 +903,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:50:14",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-22",
@@ -900,7 +946,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:55:39",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-23",
@@ -941,7 +989,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "01:58:38",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part1_song-24",
@@ -982,7 +1032,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part1",
    "tape_label": "Winter Carnival Coronation & Parade, Part 1",
    "tape_time": "02:02:51",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-01",
@@ -1023,7 +1075,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:00:00",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-02",
@@ -1064,7 +1118,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:01:28",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-03",
@@ -1105,7 +1161,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:02:56",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-04",
@@ -1146,7 +1204,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:06:12",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-05",
@@ -1187,7 +1247,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:07:42",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-06",
@@ -1228,7 +1290,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:08:28",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-07",
@@ -1269,7 +1333,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:11:03",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-08",
@@ -1310,7 +1376,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:18:27",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-09",
@@ -1351,7 +1419,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:22:41",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-10",
@@ -1392,7 +1462,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:24:48",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-11",
@@ -1433,7 +1505,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:25:58",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-12",
@@ -1474,7 +1548,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:28:39",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-13",
@@ -1515,7 +1591,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:33:38",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-14",
@@ -1556,7 +1634,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:34:52",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-15",
@@ -1597,7 +1677,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:36:12",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-16",
@@ -1638,7 +1720,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:37:15",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-17",
@@ -1679,7 +1763,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:38:58",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-18",
@@ -1720,7 +1806,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:44:37",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-19",
@@ -1761,7 +1849,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:46:43",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-20",
@@ -1802,7 +1892,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:47:44",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-21",
@@ -1843,7 +1935,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:48:56",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-22",
@@ -1884,7 +1978,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:50:00",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-23",
@@ -1925,7 +2021,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:55:13",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-24",
@@ -1966,7 +2064,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:56:34",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-25",
@@ -2007,7 +2107,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:57:36",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-26",
@@ -2048,7 +2150,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "00:59:19",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1984_winter-carnival-coronation-parade-slideshow-part2_song-27",
@@ -2089,7 +2193,9 @@
    "tape": "1984 Winter Carnival Coronation Parade Slideshow part2",
    "tape_label": "Winter Carnival Coronation & Parade, Part 2",
    "tape_time": "01:01:10",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-01",
@@ -2130,7 +2236,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:03:05",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 3,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-02",
@@ -2171,7 +2279,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:07:56",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-03",
@@ -2212,7 +2322,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:10:27",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-04",
@@ -2253,7 +2365,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:12:14",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-05",
@@ -2294,7 +2408,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:13:16",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-06",
@@ -2335,7 +2451,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:18:07",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-07",
@@ -2376,7 +2494,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:24:53",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-08",
@@ -2417,7 +2537,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:35:33",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-09",
@@ -2458,7 +2580,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:38:34",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1985_saranac-lake-winter-carnival_song-10",
@@ -2499,7 +2623,9 @@
    "tape": "1985 Saranac Lake Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:52:14",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 9,
+   "favorite": false
   },
   {
    "id": "1986_graduation-slhs_song-01",
@@ -2540,7 +2666,9 @@
    "tape": "1986 Graduation SLHS",
    "tape_label": "Saranac Lake High School Commencement",
    "tape_time": "00:01:03",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 2,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-01",
@@ -2581,7 +2709,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:15:00",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-02",
@@ -2622,7 +2752,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:18:51",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-03",
@@ -2663,7 +2795,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:23:37",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-04",
@@ -2704,7 +2838,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:27:35",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-05",
@@ -2745,7 +2881,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:31:19",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-06",
@@ -2786,7 +2924,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:37:31",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-07",
@@ -2827,7 +2967,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:43:15",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-08",
@@ -2868,7 +3010,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:49:00",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-09",
@@ -2909,7 +3053,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "00:52:45",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 6,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-10",
@@ -2950,7 +3096,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:00:39",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-11",
@@ -2991,7 +3139,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:05:59",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-12",
@@ -3032,7 +3182,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:11:17",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-13",
@@ -3073,7 +3225,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:30:43",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-14",
@@ -3114,7 +3268,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:40:01",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-15",
@@ -3155,7 +3311,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:44:54",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-16",
@@ -3196,7 +3354,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:49:07",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 7,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-17",
@@ -3237,7 +3397,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:52:24",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-18",
@@ -3278,7 +3440,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:54:46",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-19",
@@ -3319,7 +3483,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:55:33",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-20",
@@ -3360,7 +3526,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "01:58:15",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival_song-21",
@@ -3401,7 +3569,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival",
    "tape_label": "Saranac Lake Winter Carnival",
    "tape_time": "02:01:55",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival-2_song-01",
@@ -3442,7 +3612,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival 2",
    "tape_label": "Saranac Lake Winter Carnival, Tape 2",
    "tape_time": "00:00:00",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival-2_song-02",
@@ -3483,7 +3655,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival 2",
    "tape_label": "Saranac Lake Winter Carnival, Tape 2",
    "tape_time": "00:00:43",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival-2_song-03",
@@ -3524,7 +3698,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival 2",
    "tape_label": "Saranac Lake Winter Carnival, Tape 2",
    "tape_time": "00:05:05",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival-2_song-04",
@@ -3565,7 +3741,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival 2",
    "tape_label": "Saranac Lake Winter Carnival, Tape 2",
    "tape_time": "00:09:27",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival-2_song-05",
@@ -3606,7 +3784,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival 2",
    "tape_label": "Saranac Lake Winter Carnival, Tape 2",
    "tape_time": "00:13:06",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 8,
+   "favorite": false
   },
   {
    "id": "1986_saranac-lake-ny-winter-carnival-2_song-06",
@@ -3647,7 +3827,9 @@
    "tape": "1986 Saranac Lake NY Winter Carnival 2",
    "tape_label": "Saranac Lake Winter Carnival, Tape 2",
    "tape_time": "00:18:24",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-01",
@@ -3688,7 +3870,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:10:07",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-02",
@@ -3729,7 +3913,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:15:09",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 4,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-03",
@@ -3770,7 +3956,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:19:02",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-04",
@@ -3811,7 +3999,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:22:25",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 10,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-05",
@@ -3852,7 +4042,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:32:05",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-06",
@@ -3893,7 +4085,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:34:36",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-07",
@@ -3934,7 +4128,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:38:13",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-08",
@@ -3975,7 +4171,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:41:24",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-09",
@@ -4016,7 +4214,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:44:27",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-10",
@@ -4057,7 +4257,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:47:14",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-11",
@@ -4098,7 +4300,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:50:57",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-12",
@@ -4139,7 +4343,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "00:54:21",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-13",
@@ -4180,7 +4386,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "01:01:23",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-14",
@@ -4221,7 +4429,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "01:12:16",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-15",
@@ -4262,7 +4472,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "01:30:25",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-16",
@@ -4303,7 +4515,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "01:34:07",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": 1,
+   "favorite": true
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-17",
@@ -4344,7 +4558,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "01:38:35",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-18",
@@ -4385,7 +4601,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "01:40:30",
-   "tier": "check"
+   "tier": "check",
+   "featured_rank": null,
+   "favorite": false
   },
   {
    "id": "1989_saranac-lake-new-york-winter-carnival-coronation_song-20",
@@ -4426,7 +4644,9 @@
    "tape": "1989 Saranac Lake New York Winter Carnival Coronation",
    "tape_label": "Winter Carnival Coronation",
    "tape_time": "01:48:33",
-   "tier": "likely"
+   "tier": "likely",
+   "featured_rank": null,
+   "favorite": false
   }
  ]
 }
